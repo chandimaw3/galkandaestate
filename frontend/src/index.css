@@ -1,0 +1,225 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+/* Original design tokens and document baseline. Page styling lives in Tailwind utilities. */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+  dl,
+  figure {
+    margin: 0 0 1rem;
+  }
+  dd {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+  dt,
+  strong,
+  b {
+    font-weight: 700;
+  }
+  a {
+    text-decoration: underline;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    line-height: inherit;
+  }
+  button {
+    cursor: pointer;
+    padding: 1px 6px;
+    color: #000;
+  }
+  input {
+    color: #000;
+  }
+  option {
+    padding: 0 2px 1px;
+  }
+  legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    @apply text-2xl;
+    line-height: inherit;
+  }
+  legend + * {
+    clear: left;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+  }
+  svg {
+    vertical-align: middle;
+  }
+  img {
+    vertical-align: middle;
+  }
+  sup {
+    position: relative;
+    @apply text-xs;
+    line-height: 0;
+    vertical-align: baseline;
+    top: -0.5em;
+  }
+  :root {
+    --bg: #f4f1ea;
+    --bg-warm: #ece5d8;
+    --ink: #151510;
+    --muted: #68675e;
+    --green: #59614c;
+    --deep: #30382b;
+    --earth: #a17954;
+    --stone: #dcd7cc;
+    --dark: #171a15;
+    --white: #ffffff;
+    --line: rgba(21, 21, 16, 0.14);
+    --line-light: rgba(244, 241, 234, 0.2);
+    --f-sans:
+      "DM Sans", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --f-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --gutter: 20px;
+    --nav-h: 72px;
+    --r-sm: 12px;
+    --r: 16px;
+    --r-lg: 20px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --sec: clamp(96px, 14vh, 170px);
+  }
+  @media (min-width: 768px) {
+    :root {
+      --gutter: 32px;
+    }
+  }
+  @media (min-width: 992px) {
+    :root {
+      --gutter: clamp(40px, 4.4vw, 72px);
+      --nav-h: 78px;
+    }
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-sans);
+    @apply text-base;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  @media (min-width: 992px) {
+    body {
+      @apply text-base;
+    }
+  }
+  ::selection {
+    background: var(--deep);
+    color: var(--bg);
+  }
+  :focus-visible {
+    outline: 2px solid var(--earth);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .m-btn {
+    all: unset;
+  }
+  .has-motion [data-fade] {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  .has-motion [data-reveal] {
+    clip-path: inset(100% 0% 0% 0%);
+  }
+  .has-motion [data-reveal="left"] {
+    clip-path: inset(0% 100% 0% 0%);
+  }
+  .has-motion [data-reveal="right"] {
+    clip-path: inset(0% 0% 0% 100%);
+  }
+  .has-motion [data-split] {
+    visibility: hidden;
+  }
+  .has-motion .phero [data-hero-fade] {
+    opacity: 0;
+  }
+  .has-motion .phero h1 {
+    visibility: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *::before {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+  .faq__btn {
+    all: unset;
+  }
+  .xc__more {
+    all: unset;
+  }
+  .has-motion .hx__intro {
+    clip-path: inset(3% 3% 3% 3% round 22px);
+  }
+  .has-motion .hx__zoom img {
+    transform: scale(1.08);
+  }
+  .has-motion [data-hero-fade] {
+    opacity: 0;
+  }
+  .has-motion .hx__title {
+    visibility: hidden;
+  }
+  body.home-pinned .house__sh {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .mf__btn {
+    all: unset;
+  }
+  .lb-btn {
+    all: unset;
+  }
+}

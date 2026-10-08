@@ -1,0 +1,25 @@
+{
+  "name": "galkanda",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run start --workspace backend"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "bootstrap": "^5.3.8",
+    "cheerio": "^1.2.0",
+    "concurrently": "^10.0.5",
+    "postcss": "^8.5.29",
+    "postcss-selector-parser": "^7.1.6",
+    "prettier": "^3.9.9",
+    "specificity": "^1.0.0"
+  }
+}
