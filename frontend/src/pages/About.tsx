@@ -2,11 +2,110 @@ import { Link } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { initExperiences } from "../behaviors/Experiences.js";
 import { images } from "../images.js";
+import "./About.css";
 
-export default function Experiences() {
+// Extend the estate’s existing visual system with alternating image-led stories
+// and the same interactive experience cards used on the Experiences page.
+const stories = [
+  {
+    "id": "estate",
+    "title": "The Estate",
+    "image": "Estate.jpg",
+    "alt": "The countryside home at Galkanda Estate",
+    "link": "/estate#spaces-h",
+    "paragraphs": [
+      "Galkanda Estate Eco Farm Stay is a family-inspired retreat created to share a slower, more meaningful way of experiencing Sri Lanka.",
+      "Set within a working organic farm in the countryside near Kandy, the property brings together comfortable living, traditional food, farming, nature and warm Sri Lankan hospitality. Its location offers the best of both worlds: it is close enough to Kandy city to keep many of the region’s well-known cultural and historical attractions within easy reach, while remaining sufficiently removed from the bustle of the city to offer peace, privacy and tranquility.",
+      "This makes Galkanda Estate Eco Farm Stay equally suited to individuals, couples and families looking for a restful base from which to explore the region. Guests can spend the day discovering Kandy and return to the calm of the estate, surrounded by greenery, open spaces and the sounds of nature."
+    ]
+  },
+  {
+    "id": "hospitality",
+    "title": "A personal connection to the region",
+    "image": "gather.jpg",
+    "alt": "Shared moments at Galkanda Estate",
+    "link": "/explore#journal-h",
+    "paragraphs": [
+      "Beyond the better-known attractions, we also hope to introduce guests to some of the area’s lesser-known places, local experiences and everyday aspects of rural Sri Lankan life that are often missed on a conventional itinerary. Whether it is exploring nearby villages, discovering local landscapes, experiencing traditional food production or simply spending time around the farm, the aim is to offer a richer and more personal connection to the region.",
+      "The property is managed by Punya and lovingly cared for by Ravi, Sarojini and their family, who together help bring the spirit of the estate to life through their warmth, local knowledge and genuine hospitality. Together, they help ensure that guests feel welcomed, comfortable and connected to the place throughout their stay."
+    ]
+  },
+  {
+    "id": "life-on-the-farm",
+    "title": "Become part of the rhythm",
+    "image": "fieldwalk.jpg",
+    "alt": "A walk through the estate’s paddy fields",
+    "link": "/experiences#estate-activities",
+    "paragraphs": [
+      "Guests are invited not only to stay, but to become part of the rhythm of the estate, whether through enjoying freshly prepared farm-to-table meals, exploring the gardens and paddy fields, learning about traditional food production, or simply relaxing in the natural surroundings.",
+      "Our team believes that the most memorable journeys come from authentic experiences and meaningful connections. At Galkanda Estate Eco Farm Stay, we hope to offer a glimpse into everyday rural life in Sri Lanka while creating a peaceful place where guests can relax, reconnect with nature and feel truly at home."
+    ]
+  },
+  {
+    "id": "philosophy",
+    "title": "Our Philosophy",
+    "image": "Interior.jpg",
+    "alt": "Open living spaces at Galkanda Estate",
+    "link": "/estate#feat-h",
+    "paragraphs": [
+      "Galkanda Estate Eco Farm Stay was created as a home shaped by a belief that the way we live should respect the natural world, use resources thoughtfully, and remain closely connected to the land that sustains us.",
+      "From the beginning, sustainability guided the way the house and the surrounding estate developed. The open design of the home makes extensive use of natural light and encourages the free movement of air through the living spaces and the indoor open garden. This natural ventilation helps the house remain cool and comfortable, reducing the need for air conditioning and allowing the sounds, light and rhythms of nature to remain part of everyday life."
+    ]
+  },
+  {
+    "id": "sustainability",
+    "title": "Rooted in the land and community",
+    "image": "Farm2.jpg",
+    "alt": "Cultivated land on the organic farm",
+    "link": "/food#grow-h",
+    "paragraphs": [
+      "The approach to sustainability extends beyond the architecture. Solar energy supports lighting and hot water, while a biogas system provides an alternative source of energy for cooking. Around the house is a functioning dairy and organic farm where vegetables, fruits and other produce are grown, alongside the production of fresh milk, butter and curd. Wherever possible, the property produces much of what is needed on site.",
+      "When something cannot be produced on the estate, it is sourced, where possible, from people within the surrounding community. Sustainability here is not only about reducing environmental impact. It is also about supporting local livelihoods, strengthening relationships with neighbouring communities, and recognising that a truly sustainable way of living should benefit both people and nature.",
+      "Biodiversity is equally important. The garden, cultivated areas and natural spaces surrounding the property are managed with the intention of allowing people, agriculture and wildlife to coexist. The estate was developed with the hope of creating an environment where people could understand where food comes from, appreciate the changing seasons, recognise the value of other living things, and develop a genuine connection with nature."
+    ]
+  },
+  {
+    "id": "shared-purpose",
+    "title": "A way of living, shared with you",
+    "image": "Nature.jpg",
+    "alt": "Green surroundings at Galkanda Estate",
+    "link": "/food#meal-h",
+    "paragraphs": [
+      "Today, Galkanda Estate Eco Farm Stay has been opened to guests so that this experience can be shared more widely.",
+      "It is not intended to be merely a place to stay. It is a place to experience, learn, reconnect and reflect. Guests can enjoy food grown on the land, experience aspects of traditional farming and food production, spend time surrounded by nature, and discover a way of living in which comfort and sustainability do not have to be opposites.",
+      "The hope is that every guest leaves with more than memories of a beautiful stay. Ideally, they leave with a deeper appreciation of nature, food, community and the small choices through which we can all live a little more sustainably."
+    ],
+    "motto": "Live simply. Grow responsibly. Support locally. Stay connected to nature."
+  }
+];
+const questions = [
+  [
+    "Are children of all ages welcome?",
+    "Children of any age are welcome. A feeding chair is available. Please contact us to check cot availability."
+  ],
+  [
+    "Can you arrange airport pickup or local transfers?",
+    "We can arrange airport pick-ups and drop-offs at competitive rates. Contact us for a quote and to discuss local transfers."
+  ],
+  [
+    "Is the property on one floor?",
+    "The house is on a single floor. Please contact us to discuss any specific accessibility needs before booking."
+  ],
+  [
+    "Does the property have a spa tub?",
+    "No, the property does not have a spa tub."
+  ],
+  [
+    "How can I contact you or book a stay?",
+    "Use our contact page to enquire about availability and plan your stay."
+  ]
+];
+function ReadMore({ to, label }: { to: string; label: string }) {
+  return <Link className="about-link" to={to} aria-label={label}>Read more <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></Link>;
+}
+export default function About() {
   useLayoutEffect(initExperiences, []);
-  return (
-    <>
+  return (<>
       <svg
         className={String.raw`absolute!`}
         width="0"
@@ -195,7 +294,7 @@ export default function Experiences() {
             <li>
               <Link
                 className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/about"
+                to="/about" aria-current="page"
               >About</Link>
 </li>
 <li>
@@ -208,9 +307,8 @@ export default function Experiences() {
             </li>
             <li>
               <Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)] [.nav-links_&[aria-current="page"]::after]:[transform:scaleX(1)]`}
+                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)] [.nav-links_&[]::after]:[transform:scaleX(1)]`}
                 to="/experiences"
-                aria-current="page"
               >
                 Experiences
               </Link>
@@ -286,7 +384,7 @@ export default function Experiences() {
           <li>
             <Link
               className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/about"
+              to="/about" aria-current="page"
             >
               <span className={String.raw`block`}>About</span>
             </Link>
@@ -303,7 +401,6 @@ export default function Experiences() {
             <Link
               className={String.raw`block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0 [color:var(--earth)]`}
               to="/experiences"
-              aria-current="page"
             >
               <span className={String.raw`block`}>Experiences</span>
             </Link>
@@ -360,8 +457,7 @@ export default function Experiences() {
         </div>
       </div>
 
-      <main className={String.raw`block`} id="main">
-        <section
+<main id="main" className="about-page"><section
           className={String.raw`phero relative [height:78svh] min-h-135 [color:#fff] overflow-hidden flex items-end [background:var(--dark)]`}
           data-header="light"
         >
@@ -373,9 +469,9 @@ export default function Experiences() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["fieldwalk.jpg"]}
+                src={images["Estate4.jpg"]}
                 sizes="100vw"
-                alt="A farmer standing in the paddy fields at Galkanda"
+                alt="The green countryside surrounding Galkanda Estate"
                 fetchPriority="high"
                 decoding="async"
               />
@@ -392,39 +488,28 @@ export default function Experiences() {
               className={String.raw`container-wide phero__grid max-w-400 mt-0 [margin-right:auto] mb-0 [margin-left:auto] pt-0 [padding-right:var(--gutter)] pb-0 [padding-left:var(--gutter)] grid gap-7 min-[992px]:[grid-template-columns:minmax(0,1fr)_minmax(0,22em)] min-[992px]:items-end min-[992px]:[column-gap:5vw]`}
             >
               <div>
-                <span
-                  className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)] [color:rgba(255,255,255,.8)]`}
-                  data-hero-fade=""
-                >
-                  Life at Galkanda
-                </span>
+                
                 <h1
-                  className={String.raw`h-xl [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit [line-height:.94] text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl`}
+                  className={String.raw`h-xl [font-family:var(--f-sans)] font-normal [letter-spacing:-.04em] mt-0 mr-0 mb-0 ml-0 text-inherit [line-height:.94] text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl`}
                 >
-                  Stay Long Enough
-                  <br />
-                  to Become Part
-                  <br />
-                  of{" "}
+                  A Slower Way<br />to Experience{" "}
                   <em
                     className={String.raw`[font-family:var(--f-serif)] italic font-normal [letter-spacing:-.02em]`}
-                  >
-                    It.
-                  </em>
+                  > Sri Lanka. </em>
                 </h1>
               </div>
               <div
                 className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
                 data-hero-fade=""
               >
-                Everyday rhythms of the estate you're welcome to join — and
-                the best of Kandy beyond the gate.
+                About Galkanda Estate Eco Farm Stay — a family-inspired retreat where farming, nature and warm Sri Lankan hospitality come together.
               </div>
             </div>
           </div>
         </section>
 
-        <section
+        <nav className="about-jump" aria-label="About page sections">{[['estate','The Estate'],['philosophy','Our Philosophy'],['estate-activities','Experiences'],['beyond','Beyond the Estate'],['about-faq','FAQs']].map(([id, label]) => <a key={id} href={'#'+id}>{label}</a>)}</nav>
+<div className="about-stories">{stories.map((story, index) => <section className={'about-story' + (index % 2 ? ' about-story--reverse' : '')} id={story.id} key={story.id} aria-labelledby={story.id+'-heading'}><figure className="about-story__image"><img src={images[story.image]} alt={story.alt} loading="lazy" decoding="async" /></figure><div className="about-story__copy"><h2 id={story.id+'-heading'}>{story.title}</h2>{story.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{story.motto && <p className="about-motto"><strong>{story.motto}</strong></p>}<ReadMore to={story.link} label={'Read more about '+story.title} /></div></section>)}</div><section
           className={String.raw`sec sec--tight relative [padding-top:calc(var(--sec)_*_.6)] pr-0 [padding-bottom:calc(var(--sec)_*_.6)] pl-0`}
           id="estate-activities"
           aria-labelledby="on-h"
@@ -436,13 +521,9 @@ export default function Experiences() {
               className={String.raw`sh sh--row xs-head grid gap-6 min-[992px]:[grid-template-columns:minmax(0,7fr)_minmax(0,4fr)] min-[992px]:items-end min-[992px]:[column-gap:clamp(24px,6vw,120px)] [margin-bottom:clamp(32px,4vw,56px)]`}
             >
               <div>
-                <span
-                  className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--muted)] [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
-                >
-                  Farm Experiences
-                </span>
+                
                 <h2
-                  className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02]`}
+                  className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.04em] mt-0 mr-0 mb-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02]`}
                   id="on-h"
                   data-split=""
                 >
@@ -480,7 +561,7 @@ export default function Experiences() {
                 </p>
               </div>
             </div>
-            <div
+<div className="about-experience-intro"><p>A stay at Galkanda Estate Eco Farm Stay is designed to be more than accommodation. It is an opportunity to experience the rhythms of a working farm, connect with nature, discover how food is grown and prepared, and explore both the well-known and lesser-known attractions of the wider Kandy region.</p><p>Guests can choose to participate as much or as little as they wish. Some may enjoy taking part in farm activities, preparing a traditional meal or walking through the rice fields, while others may prefer birdwatching, relaxing with tea in the garden, or venturing further afield to discover waterfalls, mountain landscapes, cultural sites and wildlife.</p><p>Many of the experiences offered on the property are complimentary for resident guests. Food-based experiences are linked to lunch or dinner reservations, while off-site excursions can be organised through independent third-party providers.</p><ReadMore to="/experiences#estate-activities" label="Read more about activities around the estate" /></div>            <div
               className={String.raw`cgrid4 grid [grid-template-columns:repeat(2,minmax(0,1fr))] [gap:22px_12px] min-[768px]:[grid-template-columns:repeat(3,minmax(0,1fr))] min-[768px]:[gap:32px_18px] min-[1200px]:[grid-template-columns:repeat(4,minmax(0,1fr))]`}
             >
               <article className={String.raw`xc relative min-w-0`}>
@@ -1260,13 +1341,9 @@ export default function Experiences() {
               className={String.raw`sh sh--row xs-head grid gap-6 min-[992px]:[grid-template-columns:minmax(0,7fr)_minmax(0,4fr)] min-[992px]:items-end min-[992px]:[column-gap:clamp(24px,6vw,120px)] [margin-bottom:clamp(32px,4vw,56px)]`}
             >
               <div>
-                <span
-                  className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--muted)] [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
-                >
-                  Things to Do Near Kandy
-                </span>
+                
                 <h2
-                  className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02]`}
+                  className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.04em] mt-0 mr-0 mb-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02]`}
                   id="by-h"
                   data-split=""
                 >
@@ -1302,7 +1379,7 @@ export default function Experiences() {
                 </Link>
               </div>
             </div>
-            <div
+<div className="about-experience-intro"><p>Galkanda Estate Eco Farm Stay offers the tranquillity of a rural setting while remaining close enough to Kandy city for guests to explore many of its best-known cultural attractions with ease.</p><p>Guests can spend part of the day discovering Kandy and return to the peace and quiet of the estate afterwards. The surrounding region also offers waterfalls, scenic countryside, mountain landscapes and cycling experiences, while the property's access to the A9 makes longer day trips to Sigiriya and nearby national parks easier to organise.</p><ReadMore to="/experiences#beyond" label="Read more about experiences beyond the estate" /></div>            <div
               className={String.raw`cgrid3 grid [grid-template-columns:repeat(2,minmax(0,1fr))] [gap:22px_12px] min-[768px]:[grid-template-columns:repeat(3,minmax(0,1fr))] min-[768px]:[gap:32px_18px]`}
             >
               <article className={String.raw`xc xc--wide relative min-w-0`}>
@@ -2549,96 +2626,9 @@ export default function Experiences() {
               </article>
             </div>
           </div>
-        </section>
-
-        <section
-          className={String.raw`cta-band relative [min-height:68svh] flex items-center justify-center text-center [color:#fff] overflow-hidden [&::after]:[content:""] [&::after]:absolute [&::after]:top-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:left-0 [&::after]:[background:rgba(14,16,11,.42)] [&::after]:[z-index:1]`}
-          data-header="light"
-        >
-          <div
-            className={String.raw`frame frame--flat overflow-hidden [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] absolute top-0 right-0 bottom-0 left-0 [border-radius:0]`}
-            data-parallax="6"
-          >
-            <img
-              className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-              src={images["HeroGallery.jpg"]}
-              sizes="100vw"
-              alt="Walking through the fields at Galkanda"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div
-            className={String.raw`cta-band__copy relative [z-index:2] pt-24 [padding-right:var(--gutter)] pb-24 [padding-left:var(--gutter)] flex flex-col items-center [gap:30px]`}
-          >
-            <h2
-              className={String.raw`h-lg [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] [line-height:.98] mt-0 mr-0 mb-0 ml-0 text-inherit text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl`}
-              data-split=""
-            >
-              Shape Your Days
-              <br />
-              Around the{" "}
-              <em
-                className={String.raw`[font-family:var(--f-serif)] italic font-normal [letter-spacing:-.02em]`}
-              >
-                Farm.
-              </em>
-            </h2>
-            <p
-              className={String.raw`small text-sm [.is-dark_&]:[color:rgba(244,241,234,.66)] [color:rgba(255,255,255,.75)] mt-0 mr-0 mb-0 ml-0`}
-            >
-              Tell us what you'd like to join and we'll plan it around your
-              stay.
-            </p>
-            <div
-              className={String.raw`btn-row flex flex-wrap items-center [gap:14px_28px] justify-center`}
-            >
-              <Link
-                className={String.raw`btn-g btn-g--light text-inherit inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] [--bb:#fff] [--bf:var(--ink)]`}
-                to="/contact"
-              >
-                <span
-                  className={String.raw`btn-g__label [background:var(--bb)] [color:var(--bf)] [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px]`}
-                >
-                  Ask About Experiences
-                </span>
-                <span
-                  className={String.raw`btn-g__arrow w-11 h-11 [flex:0_0_44px] rounded-full [background:var(--bb)] [color:var(--bf)] grid place-items-center text-base [transition:background-color_.4s_var(--ease)]`}
-                  aria-hidden="true"
-                >
-                  <span
-                    className={String.raw`inline-block [transition:transform_.5s_var(--ease)] [.btn-g:hover_.btn-g\_\_arrow_&]:[transform:rotate(45deg)] [.btn-g:focus-visible_.btn-g\_\_arrow_&]:[transform:rotate(45deg)]`}
-                  >
-                    &#8599;
-                  </span>
-                </span>
-              </Link>
-              <Link
-                className={String.raw`btn-g btn-g--line [--bb:var(--dark)] [--bf:#fff] inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] [color:#fff]`}
-                to="/food"
-              >
-                <span
-                  className={String.raw`btn-g__label [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}
-                >
-                  Food &amp; Farm
-                </span>
-                <span
-                  className={String.raw`btn-g__arrow w-11 h-11 [flex:0_0_44px] rounded-full grid place-items-center text-base [transition:background-color_.4s_var(--ease)] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}
-                  aria-hidden="true"
-                >
-                  <span
-                    className={String.raw`inline-block [transition:transform_.5s_var(--ease)] [.btn-g:hover_.btn-g\_\_arrow_&]:[transform:rotate(45deg)] [.btn-g:focus-visible_.btn-g\_\_arrow_&]:[transform:rotate(45deg)]`}
-                  >
-                    &#8599;
-                  </span>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer
+        </section><section className="about-pace" id="your-pace" aria-labelledby="pace-heading"><div><h2 id="pace-heading">Experience the Region<br /><em>at Your Own Pace.</em></h2><ReadMore to="/explore#journal-h" label="Read more about exploring the region" /></div><div><p>The aim is not to create a fixed itinerary, but to give guests the freedom to shape their stay around their own interests.</p><p>Some may prefer to spend most of their time at the estate, enjoying farm activities, birdwatching and quiet walks. Others may wish to combine these experiences with waterfalls, cycling, mountain scenery, Kandy's cultural attractions, Sigiriya or a wildlife excursion.</p><p>For individuals, couples and families alike, Galkanda Estate Eco Farm Stay offers a base from which to experience both the familiar and lesser-known sides of Sri Lanka.</p><p>The hope is that guests leave with more than photographs and memories of the places they visited. They leave having experienced something of the region's food, farming, nature, culture, wildlife, landscapes and local communities.</p></div></section>
+<section className="about-faq" id="about-faq" aria-labelledby="about-faq-heading"><div><h2 id="about-faq-heading">A few things<br /><em>before you stay.</em></h2><p>Frequently asked questions</p><Link className="about-link" to="/contact#enquiry">Ask us a question</Link></div><div>{questions.map(([question, answer], index) => <details key={question}><summary>{question}<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 12h14m-7-7v14" /></svg></summary><p>{answer}{index === 4 && <> <Link to="/contact#enquiry">Contact us to book.</Link></>}</p></details>)}</div></section>
+<section className="about-holiday" id="planning" aria-labelledby="holiday-heading"><h2 id="holiday-heading">Planning Your<br /><em>Sri Lankan Holiday?</em></h2><p>Considering Sri Lanka for your next holiday but not sure where to begin? We would be happy to help.</p><p>Whether you are interested in culture, wildlife, nature, food, relaxation or a combination of experiences, we can help put together a suggested itinerary based on your budget, available time and holiday priorities.</p><Link className="about-link" to="/contact#enquiry">Plan your holiday <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></Link></section></main>      <footer
         className={String.raw`site-footer [background:var(--dark)] [color:var(--bg)] [padding-top:clamp(72px,10vw,120px)] pr-0 pb-7 pl-0`}
         data-header="light"
       >
@@ -2677,7 +2667,7 @@ export default function Experiences() {
               <li>
                 <Link
                   className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/about"
+                  to="/about" aria-current="page"
                 >About</Link>
 </li>
 <li>
@@ -2811,6 +2801,5 @@ export default function Experiences() {
           className={String.raw`cursor__dot absolute [width:6px] [height:6px] [margin-top:-3px] mr-0 mb-0 [margin-left:-3px] rounded-full [background:var(--ink)] [transition:opacity_.3s] [.cursor.is-view_&]:opacity-0 [.cursor.is-light_&]:[background:#fff]`}
         ></div>
       </div>
-    </>
-  );
+</>);
 }

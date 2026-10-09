@@ -94,6 +94,10 @@ export function runEstatePage(initPage) {
       gsap.ticker.lagSmoothing(0);
     }
     G.scrollTo = (target, opts = {}) => {
+      opts = {
+        offset: typeof target === "number" ? 0 : -(document.getElementById("siteHeader")?.offsetHeight || 78) - 24,
+        ...opts,
+      };
       if (G.lenis)
         G.lenis.scrollTo(
           target,
@@ -697,6 +701,16 @@ export function runEstatePage(initPage) {
       nextFrame,
     });
     G.initShared();
+    // Resolve cross-page section links after the lazy page and its motion mount.
+    G.ready.then(() => {
+      if (controller.signal.aborted || !window.location.hash) return;
+      nextFrame(() => {
+        let id;
+        try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+        const target = document.getElementById(id);
+        if (target) G.scrollTo(target, { immediate: true, offset: -(header?.offsetHeight || 78) - 24 });
+      });
+    });
   });
   return () => {
     controller.abort();

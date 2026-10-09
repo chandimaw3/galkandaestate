@@ -1,4 +1,5 @@
 import { lazy } from "react";
+const About = lazy(() => import("./About.tsx"));
 const Contact = lazy(() => import("./Contact.jsx"));
 const Estate = lazy(() => import("./Estate.jsx"));
 const Experiences = lazy(() => import("./Experiences.jsx"));
@@ -34,6 +35,7 @@ const UdawattakeleForest = lazy(
 );
 
 export const pages = [
+  { path: "/about", Component: About, title: "About | Galkanda Estate Eco Farm Stay, Kandy", description: "Meet Galkanda Estate: our family-inspired retreat, sustainable philosophy, farm experiences and warm Sri Lankan hospitality near Kandy.", schema: { "@context": "https://schema.org", "@type": "AboutPage", name: "About Galkanda Estate Eco Farm Stay" } },
   {
     path: "/contact",
     Component: Contact,
