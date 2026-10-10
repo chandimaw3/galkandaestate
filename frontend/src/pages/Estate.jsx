@@ -1164,6 +1164,50 @@ export default function Estate() {
         </section>
 
         <section
+          className="relative py-16 min-[768px]:py-24"
+          aria-labelledby="team-h"
+        >
+          <div className="container-wide max-w-400 mx-auto [padding-inline:var(--gutter)]">
+            <div className="[border-top:1px_solid_var(--line)] pt-10 mb-10 min-[768px]:mb-14">
+              <span className="inline-flex items-center gap-3 text-xs uppercase [letter-spacing:.16em] [color:var(--muted)] mb-5 before:content-[''] before:w-5 before:h-px before:bg-current">
+                Our team
+              </span>
+              <div className="flex flex-col min-[768px]:flex-row min-[768px]:items-end justify-between gap-6">
+                <h2 id="team-h" data-split="" className="text-4xl min-[768px]:text-5xl font-normal [letter-spacing:-.04em] [line-height:1.1]">
+                  The people behind <em className="[font-family:var(--f-serif)] font-normal">your stay.</em>
+                </h2>
+                <p data-fade="" className="max-w-sm text-base [line-height:1.7] [color:var(--muted)]">
+                  Meet the team at Galkanda Estate.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 min-[480px]:grid-cols-2 min-[992px]:grid-cols-4 gap-7">
+              {/* Replace these placeholders with the team's names, roles and portraits. */}
+              {[1, 2, 3, 4].map((member) => (
+                <article key={member} className="group">
+                  <div data-reveal="" className="relative overflow-hidden [aspect-ratio:4/5] rounded-[var(--r-lg)] [background:var(--stone)] grid place-items-center">
+                    <svg
+                      viewBox="0 0 200 250"
+                      className="w-full h-full [color:var(--green)] opacity-20 [transition:scale_1.2s_var(--ease)] group-hover:scale-[1.025] motion-reduce:transition-none"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <circle cx="100" cy="91" r="34" />
+                      <path d="M30 250v-37a70 70 0 0 1 140 0v37Z" />
+                    </svg>
+                    <span className="absolute top-5 left-5 text-xs [letter-spacing:.12em] [color:var(--muted)]">0{member}</span>
+                    <span className="absolute bottom-5 text-xs [color:var(--muted)]">Portrait coming soon</span>
+                  </div>
+                  <div data-fade="" className="pt-5 pb-5 [border-bottom:1px_solid_var(--line)]">
+                    <h3 className="text-xl font-normal [letter-spacing:-.02em] mb-2">Team member {member}</h3>
+                    <p className="text-sm [color:var(--muted)]">Name &amp; role coming soon</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section
           className={String.raw`sec sec--tight faq relative [padding-top:calc(var(--sec)_*_.6)] pr-0 [padding-bottom:calc(var(--sec)_*_.6)] pl-0`}
           aria-labelledby="faq-h"
         >

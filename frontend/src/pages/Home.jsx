@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { initHome } from "../behaviors/Home.js";
 import { images } from "../images.js";
-console.log("gather:", images["gather.jpg"]);
 
 export default function Home() {
   useLayoutEffect(initHome, []);
@@ -2757,7 +2756,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["room.jpg"]}
+                        src={images["gather.jpg"]}
                         alt="Wooden table set with Sri Lankan dishes"
                         loading="lazy"
                         decoding="async"
@@ -2845,7 +2844,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["gather2.jpg"]}
+                      src={images["gather.jpg"]}
                       sizes="45vw"
                       alt="Wooden table set with Sri Lankan dishes"
                       loading="lazy"
