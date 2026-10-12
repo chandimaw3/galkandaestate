@@ -35,13 +35,13 @@ export default function ExploreGallery({ data }) {
           )}
 
           <div
-            className={String.raw`agal__thumbs flex [gap:10px] overflow-x-auto [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden min-[768px]:grid min-[768px]:[grid-template-columns:1fr_1fr] min-[768px]:[grid-template-rows:1fr_1fr] min-[768px]:overflow-visible min-[768px]:[gap:clamp(10px,1.2vw,18px)]`}
+            className={String.raw`agal__thumbs flex [gap:10px] overflow-x-auto [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden min-[768px]:grid min-[768px]:[grid-template-columns:1fr_1fr] min-[768px]:[grid-template-rows:1fr_1fr] min-[768px]:[height:min(62vh,600px)] min-[768px]:overflow-visible min-[768px]:[gap:clamp(10px,1.2vw,18px)]`}
           >
             {data.galleryImages &&
               data.galleryImages.map((img, idx) => (
                 <button
                   key={idx}
-                  className={String.raw`lb-btn agal__t [.has-cursor_&[data-cursor]]:[cursor:none] cursor-pointer block relative [border-radius:var(--r-sm)] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] [flex:0_0_40%] [aspect-ratio:4/3] [scroll-snap-align:start] min-[768px]:[aspect-ratio:auto]`}
+                  className={String.raw`lb-btn agal__t [.has-cursor_&[data-cursor]]:[cursor:none] cursor-pointer block relative [border-radius:var(--r-sm)] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] [flex:0_0_40%] [aspect-ratio:4/3] [scroll-snap-align:start] min-[768px]:[aspect-ratio:auto] min-[768px]:h-full min-[768px]:min-h-0 min-[768px]:overflow-hidden`}
                   type="button"
                   data-cursor="view"
                   data-cat={data.category}
