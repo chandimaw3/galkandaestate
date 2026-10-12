@@ -210,7 +210,7 @@ export default function Home() {
                 >
                   <img
                     className="max-w-full block w-full h-full object-cover"
-                    src={images["main1.jpg"]}
+                    src={images["main1.webp"]}
                     alt="Galkanda Estate villa surrounded by tropical greenery near Kandy"
                     fetchPriority="high"
                     decoding="async"
@@ -220,7 +220,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover`}
-                      src={images["main2.jpg"]}
+                      src={images["main2.webp"]}
                       sizes="100vw"
                       alt="Timber house with a shaded deck among tropical trees — arriving at Galkanda"
                       loading="eager"
@@ -423,7 +423,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["main3.jpg"]}
+                    src={images["main3.webp"]}
                     sizes="(min-width: 992px) 24vw, 100vw"
                     alt="Green paddy fields of the organic farm at Galkanda"
                     loading="lazy"
@@ -552,7 +552,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["sleep.jpg"]}                    
+                    src={images["Room1.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Bedroom with a king bed and large windows looking onto the trees"
                     loading="lazy"
@@ -574,7 +574,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["gather.jpg"]}
+                    src={images["gather.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Living room with timber panelling and garden views"
                     loading="lazy"
@@ -596,7 +596,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["outside.jpg"]}
+                    src={images["Room4.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Seating tucked into the garden beside the house"
                     loading="lazy"
@@ -618,7 +618,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["cookingarea.jpg"]}
+                    src={images["cookingarea.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="The kitchen with wooden cabinets"
                     loading="lazy"
@@ -640,7 +640,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["share.jpg"]}
+                    src={images["Estate4.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Dining table on the shaded terrace"
                     loading="lazy"
@@ -1178,7 +1178,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["main3.jpg"]}
+                    src={images["main3.webp"]}
                     sizes="100vw"
                     alt="Morning fields of the working farm at Galkanda"
                     fetchPriority="high"
@@ -1195,7 +1195,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["cow.jpg"]}
+                    src={images["Farm2.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
@@ -1212,7 +1212,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["walk.jpg"]}
+                    src={images["Farm1.webp"]}
                     sizes="100vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"
@@ -1229,7 +1229,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["farmwork.jpg"]}
+                    src={images["farmwork.webp"]}
                     sizes="100vw"
                     alt="Hands planting seedlings into garden soil"
                     loading="lazy"
@@ -1246,7 +1246,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["curdnbutter.jpg"]}
+                    src={images["curdbutter.webp"]}
                     sizes="100vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1281,7 +1281,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["tea.jpg"]}
+                    src={images["tea.webp"]}
                     sizes="100vw"
                     alt="Tea being poured at a garden table"
                     loading="lazy"
@@ -1351,7 +1351,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["main3.jpg"]}
+                    src={images["main3.webp"]}
                     alt="Morning fields of the working farm at Galkanda"
                     loading="lazy"
                     decoding="async"
@@ -1382,7 +1382,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["cow.jpg"]}
+                    src={images["Farm2.webp"]}
                     sizes="80vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
@@ -1413,7 +1413,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["walk.jpg"]}
+                    src={images["Farm1.wwbp"]}
                     sizes="80vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"
@@ -1445,7 +1445,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["farmwork.jpg"]}
+                    src={images["farmwork.webp"]}
                     sizes="80vw"
                     alt="Hands planting seedlings into garden soil"
                     loading="lazy"
@@ -1476,7 +1476,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["curdbutter.jpg"]}
+                    src={images["curdbutter.webp"]}
                     sizes="80vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1540,7 +1540,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["tea.jpg"]}
+                    src={images["tea.webp"]}
                     alt="Tea being poured at a garden table"
                     loading="lazy"
                     decoding="async"
@@ -1598,7 +1598,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transform-origin:50%_50%]`}
-                  src={images["food.jpg"]}
+                  src={images["Food3.webp"]}
                   sizes="(min-width: 992px) 55vw, 100vw"
                   alt="A traditional Sri Lankan meal of rice and curries served on a leaf"
                   loading="lazy"
@@ -1615,7 +1615,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                  src={images["food2.jpg"]}
+                  src={images["Food2.webp"]}
                   sizes="(min-width: 992px) 20vw, 45vw"
                   alt="Hands preparing fresh produce on a wooden table"
                   loading="lazy"
@@ -2381,7 +2381,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["teastate.jpg"]}
+                        src={images["Nature1.webp"]}
                         sizes="90vw"
                         alt="Misty morning view over fields and hills"
                         loading="lazy"
@@ -2417,7 +2417,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["cow.jpg"]}
+                        src={images["Farm2.webp"]}
                         sizes="90vw"
                         alt="Morning milking on the farm"
                         loading="lazy"
@@ -2453,7 +2453,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["walk.jpg"]}
+                        src={images["Farm1.webp"]}
                         alt="Temple of the Tooth in Kandy"
                         loading="lazy"
                         decoding="async"
@@ -2488,7 +2488,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["walk.jpg"]}
+                        src={images["Farm1.webp"]}
                         sizes="90vw"
                         alt="Walking through the fields in the late afternoon"
                         loading="lazy"
@@ -2524,7 +2524,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["tea.jpg"]}
+                        src={images["tea.webp"]}
                         sizes="90vw"
                         alt="Tea being poured as evening falls"
                         loading="lazy"
@@ -2560,7 +2560,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["gather.jpg"]}
+                        src={images["Room2.webp"]}
                         alt="Wooden table set with Sri Lankan dishes"
                         loading="lazy"
                         decoding="async"
@@ -2582,7 +2582,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["teastate.jpg"]}
+                      src={images["Nature1.webp"]}
                       sizes="45vw"
                       alt="Misty morning view over fields and hills"
                       loading="lazy"
@@ -2595,7 +2595,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["cow.jpg"]}
+                      src={images["Farm2.webp"]}
                       sizes="45vw"
                       alt="Morning milking on the farm"
                       loading="lazy"
@@ -2622,7 +2622,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["walk.jpg"]}
+                      src={images["Farm1.webp"]}
                       sizes="45vw"
                       alt="Walking through the fields in the late afternoon"
                       loading="lazy"
@@ -2635,7 +2635,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["tea.jpg"]}
+                      src={images["tea.webp"]}
                       sizes="45vw"
                       alt="Tea being poured as evening falls"
                       loading="lazy"
@@ -2648,7 +2648,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["gather.jpg"]}
+                      src={images["gather.webp"]}
                       sizes="45vw"
                       alt="Wooden table set with Sri Lankan dishes"
                       loading="lazy"
@@ -2675,7 +2675,7 @@ export default function Home() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["testate2.jpg"]}
+                src={images["HeroGallery.webp"]}
                 sizes="100vw"
                 alt="Mist drifting over the hill country near Kandy"
                 loading="lazy"
@@ -2725,7 +2725,7 @@ export default function Home() {
             >
               <img
                 className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                src={images["house.jpg"]} 
+                src={images["house.webp"]}
                 sizes="(min-width: 992px) 34vw, 100vw"
                 alt="Guests gathered around a table under a tree at Galkanda (placeholder photo)"
                 loading="lazy"
@@ -3155,7 +3155,7 @@ export default function Home() {
           >
             <img
               className={String.raw`max-w-full block w-full h-full object-cover`}
-              src={images["mountains.jpg"]}
+              src={images["mountains.webp"]}
               sizes="100vw"
               alt="Golden evening light over the hills around Kandy"
               loading="lazy"
@@ -3245,7 +3245,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
+
 
       <Footer />
 
