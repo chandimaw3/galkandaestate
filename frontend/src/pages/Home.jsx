@@ -416,7 +416,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover`}
-                      src={images["mainsec2.jpg"]}
+                      src={images["main2.jpg"]}
                       sizes="100vw"
                       alt="Timber house with a shaded deck among tropical trees — arriving at Galkanda"
                       loading="eager"

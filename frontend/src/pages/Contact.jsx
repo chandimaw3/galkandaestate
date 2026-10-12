@@ -395,7 +395,7 @@ export default function Contact() {
                 data-fade=""
               >
                 Plan your escape to Galkanda Estate. Check availability and book
-                your stay through Airbnb.
+                your stay through Airbnb or Booking.com.
               </p>
             </div>
             <div
@@ -418,72 +418,65 @@ export default function Contact() {
 
         <section
           className={String.raw`sec cform-sec pr-0 [padding-bottom:var(--sec)] pl-0 relative [padding-top:clamp(40px,6vw,90px)]`}
-          aria-label="Airbnb booking"
+          aria-label="Book your stay"
         >
           <div
             className={String.raw`container-wide cgrid max-w-400 mt-0 [margin-right:auto] mb-0 [margin-left:auto] pt-0 [padding-right:var(--gutter)] pb-0 [padding-left:var(--gutter)] grid gap-18 min-[992px]:[grid-template-columns:minmax(0,7fr)_minmax(0,4fr)] min-[992px]:[column-gap:7vw]`}
           >
             <div className="min-w-0">
               <h2 className="[font-family:var(--f-serif)] text-4xl min-[768px]:text-5xl font-normal [letter-spacing:-.02em] mb-4">Your stay starts here.</h2>
-              <p className="text-base mb-8 [color:var(--muted)]">
-                Check availability, choose your dates and book through Airbnb.
+              <p className="text-base mb-10 [color:var(--muted)]">
+                Check availability, choose your dates and book with Airbnb or Booking.com.
               </p>
-              <a
-                className="group block text-inherit no-underline"
-                href="https://www.airbnb.com.au/rooms/1625391951294267587"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Book Galkanda Estate with Airbnb"
-              >
-                <div className="relative overflow-hidden rounded-[var(--r-lg)] [aspect-ratio:16/10]">
-                  <img
-                    src={images["house.jpg"]}
-                    alt="Galkanda Estate surrounded by lush greenery"
-                    className="w-full h-full object-cover [transition:scale_1.8s_cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.025] group-focus-visible:scale-[1.025] motion-reduce:transition-none motion-reduce:transform-none motion-reduce:scale-100"
-                    loading="lazy"
-                  />
-                  <div
-                    className="absolute inset-0 grid place-items-center bg-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 [@media(hover:none)]:opacity-100 motion-reduce:transition-none"
-                    aria-hidden="true"
-                  >
-                    <span className="inline-flex items-center gap-4 rounded-full [background:var(--bg)] [color:var(--ink)] px-6 py-4 text-sm font-medium translate-y-3 transition-transform duration-500 group-hover:translate-y-0 group-focus-visible:translate-y-0 [@media(hover:none)]:translate-y-0 motion-reduce:transition-none motion-reduce:transform-none motion-reduce:scale-100">
-                      Book with
-                      <img
-                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Airbnb%20Logo%20B%C3%A9lo.svg"
-                        alt=""
-                        aria-hidden="true"
-                        className="w-20 h-6 object-contain"
-                      />
-                      <span className="text-lg">&#8599;</span>
-                    </span>
-                  </div>
-                  <span className="absolute bottom-5 left-5 rounded-full px-4 py-2 text-xs uppercase tracking-widest [background:var(--bg)] [color:var(--ink)]">
-                    Entire home · Kandy
-                  </span>
-                </div>
-                <div className="flex flex-wrap items-start justify-between gap-4 py-6 [border-bottom:1px_solid_var(--line)]">
-                  <div>
-                    <h3 className="text-2xl font-normal mb-2 [letter-spacing:-.03em]">Galkanda Estate Eco Farm Villa</h3>
-                    <p className="text-sm [color:var(--muted)]">3 bedrooms &nbsp;·&nbsp; 3 beds &nbsp;·&nbsp; 2 baths</p>
-                  </div>
-                  <span className="text-sm [color:var(--green)]">View on Airbnb &#8599;</span>
-                </div>
-              </a>
-              <a
-                className="btn-g inline-flex items-center gap-1 mt-8 no-underline text-sm font-medium"
-                href="https://www.airbnb.com.au/rooms/1625391951294267587?guests=1&adults=1&s=66&source=embed_widget"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="rounded-full [background:var(--dark)] text-white px-7 py-4 [transition:background-color_.3s] hover:[background:var(--green)]">
-                  Book with Airbnb
-                </span>
-                <span className="w-12 h-12 rounded-full [background:var(--dark)] text-white grid place-items-center text-lg" aria-hidden="true">
-                  &#8599;
-                </span>
-              </a>
-            </div>
+              <div className="mb-8 pb-6 [border-bottom:1px_solid_var(--line)]">
+                <h3 className="text-xl font-normal mb-2 [letter-spacing:-.03em]">Galkanda Estate Eco Farm Villa</h3>
+                <p className="text-sm [color:var(--muted)]">3 bedrooms &nbsp;·&nbsp; 3 beds &nbsp;·&nbsp; 2 baths</p>
+              </div>
+              <div className="grid grid-cols-1 min-[540px]:grid-cols-2 gap-5 min-[1200px]:gap-7">
+                {[
+                  { name: "Airbnb", image: "main2.jpg", imageAlt: "Galkanda Estate villa", accent: "#b93849", tint: "#f5e6e3", radius: "28px", tagline: "A place to feel at home", href: "https://www.airbnb.com.au/rooms/1625391951294267587" },
+                  { name: "Booking.com", image: "Interior.jpg", imageAlt: "Galkanda Estate living room opening onto the garden", accent: "#003b95", tint: "#e5edf7", radius: "12px", tagline: "Your next escape awaits", href: "https://www.booking.com/Share-0PNEE0" },
+                ].map((platform) => (
+                  <article key={platform.name} style={{ "--platform-accent": platform.accent, "--platform-tint": platform.tint, "--platform-radius": platform.radius }} className="min-w-0 flex flex-col">
+                    <div data-fade="" className="flex items-center justify-between gap-3 mb-4">
+                      <span className="text-xl font-bold [color:var(--platform-accent)] [letter-spacing:-.04em]">{platform.name}</span>
 
+                    </div>
+                    <a
+                      className="group block flex-1 text-inherit no-underline"
+                      href={platform.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Book Galkanda Estate with ${platform.name}`}
+                    >
+                      <div data-reveal="" className="relative overflow-hidden rounded-[var(--r-lg)] [aspect-ratio:4/5]">
+                        <img
+                          src={images[platform.image]}
+                          alt={platform.imageAlt}
+                          className="w-full h-full object-cover [transition:scale_1.8s_cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.025] group-focus-visible:scale-[1.025] motion-reduce:transition-none motion-reduce:scale-100"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 grid place-items-center bg-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 [@media(hover:none)]:opacity-100 motion-reduce:transition-none" aria-hidden="true">
+                          <span className="inline-flex flex-wrap items-center gap-2 rounded-full min-h-14 w-[90%] justify-center [background:var(--platform-tint)] [color:var(--platform-accent)] px-3 py-3 text-xs font-medium translate-y-3 transition-transform duration-500 group-hover:translate-y-0 group-focus-visible:translate-y-0 [@media(hover:none)]:translate-y-0 motion-reduce:transition-none motion-reduce:transform-none">
+                            Book with
+                            {platform.name === "Airbnb" ? (
+                              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Airbnb%20Logo%20B%C3%A9lo.svg" alt="" className="w-20 h-6 object-contain" />
+                            ) : (
+                              <span className="font-bold [color:#003b95]">Booking.com</span>
+                            )}
+                            <span className="text-lg">&#8599;</span>
+                          </span>
+                        </div>
+                        <span className="absolute bottom-4 left-3 rounded-full px-3 py-2 text-[10px] uppercase tracking-widest [background:var(--bg)] [color:var(--ink)]">Entire home · Kandy</span>
+                      </div>
+                    </a>
+                    <a data-fade="" className="inline-flex items-center justify-between gap-2 mt-6 rounded-full w-full h-14 [background:var(--platform-accent)] text-white px-4 py-4 no-underline text-sm font-medium transition-[filter,box-shadow] duration-300 hover:brightness-110 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none" href={platform.href} target="_blank" rel="noopener noreferrer">
+                      Book with {platform.name} <span aria-hidden="true">&#8599;</span>
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </div>
             <aside
               className={String.raw`cinfo grid gap-12 [align-content:start]`}
             >
