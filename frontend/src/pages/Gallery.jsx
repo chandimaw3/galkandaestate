@@ -175,7 +175,7 @@ export default function Gallery() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["HeroGallery.jpg"]}
+                src={images["HeroGallery.webp"]}
                 sizes="100vw"
                 alt="Mist drifting over the hill country near Kandy"
                 fetchPriority="high"
@@ -331,21 +331,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: The house among trees and garden"
+                  aria-label="View photo: Estate 1"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Estate.jpg"]}
+                    src={images["Estate1.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="The house among trees and garden"
+                    alt="Estate 1"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Estate.jpg"]}
+                    data-full={images["Estate1.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Estate
+                    Estate 1
                   </span>
                 </button>
               </figure>
@@ -357,21 +357,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Bedroom with forest view"
+                  aria-label="View photo: Room 1"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Bed.jpg"]}
+                    src={images["Room1.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Bedroom with forest view"
+                    alt="Room 1"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Bed.jpg"]}
+                    data-full={images["Room1.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Rooms
+                    Room 1
                   </span>
                 </button>
               </figure>
@@ -383,21 +383,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Paddy fields in the morning"
+                  aria-label="View photo: Farm 1"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Rich Field1.jpg"]}
+                    src={images["Farm1.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Paddy fields in the morning"
+                    alt="Farm 1"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Rich Field1.jpg"]}
+                    data-full={images["Farm1.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Farm
+                    Farm 1
                   </span>
                 </button>
               </figure>
@@ -409,21 +409,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Rice and curries served on leaf"
+                  aria-label="View photo: Food 1"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Mome55.jpg"]}
+                    src={images["Food1.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Rice and curries served on leaf"
+                    alt="Food 1"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Mome55.jpg"]}
+                    data-full={images["Food1.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Food
+                    Food 1
                   </span>
                 </button>
               </figure>
@@ -435,47 +435,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Peafowl on a branch"
+                  aria-label="View photo: Nature 1"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["6.jpg"]}
+                    src={images["Nature1.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Peafowl on a branch"
+                    alt="Nature 1"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["6.jpg"]}
+                    data-full={images["Nature1.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Nature
-                  </span>
-                </button>
-              </figure>
-              <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
-                data-cat="kandy"
-              >
-                <button
-                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
-                  type="button"
-                  data-cursor="view"
-                  aria-label="View photo: Temple of the Tooth across the water"
-                >
-                  <img
-                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["kandy.jpg"]}
-                    sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Temple of the Tooth across the water"
-                    loading="lazy"
-                    decoding="async"
-                    data-full={images["kandy.jpg"]}
-                  />
-                  <span
-                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                  >
-                    Around Kandy
+                    Nature 1
                   </span>
                 </button>
               </figure>
@@ -487,21 +461,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Tiled roof and palm"
+                  aria-label="View photo: Estate 2"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Estate2.jpg"]}
+                    src={images["Estate2.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Tiled roof and palm"
+                    alt="Estate 2"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Estate2.jpg"]}
+                    data-full={images["Estate2.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Estate
+                    Estate 2
                   </span>
                 </button>
               </figure>
@@ -513,21 +487,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Morning milking"
+                  aria-label="View photo: Farm 2"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Herd.jpg"]}
+                    src={images["Farm2.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Morning milking"
+                    alt="Farm 2"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Herd.jpg"]}
+                    data-full={images["Farm2.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Farm
+                    Farm 2
                   </span>
                 </button>
               </figure>
@@ -539,21 +513,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Living room in warm timber"
+                  aria-label="View photo: Room 2"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Interior.jpg"]}
+                    src={images["Room2.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Living room in warm timber"
+                    alt="Room 2"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Interior.jpg"]}
+                    data-full={images["Room2.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Rooms
+                    Room 2
                   </span>
                 </button>
               </figure>
@@ -565,21 +539,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Mist over the hills"
+                  aria-label="View photo: Nature 2"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Nature.jpg"]}
+                    src={images["Nature2.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Mist over the hills"
+                    alt="Nature 2"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Nature.jpg"]}
+                    data-full={images["Nature2.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Nature
+                    Nature 2
                   </span>
                 </button>
               </figure>
@@ -591,21 +565,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Curries from the kitchen"
+                  aria-label="View photo: Food 2"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["FooterF.jpg"]}
+                    src={images["Food2.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Curries from the kitchen"
+                    alt="Food 2"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["FooterF.jpg"]}
+                    data-full={images["Food2.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Food
+                    Food 2
                   </span>
                 </button>
               </figure>
@@ -644,21 +618,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Shaded terrace"
+                  aria-label="View photo: Estate 3"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Estate3.jpg"]}
+                    src={images["Estate3.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Shaded terrace"
+                    alt="Estate 3"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Estate3.jpg"]}
+                    data-full={images["Estate3.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Estate
+                    Estate 3
                   </span>
                 </button>
               </figure>
@@ -670,21 +644,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Planting seedlings"
+                  aria-label="View photo: Farm 3"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Farm2.jpg"]}
+                    src={images["Farm3.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Planting seedlings"
+                    alt="Farm 3"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Farm2.jpg"]}
+                    data-full={images["Farm3.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Farm
+                    Farm 3
                   </span>
                 </button>
               </figure>
@@ -696,21 +670,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Bedroom with tall windows"
+                  aria-label="View photo: Room 3"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Bed.jpg"]}
+                    src={images["Room3.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Bedroom with tall windows"
+                    alt="Room 3"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Bed.jpg"]}
+                    data-full={images["Room3.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Rooms
+                    Room 3
                   </span>
                 </button>
               </figure>
@@ -722,21 +696,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Stork-billed kingfisher"
+                  aria-label="View photo: Nature 3"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Nature3.jpg"]}
+                    src={images["Nature3.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Stork-billed kingfisher"
+                    alt="Nature 3"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Nature3.jpg"]}
+                    data-full={images["Nature3.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Nature
+                    Nature 3
                   </span>
                 </button>
               </figure>
@@ -748,21 +722,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Cooking on a clay stove"
+                  aria-label="View photo: Food 3"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Cook.jpg"]}
+                    src={images["Food3.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Cooking on a clay stove"
+                    alt="Food 3"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Cook.jpg"]}
+                    data-full={images["Food3.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Food
+                    Food 3
                   </span>
                 </button>
               </figure>
@@ -801,21 +775,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: A seat in the garden"
+                  aria-label="View photo: Estate 4"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Estate4.jpg"]}
+                    src={images["Estate4.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="A seat in the garden"
+                    alt="Estate 4"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Estate4.jpg"]}
+                    data-full={images["Estate4.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Estate
+                    Estate 4
                   </span>
                 </button>
               </figure>
@@ -827,21 +801,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Walking the fields"
+                  aria-label="View photo: Farm 4"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Farm3.jpg"]}
+                    src={images["Farm4.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Walking the fields"
+                    alt="Farm 4"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Farm3.jpg"]}
+                    data-full={images["Farm4.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Farm
+                    Farm 4
                   </span>
                 </button>
               </figure>
@@ -853,21 +827,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Tea in the garden"
+                  aria-label="View photo: Food 4"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Food1.jpg"]}
+                    src={images["Food4.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Tea in the garden"
+                    alt="Food 4"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Food1.jpg"]}
+                    data-full={images["Food4.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Food
+                    Food 4
                   </span>
                 </button>
               </figure>
@@ -879,21 +853,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Waterfall in the hills"
+                  aria-label="View photo: Nature 4"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Nature5.jpg"]}
+                    src={images["Nature4.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Waterfall in the hills"
+                    alt="Nature 4"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Nature5.jpg"]}
+                    data-full={images["Nature4.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Nature
+                    Nature 4
                   </span>
                 </button>
               </figure>
@@ -905,21 +879,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Living room with ceiling fan"
+                  aria-label="View photo: Room 4"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Room1.jpg"]}
+                    src={images["Room4.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Living room with ceiling fan"
+                    alt="Room 4"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Room1.jpg"]}
+                    data-full={images["Room4.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Rooms
+                    Room 4
                   </span>
                 </button>
               </figure>
@@ -958,21 +932,21 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Grazing in the fields"
+                  aria-label="View photo: Farm 5"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Farm4.jpg"]}
+                    src={images["Farm5.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Grazing in the fields"
+                    alt="Farm 5"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Farm4.jpg"]}
+                    data-full={images["Farm5.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Farm
+                    Farm 5
                   </span>
                 </button>
               </figure>
@@ -984,21 +958,73 @@ export default function Gallery() {
                   className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
                   type="button"
                   data-cursor="view"
-                  aria-label="View photo: Evening over the hills"
+                  aria-label="View photo: Nature 5"
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
-                    src={images["Nature7.jpg"]}
+                    src={images["Nature5.webp"]}
                     sizes="(min-width: 768px) 40vw, 50vw"
-                    alt="Evening over the hills"
+                    alt="Nature 5"
                     loading="lazy"
                     decoding="async"
-                    data-full={images["Nature7.jpg"]}
+                    data-full={images["Nature5.webp"]}
                   />
                   <span
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
-                    Nature
+                    Nature 5
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="kandy"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Kandy 2"
+                >
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                    src={images["Kandy2.webp"]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Kandy 2"
+                    loading="lazy"
+                    decoding="async"
+                    data-full={images["Kandy2.webp"]}
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Kandy 2
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="kandy"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Kandy 4"
+                >
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                    src={images["Kandy4.webp"]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Kandy 4"
+                    loading="lazy"
+                    decoding="async"
+                    data-full={images["Kandy4.webp"]}
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Kandy 4
                   </span>
                 </button>
               </figure>
@@ -1016,7 +1042,7 @@ export default function Gallery() {
           >
             <img
               className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-              src={images["Estate7.jpg"]}
+              src={images["CTAGallery.webp"]}
               sizes="100vw"
               alt="The house at Galkanda among the trees"
               loading="lazy"
