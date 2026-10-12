@@ -21,9 +21,9 @@ const storyParagraphs = [
   "We hope guests leave not only with memories of a peaceful stay, but with a deeper appreciation of nature, food, community and the small choices through which all of us can live a little more sustainably."
 ];
 const team = [
-  { name: "Ravi", role: "Estate care & hospitality", initial: "R", text: "Ravi lovingly cares for the estate alongside Sarojini and their family, helping guests feel welcomed and connected to the place.", value: "Local knowledge" },
-  { name: "Sarojini", role: "Estate care & hospitality", initial: "S", text: "Sarojini and her family bring warmth and genuine Sri Lankan hospitality to everyday life at Galkanda.", value: "Warm hospitality" },
-  { name: "Their family", role: "The heart of the estate", initial: "G", text: "Together, the family helps make Galkanda a comfortable, welcoming place to slow down and share the rhythm of the estate.", value: "A personal welcome" }
+  { name: "Ravi", role: "Estate care & hospitality", initial: "R", photo: "https://i.pravatar.cc/600?img=12", text: "Ravi lovingly cares for the estate alongside Sarojini and their family, helping guests feel welcomed and connected to the place.", value: "Local knowledge" },
+  { name: "Sarojini", role: "Estate care & hospitality", initial: "S", photo: "https://i.pravatar.cc/600?img=47", text: "Sarojini and her family bring warmth and genuine Sri Lankan hospitality to everyday life at Galkanda.", value: "Warm hospitality" },
+  { name: "Their family", role: "The heart of the estate", initial: "G", photo: "https://i.pravatar.cc/600?img=49", text: "Together, the family helps make Galkanda a comfortable, welcoming place to slow down and share the rhythm of the estate.", value: "A personal welcome" }
 ];
 
 export default function About() {
@@ -442,14 +442,39 @@ export default function About() {
         <p>Live simply.<br />Grow responsibly.<br />Support locally.<br />Stay connected to <em>nature.</em></p>
       </section>
       <section className="about-team" id="team" aria-labelledby="team-heading">
-        <div className="about-team__heading"><h2 id="team-heading">The people behind <em>your stay.</em></h2><p>Meet the team at Galkanda Estate.</p></div>
-        <article className="about-team__lead">
-          <div className="about-team__initial about-team__initial--lead" aria-hidden="true">P</div>
-          <div className="about-team__lead-copy"><span className="about-team__role">Property manager</span><h3>Punya</h3><p>Punya manages Galkanda Estate, where a family-inspired way of life brings nature, farming and warm Sri Lankan hospitality together.</p><ul className="about-team__values"><li>Connected to nature</li><li>Supporting locally</li><li>Thoughtful living</li></ul></div>
-          <img className="about-team__estate" src={images["Nature.jpg"]} alt="The natural surroundings of Galkanda Estate" loading="lazy" decoding="async" />
+        <div className="about-team__heading">
+          <span className="about-team__eyebrow" data-fade="">A personal welcome</span>
+          <h2 id="team-heading" data-split="">The people behind <em>your stay.</em></h2>
+          <p data-fade="">Meet the team at Galkanda Estate.</p>
+        </div>
+        <article className="about-team__host" aria-labelledby="host-name">
+          <div className="about-team__portrait about-team__host-portrait" data-reveal="">
+            <img className="about-team__photo" src="https://i.pravatar.cc/600?img=11" alt="Temporary host portrait; not a photo of Punya" loading="lazy" decoding="async" />
+            <span className="about-team__placeholder">Temporary photo</span>
+          </div>
+          <div className="about-team__host-copy" data-fade="">
+            <span className="about-team__host-label">Your host</span>
+            <h3 id="host-name">Meet <em>Punya.</em></h3>
+            <span className="about-team__role">Property manager</span>
+            <p>Punya manages Galkanda Estate, where a family-inspired way of life brings nature, farming and warm Sri Lankan hospitality together.</p>
+            <Link className="about-team__host-link" to="/contact">Plan your stay <span aria-hidden="true">&#8599;</span></Link>
+          </div>
         </article>
-        <div className="about-team__grid">{team.map(member => <article className="about-team__member" key={member.name}><div className="about-team__portrait"><span className="about-team__initial" aria-hidden="true">{member.initial}</span><span className="about-team__badge">{member.value}</span></div><h3>{member.name}</h3><span className="about-team__role">{member.role}</span><p>{member.text}</p></article>)}</div>
-      </section>
+        <div className="about-team__cards">
+          {team.map((member) => (
+            <article className="about-team__card" key={member.name}>
+              <div className="about-team__portrait" data-reveal="">
+                <img className="about-team__photo" src={member.photo} alt={`Temporary portrait placeholder for ${member.name}`} loading="lazy" decoding="async" />
+                <span className="about-team__placeholder">Temporary photo</span>
+              </div>
+              <div className="about-team__card-copy" data-fade="">
+                <h3>{member.name}</h3>
+                <span className="about-team__role">{member.role}</span>
+                <p>{member.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>      </section>
       <section className="about-stay" aria-labelledby="stay-heading" data-header="light">
         <img src={images["Estate.jpg"]} alt="The countryside home at Galkanda Estate" loading="lazy" decoding="async" />
         <div className="about-stay__copy"><h2 id="stay-heading">Make Galkanda<br />Your Home in <em>Kandy.</em></h2><p>Enquire about dates, guests and the experiences you&#8217;d like.</p><div className="about-stay__actions"><Link to="/contact#enquiry">Plan Your Stay <span aria-hidden="true">&#8599;</span></Link><Link to="/estate">Life at Galkanda <span aria-hidden="true">&#8599;</span></Link></div></div>
