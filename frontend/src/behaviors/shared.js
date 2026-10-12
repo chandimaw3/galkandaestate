@@ -544,11 +544,13 @@ export function runEstatePage(initPage) {
       const im = $(".lightbox__img", lb),
         capCat = $(".lightbox__cat", lb),
         capText = $(".lightbox__text", lb),
-        cnt = $(".lightbox__count", lb);
+        cnt = $(".lightbox__count", lb),
+        prevBtn = $(".lightbox__prev", lb),
+        nextBtn = $(".lightbox__next", lb);
       let items = [],
         idx = 0,
         lastFocus = null;
-      const show = (i) => {
+      const show = (i, isOpening = false) => {
         idx = (i + items.length) % items.length;
         const src = items[idx].querySelector("img");
         const full = src.getAttribute("data-full") || src.currentSrc || src.src;
@@ -556,38 +558,55 @@ export function runEstatePage(initPage) {
         const swap = () => {
           im.src = full;
           im.alt = src.alt;
-          capCat.textContent = b.dataset.cat || "";
-          capText.textContent = b.dataset.caption || src.alt;
-          cnt.textContent =
-            String(idx + 1).padStart(2, "0") +
-            " / " +
-            String(items.length).padStart(2, "0");
+          if (capCat) {
+            capCat.textContent = b.dataset.cat || "";
+            if (b.dataset.cat) capCat.classList.remove("hidden");
+            else capCat.classList.add("hidden");
+          }
+          if (capText) capText.textContent = b.dataset.caption || src.alt;
+          if (cnt)
+            cnt.textContent =
+              String(idx + 1).padStart(2, "0") +
+              " / " +
+              String(items.length).padStart(2, "0");
         };
-        if (motion)
-          gsap
-            .timeline()
-            .to(im, { opacity: 0, duration: 0.2, onComplete: swap })
-            .fromTo(
+        if (motion) {
+          gsap.killTweensOf(im);
+          if (isOpening) {
+            swap();
+            gsap.fromTo(
               im,
-              { opacity: 0, scale: 0.97 },
-              { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" },
+              { opacity: 0, scale: 0.94, y: 10 },
+              { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "power3.out" },
             );
-        else swap();
+          } else {
+            gsap
+              .timeline()
+              .to(im, { opacity: 0, scale: 0.98, duration: 0.15, onComplete: swap })
+              .fromTo(
+                im,
+                { opacity: 0, scale: 0.96 },
+                { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out" },
+              );
+          }
+        } else swap();
       };
       const open = (list, i) => {
         items = list;
         lastFocus = document.activeElement;
         lb.classList.add("is-open");
         lb.setAttribute("aria-hidden", "false");
+        if (prevBtn) prevBtn.style.display = items.length > 1 ? "" : "none";
+        if (nextBtn) nextBtn.style.display = items.length > 1 ? "" : "none";
         if (G.lenis) G.lenis.stop();
         document.body.style.overflow = "hidden";
         if (motion)
           gsap.fromTo(
             lb,
             { opacity: 0 },
-            { opacity: 1, duration: 0.45, ease: "power2.out" },
+            { opacity: 1, duration: 0.4, ease: "power2.out" },
           );
-        show(i);
+        show(i, true);
         $(".lightbox__close", lb).focus();
       };
       const close = () => {
@@ -628,8 +647,14 @@ export function runEstatePage(initPage) {
       listen(document, "keydown", (e) => {
         if (!lb.classList.contains("is-open")) return;
         if (e.key === "Escape") close();
-        if (e.key === "ArrowLeft") show(idx - 1);
-        if (e.key === "ArrowRight") show(idx + 1);
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          show(idx - 1);
+        }
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          show(idx + 1);
+        }
         if (e.key === "Tab") {
           const f = $$("button", lb),
             first = f[0],

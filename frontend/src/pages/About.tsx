@@ -1,10 +1,38 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { initExperiences } from "../behaviors/Experiences.js";
 import { images } from "../images.js";
+import {
+  getAboutTeamData,
+  DEFAULT_HOST,
+  DEFAULT_TEAM_MEMBERS,
+} from "../services/contentful.js";
 import "./About.css";
+
+interface HostMember {
+  name: string;
+  title?: string;
+  role: string;
+  label?: string;
+  photo: string;
+  text: string;
+  linkText?: string;
+  linkUrl?: string;
+  isPlaceholder?: boolean;
+}
+
+interface TeamMember {
+  id?: string;
+  name: string;
+  role: string;
+  initial?: string;
+  photo: string;
+  text: string;
+  value?: string;
+  isPlaceholder?: boolean;
+}
 
 const storyParagraphs = [
   "Galkanda Estate Eco Farm Stay is a family-inspired retreat created to share a slower, more meaningful way of experiencing Sri Lanka \u2014 one that brings together nature, traditional food, farming, sustainability and warm Sri Lankan hospitality.",
@@ -22,13 +50,30 @@ const storyParagraphs = [
   "Ultimately, Galkanda Estate Eco Farm Stay is not intended to be merely a place to sleep while visiting Kandy. It is a place to experience, learn, reconnect and slow down.",
   "We hope guests leave not only with memories of a peaceful stay, but with a deeper appreciation of nature, food, community and the small choices through which all of us can live a little more sustainably."
 ];
-const team = [
-  { name: "Ravi", role: "Estate care & hospitality", initial: "R", photo: "https://i.pravatar.cc/600?img=12", text: "Ravi lovingly cares for the estate alongside Sarojini and their family, helping guests feel welcomed and connected to the place.", value: "Local knowledge" },
-  { name: "Sarojini", role: "Estate care & hospitality", initial: "S", photo: "https://i.pravatar.cc/600?img=47", text: "Sarojini and her family bring warmth and genuine Sri Lankan hospitality to everyday life at Galkanda.", value: "Warm hospitality" },
-  { name: "Their family", role: "The heart of the estate", initial: "G", photo: "https://i.pravatar.cc/600?img=49", text: "Together, the family helps make Galkanda a comfortable, welcoming place to slow down and share the rhythm of the estate.", value: "A personal welcome" }
-];
-
 export default function About() {
+  const [team, setTeam] = useState<TeamMember[]>(DEFAULT_TEAM_MEMBERS);
+  const [host, setHost] = useState<HostMember>(DEFAULT_HOST);
+
+  useEffect(() => {
+    let isMounted = true;
+    getAboutTeamData().then((res) => {
+      if (isMounted && res) {
+        if (res.team && res.team.length > 0) {
+          setTeam(res.team);
+          // Shared scroll reveals initialize on mount, before async Contentful
+          // cards arrive. Apply the same host animation to those new elements.
+          requestAnimationFrame(() =>
+            (window as any).Galkanda?.initShared?.(),
+          );
+        }
+        if (res.host) setHost(res.host);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   useLayoutEffect(initExperiences, []);
   return (<>
     <svg
@@ -253,23 +298,65 @@ export default function About() {
         </div>
         <article className="about-team__host" aria-labelledby="host-name">
           <div className="about-team__portrait about-team__host-portrait" data-reveal="">
-            <img className="about-team__photo" src="https://i.pravatar.cc/600?img=11" alt="Temporary host portrait; not a photo of Punya" loading="lazy" decoding="async" />
-            <span className="about-team__placeholder">Temporary photo</span>
+            {host.photo ? (
+              <img
+                className="about-team__photo"
+                src={host.photo}
+                alt={
+                  host.isPlaceholder
+                    ? `Temporary host portrait; not a photo of ${host.name}`
+                    : `Portrait of ${host.name}`
+                }
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <div className="about-team__silhouette">
+                <span className="about-team__monogram">
+                  {host.name ? host.name.charAt(0) : "P"}
+                </span>
+              </div>
+            )}
+            {host.isPlaceholder && (
+              <span className="about-team__placeholder">Temporary photo</span>
+            )}
           </div>
           <div className="about-team__host-copy" data-fade="">
-            <span className="about-team__host-label">Your host</span>
-            <h3 id="host-name">Meet <em>Punya.</em></h3>
-            <span className="about-team__role">Property manager</span>
-            <p>Punya manages Galkanda Estate, where a family-inspired way of life brings nature, farming and warm Sri Lankan hospitality together.</p>
-            <Link className="about-team__host-link" to="/contact">Plan your stay <span aria-hidden="true">&#8599;</span></Link>
+            <span className="about-team__host-label">{host.label || "Your host"}</span>
+            <h3 id="host-name">Meet <em>{host.name}.</em></h3>
+            <span className="about-team__role">{host.role}</span>
+            <p>{host.text}</p>
+            <Link className="about-team__host-link" to={host.linkUrl || "/contact"}>
+              {host.linkText || "Plan your stay"} <span aria-hidden="true">&#8599;</span>
+            </Link>
           </div>
         </article>
         <div className="about-team__cards">
           {team.map((member) => (
-            <article className="about-team__card" key={member.name}>
+            <article className="about-team__card" key={member.id || member.name}>
               <div className="about-team__portrait" data-reveal="">
-                <img className="about-team__photo" src={member.photo} alt={`Temporary portrait placeholder for ${member.name}`} loading="lazy" decoding="async" />
-                <span className="about-team__placeholder">Temporary photo</span>
+                {member.photo ? (
+                  <img
+                    className="about-team__photo"
+                    src={member.photo}
+                    alt={
+                      member.isPlaceholder
+                        ? `Temporary portrait placeholder for ${member.name}`
+                        : `Portrait of ${member.name}`
+                    }
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <div className="about-team__silhouette">
+                    <span className="about-team__monogram">
+                      {member.initial || (member.name ? member.name.charAt(0) : "G")}
+                    </span>
+                  </div>
+                )}
+                {member.isPlaceholder && (
+                  <span className="about-team__placeholder">Temporary photo</span>
+                )}
               </div>
               <div className="about-team__card-copy" data-fade="">
                 <h3>{member.name}</h3>

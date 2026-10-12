@@ -12,6 +12,7 @@ import ExploreStory from "./components/ExploreStory.jsx";
 import ExploreRelated from "./components/ExploreRelated.jsx";
 import ExploreMiniCTA from "./components/ExploreMiniCTA.jsx";
 import ExploreFooter from "./components/ExploreFooter.jsx";
+import ExploreLightbox from "./components/ExploreLightbox.jsx";
 
 export default function ExploreDetail({ slug: propSlug, data: propData }) {
   const params = useParams();
@@ -169,6 +170,7 @@ export default function ExploreDetail({ slug: propSlug, data: propData }) {
         <ExploreMiniCTA />
       </main>
       <ExploreFooter />
+      <ExploreLightbox />
     </>
   );
 }

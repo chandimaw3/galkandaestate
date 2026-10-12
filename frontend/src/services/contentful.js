@@ -372,3 +372,209 @@ export async function getExperienceDetail(slug) {
     return null;
   }
 }
+
+export const DEFAULT_HOST = {
+  name: "Punya",
+  title: "Meet Punya.",
+  role: "Property manager",
+  label: "Your host",
+  photo: "https://i.pravatar.cc/600?img=11",
+  text: "Punya manages Galkanda Estate, where a family-inspired way of life brings nature, farming and warm Sri Lankan hospitality together.",
+  linkText: "Plan your stay",
+  linkUrl: "/contact",
+  isPlaceholder: true,
+};
+
+export const DEFAULT_TEAM_MEMBERS = [
+  {
+    name: "Ravi",
+    role: "Estate care & hospitality",
+    initial: "R",
+    photo: "https://i.pravatar.cc/600?img=12",
+    text: "Ravi lovingly cares for the estate alongside Sarojini and their family, helping guests feel welcomed and connected to the place.",
+    value: "Local knowledge",
+    isPlaceholder: true,
+  },
+  {
+    name: "Sarojini",
+    role: "Estate care & hospitality",
+    initial: "S",
+    photo: "https://i.pravatar.cc/600?img=47",
+    text: "Sarojini and her family bring warmth and genuine Sri Lankan hospitality to everyday life at Galkanda.",
+    value: "Warm hospitality",
+    isPlaceholder: true,
+  },
+  {
+    name: "Their family",
+    role: "The heart of the estate",
+    initial: "G",
+    photo: "https://i.pravatar.cc/600?img=49",
+    text: "Together, the family helps make Galkanda a comfortable, welcoming place to slow down and share the rhythm of the estate.",
+    value: "A personal welcome",
+    isPlaceholder: true,
+  },
+];
+
+let cachedAboutTeam = null;
+let cachedTeamMembers = null;
+
+// Fetch both Host (Property Manager) and Team Members from Contentful
+export async function getAboutTeamData() {
+  if (cachedAboutTeam) {
+    return cachedAboutTeam;
+  }
+
+  if (!isContentfulConfigured || !contentfulClient) {
+    return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+  }
+
+  try {
+    const candidateTypes = [
+      "teamMember",
+      "teamMembers",
+      "team",
+      "aboutTeam",
+      "member",
+    ];
+    let matchedType = null;
+
+    try {
+      const ctRes = await contentfulClient.getContentTypes();
+      const found = ctRes.items.find(
+        (ct) =>
+          candidateTypes.includes(ct.sys.id) ||
+          /team|member/i.test(ct.sys.id) ||
+          /team|member/i.test(ct.name)
+      );
+      if (found) matchedType = found.sys.id;
+    } catch {
+      // Content type inspection not available, proceed to direct query
+    }
+
+    let response = null;
+    if (matchedType) {
+      try {
+        response = await contentfulClient.getEntries({
+          content_type: matchedType,
+          order: "fields.order",
+        });
+      } catch {
+        response = await contentfulClient.getEntries({
+          content_type: matchedType,
+        });
+      }
+    } else {
+      try {
+        response = await contentfulClient.getEntries({
+          content_type: "teamMember",
+          order: "fields.order",
+        });
+      } catch {
+        try {
+          response = await contentfulClient.getEntries({
+            content_type: "teamMember",
+          });
+        } catch {
+          return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+        }
+      }
+    }
+
+    if (!response || !response.items || response.items.length === 0) {
+      return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+    }
+
+    let rawItems = [];
+    const firstEntry = response.items[0];
+    if (
+      Array.isArray(firstEntry.fields?.teamMembers) ||
+      Array.isArray(firstEntry.fields?.team)
+    ) {
+      rawItems = (
+        firstEntry.fields.teamMembers || firstEntry.fields.team
+      )
+        .map((ref) => (ref?.fields ? ref : null))
+        .filter(Boolean);
+    } else {
+      rawItems = response.items;
+    }
+
+    const allMembers = rawItems
+      .map((item, index) => {
+        const f = item.fields || {};
+        const name = f.name || f.fullName || f.title || "";
+        if (!name) return null;
+        const photoUrl =
+          resolveAssetUrl(f.photo || f.image || f.portrait || f.avatar) ||
+          (typeof f.photo === "string" ? f.photo : "") ||
+          "";
+        const initial =
+          f.initial || (name ? name.trim().charAt(0).toUpperCase() : "");
+        const role =
+          f.role ||
+          f.position ||
+          f.designation ||
+          f.jobTitle ||
+          "Estate care & hospitality";
+
+        const isHost =
+          Boolean(f.isHost || f.host) ||
+          /property manager|host/i.test(role) ||
+          /punya/i.test(name);
+
+        return {
+          id: item.sys?.id || `member-${index}`,
+          name,
+          role,
+          initial,
+          photo:
+            photoUrl || `https://i.pravatar.cc/600?img=${12 + index * 10}`,
+          text: f.text || f.bio || f.description || f.about || "",
+          value: f.value || f.highlight || f.tagline || "",
+          label: f.label || "Your host",
+          linkText: f.linkText || "Plan your stay",
+          linkUrl: f.linkUrl || "/contact",
+          isHost,
+          isPlaceholder: !photoUrl,
+        };
+      })
+      .filter(Boolean);
+
+    // Separate host (Property Manager) from general team cards
+    const hostEntry = allMembers.find((m) => m.isHost);
+    const host = hostEntry
+      ? {
+          name: hostEntry.name,
+          title: `Meet ${hostEntry.name}.`,
+          role: hostEntry.role,
+          label: hostEntry.label || "Your host",
+          photo: hostEntry.photo,
+          text: hostEntry.text,
+          linkText: hostEntry.linkText || "Plan your stay",
+          linkUrl: hostEntry.linkUrl || "/contact",
+          isPlaceholder: hostEntry.isPlaceholder,
+        }
+      : DEFAULT_HOST;
+
+    const teamMembers = allMembers.filter((m) => m !== hostEntry);
+    const team = teamMembers.length > 0 ? teamMembers : DEFAULT_TEAM_MEMBERS;
+
+    const result = { host, team };
+    cachedAboutTeam = result;
+    cachedTeamMembers = team;
+    return result;
+  } catch (err) {
+    console.warn("Failed to fetch team members from Contentful:", err);
+    return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+  }
+}
+
+// Fetch Team Members from Contentful with fallback to DEFAULT_TEAM_MEMBERS
+export async function getTeamMembers() {
+  if (cachedTeamMembers) {
+    return cachedTeamMembers;
+  }
+  const data = await getAboutTeamData();
+  return data.team;
+}
+
