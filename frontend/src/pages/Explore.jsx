@@ -547,6 +547,7 @@ export default function Explore() {
                   key={item.id}
                   className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
                   data-cat={item.categorySlug}
+                  style={{ opacity: 0 }}
                 >
                   <Link
                     className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
