@@ -79,7 +79,6 @@ export function initExploreDetail() {
               ease: "power3.out",
             },
           )
-            .add(() => G.splitReveal($(".atop__h1"), { duration: 1.2 }), 0.15)
             .fromTo(
               ".kfacts li",
               { opacity: 0, y: 16 },

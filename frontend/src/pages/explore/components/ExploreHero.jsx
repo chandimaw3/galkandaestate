@@ -57,7 +57,7 @@ export default function ExploreHero({ data }) {
           <h1
             className={String.raw`h-lg atop__h1 [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] [line-height:.98] mt-0 mr-0 ml-0 text-inherit text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-5 [max-width:13em]`}
             id="a-h1"
-            data-split="manual"
+            data-anim="top"
           >
             {data.title}
           </h1>

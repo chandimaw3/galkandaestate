@@ -5,12 +5,11 @@ import {
   DEFAULT_EXPLORE_PAGE,
   DEFAULT_EXPERIENCES,
   DEFAULT_EXPLORE_CATEGORIES,
-  getExplorePageContent,
   getExploreExperiences,
 } from "../services/contentful.js";
 
 export default function Explore() {
-  const [pageData, setPageData] = useState(DEFAULT_EXPLORE_PAGE);
+  const pageData = DEFAULT_EXPLORE_PAGE;
   const [experiences, setExperiences] = useState(DEFAULT_EXPERIENCES);
   const [categories] = useState(DEFAULT_EXPLORE_CATEGORIES);
 
@@ -18,14 +17,8 @@ export default function Explore() {
     let isMounted = true;
     async function loadContent() {
       try {
-        const [pageContent, expList] = await Promise.all([
-          getExplorePageContent(),
-          getExploreExperiences(),
-        ]);
-        if (isMounted) {
-          if (pageContent) setPageData(pageContent);
-          if (expList && expList.length > 0) setExperiences(expList);
-        }
+        const expList = await getExploreExperiences();
+        if (isMounted && expList && expList.length > 0) setExperiences(expList);
       } catch (err) {
         console.error("Failed to load Contentful data:", err);
       }

@@ -18,7 +18,7 @@ export default function ExploreStory({ data }) {
           <h2
             className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02] [margin-bottom:22px]`}
             id="about-h"
-            data-split=""
+            data-fade=""
           >
             {data.aboutTitle}
           </h2>
