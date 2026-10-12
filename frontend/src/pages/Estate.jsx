@@ -175,7 +175,7 @@ export default function Estate() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["main2.jpg"]}
+                src={images["main2.webp"]}
                 sizes="100vw"
                 alt="Timber house with deck surrounded by tropical trees"
                 fetchPriority="high"
@@ -408,7 +408,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Bed.jpg"]}
+                    src={images["Room3.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Master bedroom with king bed and forest view"
                     loading="lazy"
@@ -628,7 +628,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Room.jpg"]}
+                    src={images["Room.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Living room with timber panelling and garden views"
                     loading="lazy"
@@ -655,7 +655,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["cookingarea.jpg"]}
+                    src={images["cookingarea.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="The kitchen with wooden cabinets"
                     loading="lazy"
@@ -682,7 +682,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["outside.jpg"]}
+                    src={images["outside.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Table and wicker chair on the shaded terrace"
                     loading="lazy"
@@ -1704,7 +1704,7 @@ export default function Estate() {
           >
             <img
               className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-              src={images["main1.jpg"]}
+              src={images["main1.webp"]}
               sizes="100vw"
               alt="The house at Galkanda among the trees"
               loading="lazy"
