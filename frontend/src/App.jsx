@@ -83,6 +83,22 @@ export default function App() {
       <Suspense fallback={<div className="min-h-screen" />}>
         <EstateRoutes />
       </Suspense>
+      <a
+        href="tel:+94711659004"
+        aria-label="Call Galkanda Estate on +94 71 165 9004"
+        title="Call +94 71 165 9004"
+        className="floating-call fixed right-6 bottom-10 z-[130] flex h-12 items-center rounded-full px-[13.5px] [background:var(--green)] text-white shadow-lg no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:[outline-color:var(--green)] motion-reduce:transition-none motion-reduce:transform-none [margin-bottom:env(safe-area-inset-bottom)]"
+      >
+        <svg className="shrink-0" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z" />
+        </svg>
+        <span
+          aria-hidden="true"
+          className="floating-call__label text-sm font-medium"
+        >
+          Call now
+        </span>
+      </a>
     </BrowserRouter>
   );
 }

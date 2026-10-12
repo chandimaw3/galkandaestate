@@ -477,7 +477,7 @@ export default function About() {
         </div>      </section>
       <section className="about-stay" aria-labelledby="stay-heading" data-header="light">
         <img src={images["Estate.jpg"]} alt="The countryside home at Galkanda Estate" loading="lazy" decoding="async" />
-        <div className="about-stay__copy"><h2 id="stay-heading">Make Galkanda<br />Your Home in <em>Kandy.</em></h2><p>Enquire about dates, guests and the experiences you&#8217;d like.</p><div className="about-stay__actions"><Link to="/contact#enquiry">Plan Your Stay <span aria-hidden="true">&#8599;</span></Link><Link to="/estate">Life at Galkanda <span aria-hidden="true">&#8599;</span></Link></div></div>
+        <div className="about-stay__copy"><h2 id="stay-heading">Make Galkanda<br />Your Home in <em>Kandy.</em></h2><p>Enquire about dates, guests and the experiences you&#8217;d like.</p><div className="about-stay__actions"><Link to="/contact#enquiry">Plan Your Stay <span aria-hidden="true">&#8599;</span></Link><a href="tel:+94711659004">Call now <span aria-hidden="true">&#8599;</span></a></div></div>
       </section>
     </main>      <footer
         className={String.raw`site-footer [background:var(--dark)] [color:var(--bg)] [padding-top:clamp(72px,10vw,120px)] pr-0 pb-7 pl-0`}

@@ -668,7 +668,7 @@ export default function Contact() {
                   <dd
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
-                    [phone number]
+                    <a href="tel:+94711659004" className="text-inherit no-underline hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">+94 71 165 9004</a>
                   </dd>
                 </div>
                 <div

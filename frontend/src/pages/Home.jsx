@@ -3412,14 +3412,14 @@ export default function Home() {
                   </span>
                 </span>
               </Link>
-              <Link
+              <a
                 className={String.raw`btn-g btn-g--line [--bb:var(--dark)] [--bf:#fff] inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] [color:#fff]`}
-                to="/estate"
+                href="tel:+94711659004"
               >
                 <span
                   className={String.raw`btn-g__label [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}
                 >
-                  Explore the Estate
+                  Call now
                 </span>
                 <span
                   className={String.raw`btn-g__arrow w-11 h-11 [flex:0_0_44px] rounded-full grid place-items-center text-base [transition:background-color_.4s_var(--ease)] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}
@@ -3431,7 +3431,7 @@ export default function Home() {
                     &#8599;
                   </span>
                 </span>
-              </Link>
+              </a>
             </div>
             <p
               className={String.raw`fin__note text-sm [color:rgba(255,255,255,.72)] mt-0 mr-0 mb-0 ml-0`}
