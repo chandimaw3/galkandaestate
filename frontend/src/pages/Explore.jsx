@@ -10,17 +10,22 @@ import {
 
 export default function Explore() {
   const pageData = DEFAULT_EXPLORE_PAGE;
-  const [experiences, setExperiences] = useState(DEFAULT_EXPERIENCES);
+  const [experiences, setExperiences] = useState([]);
   const [categories] = useState(DEFAULT_EXPLORE_CATEGORIES);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let isMounted = true;
     async function loadContent() {
       try {
         const expList = await getExploreExperiences();
-        if (isMounted && expList && expList.length > 0) setExperiences(expList);
+        if (isMounted) {
+          setExperiences(expList || []);
+          setLoading(false);
+        }
       } catch (err) {
         console.error("Failed to load Contentful data:", err);
+        if (isMounted) setLoading(false);
       }
     }
     loadContent();
@@ -30,11 +35,12 @@ export default function Explore() {
   }, []);
 
   useLayoutEffect(() => {
+    if (loading) return;
     const cleanup = initExplore();
     return () => {
       if (typeof cleanup === "function") cleanup();
     };
-  }, [experiences]);
+  }, [experiences, loading]);
   return (
     <>
       <svg
@@ -187,6 +193,28 @@ export default function Explore() {
           </symbol>
         </defs>
       </svg>
+
+      <div
+        className={String.raw`loader fixed top-0 right-0 bottom-0 left-0 [z-index:600] [background:var(--bg)] grid place-items-center`}
+        aria-hidden="true"
+      >
+        <div
+          className={String.raw`loader__inner [width:min(260px,60vw)] text-center`}
+        >
+          <span
+            className={String.raw`loader__word text-xs [letter-spacing:.32em] uppercase font-medium [margin-bottom:18px] block [color:var(--ink)]`}
+          >
+            Galkanda Estate
+          </span>
+          <div
+            className={String.raw`loader__line [height:1px] [background:var(--line)] overflow-hidden`}
+          >
+            <i
+              className={String.raw`block h-full [background:var(--ink)] [transform:scaleX(0)] origin-left`}
+            ></i>
+          </div>
+        </div>
+      </div>
 
       <a
         className={String.raw`skip-link fixed left-3 [top:-60px] [z-index:300] [background:var(--dark)] [color:#fff] [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 rounded-full text-sm no-underline [transition:top_.3s] [&:focus]:top-3`}
@@ -551,34 +579,40 @@ export default function Explore() {
                       >
                         {item.description}
                       </p>
-                      <ul
-                        className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                      >
-                        <li
-                          className={String.raw`inline-flex items-center [gap:6px]`}
+                      {(item.distance || item.travelTime) && (
+                        <ul
+                          className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
                         >
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-pin"></use>
-                          </svg>
-                          <span>{item.distance}</span>
-                        </li>
-                        <li
-                          className={String.raw`inline-flex items-center [gap:6px]`}
-                        >
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-car"></use>
-                          </svg>
-                          <span>{item.travelTime}</span>
-                        </li>
-                      </ul>
+                          {item.distance && (
+                            <li
+                              className={String.raw`inline-flex items-center [gap:6px]`}
+                            >
+                              <svg
+                                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
+                                aria-hidden="true"
+                                focusable="false"
+                              >
+                                <use href="#i-pin"></use>
+                              </svg>
+                              <span>{item.distance}</span>
+                            </li>
+                          )}
+                          {item.travelTime && (
+                            <li
+                              className={String.raw`inline-flex items-center [gap:6px]`}
+                            >
+                              <svg
+                                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
+                                aria-hidden="true"
+                                focusable="false"
+                              >
+                                <use href="#i-car"></use>
+                              </svg>
+                              <span>{item.travelTime}</span>
+                            </li>
+                          )}
+                        </ul>
+                      )}
                       <span
                         className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard__link:hover_&::after]:[transform:scaleX(1)] [.ecard__link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
                       >

@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 export default function ExploreHero({ data }) {
   if (!data) return null;
 
+  const heroFacts = [
+    { key: "distance", label: "Distance", icon: "#i-pin", val: data.distance },
+    { key: "travelTime", label: "Travel time", icon: "#i-car", val: data.travelTime || data.drivingTime },
+    { key: "duration", label: "Duration", icon: "#i-hourglass", val: data.duration },
+    { key: "bestTime", label: "Best time", icon: "#i-sun", val: data.bestTime },
+    { key: "location", label: "Location", icon: "#i-home", val: data.location },
+    { key: "entryPrice", label: "Entry / price", icon: "#i-cash", val: data.entryPrice || data.entryFee },
+  ].filter((f) => f.val && String(f.val).trim().length > 0);
+
   return (
     <section
       className={String.raw`atop [padding-top:calc(var(--nav-h)_+_clamp(28px,5vh,56px))] pr-0 [padding-bottom:clamp(28px,4vw,48px)] pl-0`}
@@ -61,130 +70,42 @@ export default function ExploreHero({ data }) {
           >
             {data.title}
           </h1>
-          <p
-            className={String.raw`lead text-base 2xl:text-lg [line-height:1.6] [color:var(--ink)] mt-0 mr-0 [margin-bottom:26px] ml-0 [max-width:36em] font-light`}
-            data-anim="top"
-          >
-            {data.lead}
-          </p>
-          <ul
-            className={String.raw`kfacts list-none mt-0 mr-0 mb-0 ml-0 pr-0 pb-0 pl-0 grid [grid-template-columns:repeat(2,minmax(0,1fr))] [gap:14px_18px] [border-top:1px_solid_var(--line)] pt-5 min-[768px]:[grid-template-columns:repeat(3,minmax(0,1fr))]`}
-          >
-            <li
-              className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
+          {data.lead && (
+            <p
+              className={String.raw`lead text-base 2xl:text-lg [line-height:1.6] [color:var(--ink)] mt-0 mr-0 [margin-bottom:26px] ml-0 [max-width:36em] font-light`}
+              data-anim="top"
             >
-              <svg
-                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="#i-pin"></use>
-              </svg>
-              <span>
-                <em
-                  className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
-                >
-                  Distance
-                </em>
-                {data.distance}
-              </span>
-            </li>
-            <li
-              className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
+              {data.lead}
+            </p>
+          )}
+          {heroFacts.length > 0 && (
+            <ul
+              className={String.raw`kfacts list-none mt-0 mr-0 mb-0 ml-0 pr-0 pb-0 pl-0 grid [grid-template-columns:repeat(2,minmax(0,1fr))] [gap:14px_18px] [border-top:1px_solid_var(--line)] pt-5 min-[768px]:[grid-template-columns:repeat(3,minmax(0,1fr))]`}
             >
-              <svg
-                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="#i-car"></use>
-              </svg>
-              <span>
-                <em
-                  className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
+              {heroFacts.map((fact) => (
+                <li
+                  key={fact.key}
+                  className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
                 >
-                  Travel time
-                </em>
-                {data.travelTime}
-              </span>
-            </li>
-            <li
-              className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
-            >
-              <svg
-                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="#i-hourglass"></use>
-              </svg>
-              <span>
-                <em
-                  className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
-                >
-                  Duration
-                </em>
-                {data.duration}
-              </span>
-            </li>
-            <li
-              className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
-            >
-              <svg
-                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="#i-sun"></use>
-              </svg>
-              <span>
-                <em
-                  className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
-                >
-                  Best time
-                </em>
-                {data.bestTime}
-              </span>
-            </li>
-            <li
-              className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
-            >
-              <svg
-                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="#i-home"></use>
-              </svg>
-              <span>
-                <em
-                  className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
-                >
-                  Location
-                </em>
-                {data.location}
-              </span>
-            </li>
-            <li
-              className={String.raw`flex [gap:10px] items-start text-sm [line-height:1.4] min-w-0`}
-            >
-              <svg
-                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
-                aria-hidden="true"
-                focusable="false"
-              >
-                <use href="#i-cash"></use>
-              </svg>
-              <span>
-                <em
-                  className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
-                >
-                  Entry / price
-                </em>
-                {data.entryPrice}
-              </span>
-            </li>
-          </ul>
+                  <svg
+                    className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:18px] [height:18px] [color:var(--green)] [margin-top:1px]`}
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href={fact.icon}></use>
+                  </svg>
+                  <span>
+                    <em
+                      className={String.raw`block not-italic text-xs [letter-spacing:.14em] uppercase [color:var(--muted)] [margin-bottom:2px]`}
+                    >
+                      {fact.label}
+                    </em>
+                    {fact.val}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <aside
           className={String.raw`plan [background:var(--bg-warm)] [border-radius:var(--r)] [padding-top:22px] [padding-right:22px] [padding-bottom:22px] [padding-left:22px] [align-self:start]`}
