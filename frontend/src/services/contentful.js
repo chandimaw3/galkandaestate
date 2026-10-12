@@ -26,6 +26,55 @@ export const DEFAULT_EXPLORE_CATEGORIES = [
   { slug: "food-dining", name: "Food & Dining" },
 ];
 
+export const CATEGORY_SLUG_MAP = {
+  "Culture & Heritage": "culture-heritage",
+  "Scenic Places": "scenic-places",
+  "Nature": "nature",
+  "Local Experiences": "local-experiences",
+  "Shopping": "shopping",
+  "Adventure": "adventure",
+  "Day Trips": "day-trips",
+  "Food & Dining": "food-dining",
+};
+
+export function toCategorySlug(name) {
+  if (!name) return "culture-heritage";
+  if (CATEGORY_SLUG_MAP[name]) return CATEGORY_SLUG_MAP[name];
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+export function resolveCategory(rawCategory, rawCategorySlug) {
+  // If it's a Contentful Reference entry (Taxonomy model)
+  if (rawCategory && typeof rawCategory === "object" && rawCategory.fields) {
+    const name =
+      rawCategory.fields.name ||
+      rawCategory.fields.title ||
+      "Culture & Heritage";
+    const slug = rawCategory.fields.slug || toCategorySlug(name);
+    return { name, slug };
+  }
+
+  // If it's a string (e.g. from a dropdown or text)
+  const name =
+    typeof rawCategory === "string" && rawCategory.trim()
+      ? rawCategory.trim()
+      : "Culture & Heritage";
+
+  const slug =
+    rawCategorySlug &&
+    typeof rawCategorySlug === "string" &&
+    rawCategorySlug.trim()
+      ? rawCategorySlug.trim()
+      : toCategorySlug(name);
+
+  return { name, slug };
+}
+
 export const DEFAULT_EXPLORE_PAGE = {
   hero: {
     eyebrow: "Explore Kandy",
@@ -335,10 +384,15 @@ export async function getExploreExperiences() {
         ? rawSlug
         : `/explore/${rawSlug}`;
 
+      const { name: categoryName, slug: categorySlug } = resolveCategory(
+        f.category || f.categoryName,
+        f.categorySlug
+      );
+
       return {
         id: item.sys.id || rawSlug,
-        categorySlug: f.categorySlug || "culture-heritage",
-        categoryName: f.categoryName || f.category || "Culture & Heritage",
+        categorySlug,
+        categoryName,
         link,
         title: f.title || "Experience",
         description: f.cardDescription || f.shortDescription || f.description || "",
@@ -1256,11 +1310,16 @@ export async function getExperienceDetail(slug, options = {}) {
       });
     }
 
+    const { name: categoryName, slug: categorySlug } = resolveCategory(
+      f.category || f.categoryName,
+      f.categorySlug || fallback.categorySlug
+    );
+
     return {
       slug: f.slug || slug,
       title: f.title || fallback.title,
-      category: f.category || f.categoryName || fallback.category,
-      categorySlug: f.categorySlug || fallback.categorySlug,
+      category: categoryName || fallback.category,
+      categorySlug: categorySlug || fallback.categorySlug,
       lead: f.lead || f.cardDescription || fallback.lead,
       distance: f.distance || "",
       travelTime: f.travelTime || f.drivingTime || "",
