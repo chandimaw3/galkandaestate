@@ -1,6 +1,6 @@
 import { runEstatePage } from "./shared.js";
 
-export function initKnucklesMountainRange() {
+export function initExploreDetail() {
   return runEstatePage(
     ({
       $,
@@ -64,7 +64,7 @@ export function initKnucklesMountainRange() {
         });
       }
 
-      /* activity page motion */
+      /* Activity / Explore Detail page motion */
       if (motion) {
         G.whenReady(() => {
           const tl = gsap.timeline({ delay: 0.1 });
@@ -79,7 +79,6 @@ export function initKnucklesMountainRange() {
               ease: "power3.out",
             },
           )
-            .add(() => G.splitReveal($(".atop__h1"), { duration: 1.2 }), 0.15)
             .fromTo(
               ".kfacts li",
               { opacity: 0, y: 16 },

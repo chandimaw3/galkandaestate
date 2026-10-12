@@ -1,9 +1,46 @@
 import { Link } from "react-router-dom";
-import { useLayoutEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { initExplore } from "../behaviors/Explore.js";
+import {
+  DEFAULT_EXPLORE_PAGE,
+  DEFAULT_EXPERIENCES,
+  DEFAULT_EXPLORE_CATEGORIES,
+  getExploreExperiences,
+} from "../services/contentful.js";
 
 export default function Explore() {
-  useLayoutEffect(initExplore, []);
+  const pageData = DEFAULT_EXPLORE_PAGE;
+  const [experiences, setExperiences] = useState([]);
+  const [categories] = useState(DEFAULT_EXPLORE_CATEGORIES);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+    async function loadContent() {
+      try {
+        const expList = await getExploreExperiences();
+        if (isMounted) {
+          setExperiences(expList || []);
+          setLoading(false);
+        }
+      } catch (err) {
+        console.error("Failed to load Contentful data:", err);
+        if (isMounted) setLoading(false);
+      }
+    }
+    loadContent();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    if (loading) return;
+    const cleanup = initExplore();
+    return () => {
+      if (typeof cleanup === "function") cleanup();
+    };
+  }, [experiences, loading]);
   return (
     <>
       <svg
@@ -156,6 +193,28 @@ export default function Explore() {
           </symbol>
         </defs>
       </svg>
+
+      <div
+        className={String.raw`loader fixed top-0 right-0 bottom-0 left-0 [z-index:600] [background:var(--bg)] grid place-items-center`}
+        aria-hidden="true"
+      >
+        <div
+          className={String.raw`loader__inner [width:min(260px,60vw)] text-center`}
+        >
+          <span
+            className={String.raw`loader__word text-xs [letter-spacing:.32em] uppercase font-medium [margin-bottom:18px] block [color:var(--ink)]`}
+          >
+            Galkanda Estate
+          </span>
+          <div
+            className={String.raw`loader__line [height:1px] [background:var(--line)] overflow-hidden`}
+          >
+            <i
+              className={String.raw`block h-full [background:var(--ink)] [transform:scaleX(0)] origin-left`}
+            ></i>
+          </div>
+        </div>
+      </div>
 
       <a
         className={String.raw`skip-link fixed left-3 [top:-60px] [z-index:300] [background:var(--dark)] [color:#fff] [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 rounded-full text-sm no-underline [transition:top_.3s] [&:focus]:top-3`}
@@ -372,10 +431,8 @@ export default function Explore() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                srcSet="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                sizes="100vw"
-                alt="The Temple of the Tooth across Kandy Lake"
+                src={pageData.hero.image}
+                alt={pageData.hero.imageAlt}
                 fetchPriority="high"
                 decoding="async"
               />
@@ -396,7 +453,7 @@ export default function Explore() {
                   className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)] [color:rgba(255,255,255,.8)]`}
                   data-hero-fade=""
                 >
-                  Explore Kandy
+                  {pageData.hero.eyebrow}
                 </span>
                 <h1
                   className={String.raw`h-xl [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit [line-height:.94] text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl`}
@@ -415,9 +472,7 @@ export default function Explore() {
                 className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
                 data-hero-fade=""
               >
-                Places we love near the estate — temples and forests, tea
-                country, markets and day trips — each with the practical
-                details to plan your visit.
+                {pageData.hero.description}
               </div>
             </div>
           </div>
@@ -437,7 +492,7 @@ export default function Explore() {
                 <span
                   className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--muted)] [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 >
-                  Things to Do Near Kandy
+                  {pageData.section.eyebrow}
                 </span>
                 <h2
                   className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02]`}
@@ -458,9 +513,7 @@ export default function Explore() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Galkanda is a base for exploring, not a tour company. Off-site
-                experiences are arranged with independent providers where
-                applicable — we're always happy to help you plan.
+                {pageData.section.description}
               </p>
             </div>
             <div
@@ -468,1066 +521,121 @@ export default function Explore() {
               role="group"
               aria-label="Filter by category"
             >
-              <button
-                className={String.raw`filter is-active flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="all"
-                aria-pressed="true"
-              >
-                All
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="culture-heritage"
-                aria-pressed="false"
-              >
-                Culture &amp; Heritage
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="scenic-places"
-                aria-pressed="false"
-              >
-                Scenic Places
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="nature"
-                aria-pressed="false"
-              >
-                Nature
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="local-experiences"
-                aria-pressed="false"
-              >
-                Local Experiences
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="shopping"
-                aria-pressed="false"
-              >
-                Shopping
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="adventure"
-                aria-pressed="false"
-              >
-                Adventure
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="day-trips"
-                aria-pressed="false"
-              >
-                Day Trips
-              </button>
-              <button
-                className={String.raw`filter flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
-                type="button"
-                data-filter="food-dining"
-                aria-pressed="false"
-              >
-                Food &amp; Dining
-              </button>
+              {categories.map((cat, idx) => (
+                <button
+                  key={cat.slug}
+                  className={String.raw`filter ${idx === 0 ? "is-active" : ""} flex-none [border:1px_solid_var(--line)] [background:rgba(244,241,234,.92)] [-webkit-backdrop-filter:blur(8px)] [backdrop-filter:blur(8px)] [color:var(--ink)] text-sm [padding-top:9px] pr-4 [padding-bottom:9px] pl-4 rounded-full [transition:background-color_.4s_var(--ease),color_.4s,border-color_.4s] hover:[border-color:var(--ink)] [&.is-active]:[background:var(--dark)] [&.is-active]:[color:#fff] [&.is-active]:[border-color:var(--dark)]`}
+                  type="button"
+                  data-filter={cat.slug}
+                  aria-pressed={idx === 0 ? "true" : "false"}
+                >
+                  {cat.name}
+                </button>
+              ))}
             </div>
             <p
               className={String.raw`visually-hidden absolute! [width:1px] [height:1px] overflow-hidden [clip:rect(0_0_0_0)] whitespace-nowrap -m-px p-0 border-0`}
               id="jstatus"
               aria-live="polite"
             ></p>
-            <div
+                        <div
               className={String.raw`egrid grid [grid-template-columns:1fr] [gap:34px] min-[600px]:[grid-template-columns:repeat(2,minmax(0,1fr))] min-[600px]:[gap:40px_20px] min-[992px]:[grid-template-columns:repeat(3,minmax(0,1fr))] min-[992px]:[gap:48px_clamp(18px,2vw,30px)]`}
               id="journalGrid"
             >
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="culture-heritage"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/temple-of-the-tooth"
+              {experiences.map((item) => (
+                <article
+                  key={item.id}
+                  className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
+                  data-cat={item.categorySlug}
                 >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
+                  <Link
+                    className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
+                    to={item.link}
                   >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="The Temple of the Sacred Tooth Relic seen across Kandy Lake"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
+                    <div
+                      className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
                     >
-                      Culture &amp; Heritage
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Temple of the Tooth, Kandy
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Sri Lanka's most revered temple, home to the sacred tooth
-                      relic of the Buddha.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
+                      <img
+                        className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard__link:hover_.ecard__media_&]:[scale:1.11] [.ecard.is-inview_.ecard__media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
+                        src={item.image}
+                        alt={item.imageAlt || item.title}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div className={String.raw`ecard__body`}>
+                      <span
+                        className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
                       >
+                        {item.categoryName}
+                      </span>
+                      <h3
+                        className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard__link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
+                      >
+                        {item.title}
+                      </h3>
+                      <p
+                        className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
+                      >
+                        {item.description}
+                      </p>
+                      {(item.distance || item.travelTime) && (
+                        <ul
+                          className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
+                        >
+                          {item.distance && (
+                            <li
+                              className={String.raw`inline-flex items-center [gap:6px]`}
+                            >
+                              <svg
+                                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
+                                aria-hidden="true"
+                                focusable="false"
+                              >
+                                <use href="#i-pin"></use>
+                              </svg>
+                              <span>{item.distance}</span>
+                            </li>
+                          )}
+                          {item.travelTime && (
+                            <li
+                              className={String.raw`inline-flex items-center [gap:6px]`}
+                            >
+                              <svg
+                                className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
+                                aria-hidden="true"
+                                focusable="false"
+                              >
+                                <use href="#i-car"></use>
+                              </svg>
+                              <span>{item.travelTime}</span>
+                            </li>
+                          )}
+                        </ul>
+                      )}
+                      <span
+                        className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard__link:hover_&::after]:[transform:scaleX(1)] [.ecard__link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
+                      >
+                        <span>{item.ctaText || "View Details"}</span>
                         <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
+                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard__link:hover_.ecard__cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard__cta_&]:[transform:translateX(4px)]`}
                           aria-hidden="true"
                           focusable="false"
                         >
-                          <use href="#i-pin"></use>
+                          <use href="#i-right"></use>
                         </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="scenic-places"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/kandy-lake"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1626091022888-485eb96c494a?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1626091022888-485eb96c494a?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1626091022888-485eb96c494a?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1626091022888-485eb96c494a?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1626091022888-485eb96c494a?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Buildings on the edge of Kandy Lake"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Scenic Places
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Kandy Lake Walk
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      An easy loop around the city's lake — the calmest way to
-                      see Kandy.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="nature"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/udawattakele-forest"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1687525933572-e5d144fea470?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1687525933572-e5d144fea470?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1687525933572-e5d144fea470?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1687525933572-e5d144fea470?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1687525933572-e5d144fea470?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Dense green forest canopy"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Nature
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Udawattakele Forest Reserve
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Quiet forest trails on the hill right behind the Temple of
-                      the Tooth.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="nature"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/royal-botanical-gardens"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Great trees on open lawns at the botanical gardens"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Nature
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Royal Botanical Gardens, Peradeniya
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Avenues of palms, giant trees and an orchid house just
-                      outside Kandy.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="culture-heritage"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/kandyan-cultural-show"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Traditional fire dancers performing"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Culture &amp; Heritage
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Kandyan Cultural Dance Show
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Drums, costume and fire — an hour of Kandyan dance in
-                      the city.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="local-experiences"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/tea-estate-visit"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1770059406620-7bfa1fda76ed?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1770059406620-7bfa1fda76ed?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1770059406620-7bfa1fda76ed?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1770059406620-7bfa1fda76ed?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1770059406620-7bfa1fda76ed?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Tea pluckers at work on a green slope"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Local Experiences
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Hill Country Tea Estate Visit
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      See how Ceylon tea goes from leaf to cup — then taste it
-                      where it's made.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="shopping"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/kandy-central-market"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1743636521230-15e192f1cfec?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1743636521230-15e192f1cfec?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1743636521230-15e192f1cfec?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1743636521230-15e192f1cfec?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1743636521230-15e192f1cfec?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="A bustling produce market"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Shopping
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Kandy Central Market
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Tropical fruit, spices and everyday Kandy life under one
-                      roof.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="adventure"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/knuckles-mountain-range"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="A mountain road winding through the Knuckles range"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Adventure
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Knuckles Mountain Range
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Cloud forest, ridgelines and village trails in a
-                      UNESCO-listed range.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x hrs by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="scenic-places"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/ambuluwawa-tower"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1731210719054-1a3a1e3e4c3e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1731210719054-1a3a1e3e4c3e?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1731210719054-1a3a1e3e4c3e?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1731210719054-1a3a1e3e4c3e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1731210719054-1a3a1e3e4c3e?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Ambuluwawa's tall white tower against the sky"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Scenic Places
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Ambuluwawa Tower
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      A spiralling white tower on a mountaintop, with views
-                      across the hill country.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="day-trips"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/sigiriya-day-trip"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1612862862126-865765df2ded?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1612862862126-865765df2ded?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1612862862126-865765df2ded?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1612862862126-865765df2ded?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1612862862126-865765df2ded?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Sigiriya rock fortress rising above the forest"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Day Trips
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Sigiriya Rock Fortress Day Trip
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Climb the 5th-century fortress of King Kashyapa in the
-                      Cultural Triangle.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x hrs by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="day-trips"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/minneriya-kaudulla-safari"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1674556275189-e78fd6223e6d?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1674556275189-e78fd6223e6d?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1674556275189-e78fd6223e6d?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1674556275189-e78fd6223e6d?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1674556275189-e78fd6223e6d?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="A herd of elephants on green grassland"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Day Trips
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Minneriya &amp; Kaudulla Elephant Safari
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Afternoon jeep safaris to see wild elephants gather on the
-                      grasslands.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x hrs by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
-              <article
-                className={String.raw`ecard min-w-0 [&.is-hidden]:hidden`}
-                data-cat="food-dining"
-              >
-                <Link
-                  className={String.raw`ecard__link block no-underline text-inherit [border-radius:var(--r)] [transition:transform_.7s_var(--ease)] [-webkit-tap-highlight-color:transparent] hover:[transform:translateY(-4px)] [.ecard.is-inview_&]:[transform:translateY(-4px)] [&:active]:[transform:scale(.985)] [&:active]:[transition-duration:.2s] focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:6px] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                  to="/explore/sri-lankan-cooking-class"
-                >
-                  <div
-                    className={String.raw`frame ecard__media relative overflow-hidden [background:var(--stone)] mt-0 mr-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:16/10] [border-radius:var(--r-sm)] mb-4 max-[599.98px]:[aspect-ratio:16/9]`}
-                  >
-                    <img
-                      className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [scale:1.06] [transition:scale_1.1s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_media_&]:[scale:1.11] [.ecard.is-inview_.ecard\_\_media_&]:[scale:1.11] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                      src="https://images.unsplash.com/photo-1683621284476-549af8467c8d?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1683621284476-549af8467c8d?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1683621284476-549af8467c8d?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1683621284476-549af8467c8d?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1683621284476-549af8467c8d?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                      sizes="(min-width: 992px) 30vw, (min-width: 768px) 46vw, 92vw"
-                      alt="Cooking together around a stove"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div className={String.raw`ecard__body`}>
-                    <span
-                      className={String.raw`ecard__cat block text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--earth)] mb-2`}
-                    >
-                      Food &amp; Dining
-                    </span>
-                    <h3
-                      className={String.raw`ecard__title [font-family:var(--f-sans)] text-inherit text-xl 2xl:text-2xl [line-height:1.15] [letter-spacing:-.025em] font-normal mt-0 mr-0 mb-2 ml-0 [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_&]:[transform:translateX(3px)] [.ecard.is-inview_&]:[transform:translateX(3px)] motion-reduce:[transition:none]! motion-reduce:[transform:none]! motion-reduce:[scale:1]!`}
-                    >
-                      Sri Lankan Cooking Class
-                    </h3>
-                    <p
-                      className={String.raw`ecard__desc mt-0 mr-0 mb-3 ml-0 text-sm [line-height:1.55] [color:var(--muted)] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden`}
-                    >
-                      Learn rice and curry, sambols and spice blends — then
-                      sit down to eat.
-                    </p>
-                    <ul
-                      className={String.raw`ecard__meta list-none mt-0 mr-0 [margin-bottom:14px] ml-0 pt-0 pr-0 pb-0 pl-0 flex flex-wrap [gap:6px_16px] text-xs`}
-                    >
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-pin"></use>
-                        </svg>
-                        <span>[x km]</span>
-                      </li>
-                      <li
-                        className={String.raw`inline-flex items-center [gap:6px]`}
-                      >
-                        <svg
-                          className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [color:var(--green)]`}
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <use href="#i-car"></use>
-                        </svg>
-                        <span>[~x min by car]</span>
-                      </li>
-                    </ul>
-                    <span
-                      className={String.raw`ecard__cta relative inline-flex items-center gap-2 text-sm font-medium pb-1 [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:[transform:scaleX(.35)] [&::after]:origin-left [&::after]:[opacity:.5] [&::after]:[transition:transform_.6s_var(--ease),opacity_.6s] [.ecard\_\_link:hover_&::after]:[transform:scaleX(1)] [.ecard\_\_link:hover_&::after]:opacity-100 [.ecard.is-inview_&::after]:[transform:scaleX(1)] [.ecard.is-inview_&::after]:opacity-100`}
-                    >
-                      <span>View Details</span>
-                      <svg
-                        className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [transition:transform_.6s_var(--ease)] [.ecard\_\_link:hover_.ecard\_\_cta_&]:[transform:translateX(4px)] [.ecard.is-inview_.ecard\_\_cta_&]:[transform:translateX(4px)]`}
-                        aria-hidden="true"
-                        focusable="false"
-                      >
-                        <use href="#i-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </article>
+                      </span>
+                    </div>
+                  </Link>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
         <section
-          className={String.raw`minicta [background:var(--bg-warm)] [padding-top:clamp(56px,7vw,96px)] pr-0 [padding-bottom:clamp(56px,7vw,96px)] pl-0`}
+          className={String.raw`minicta
+ [background:var(--bg-warm)] [padding-top:clamp(56px,7vw,96px)] pr-0 [padding-bottom:clamp(56px,7vw,96px)] pl-0`}
           aria-labelledby="minicta-h"
         >
           <div
@@ -1549,7 +657,7 @@ export default function Explore() {
               <span
                 className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--muted)] [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
               >
-                Stay at Galkanda
+                {pageData.cta.eyebrow}
               </span>
               <h2
                 className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02] mb-3`}
@@ -1565,8 +673,7 @@ export default function Explore() {
               <p
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] mt-0 mr-0 mb-0 ml-0`}
               >
-                Come back to the farm after a day out — tea in the garden,
-                dinner from the estate, and a slower pace.
+                {pageData.cta.description}
               </p>
             </div>
             <div
@@ -1594,9 +701,9 @@ export default function Explore() {
               </Link>
               <Link
                 className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}
-                to="/estate"
+                to={pageData.cta.secondaryButtonLink}
               >
-                See the Estate{" "}
+                {pageData.cta.secondaryButtonText}{" "}
                 <i
                   className={String.raw`not-italic inline-block [transition:transform_.45s_var(--ease)] [.link-u:hover_&]:[transform:rotate(45deg)]`}
                   aria-hidden="true"

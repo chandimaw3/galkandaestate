@@ -15,7 +15,17 @@ function EstateRoutes() {
       .replace(/\/index\.html$/, "/")
       .replace(/\.html$/, "")
       .replace(/\/$/, "") || "/";
-  const page = pages.find((page) => page.path === cleanPath);
+  const page = pages.find((p) => {
+    if (p.path === cleanPath) return true;
+    if (p.path.includes("/:slug")) {
+      const prefix = p.path.split("/:slug")[0];
+      return (
+        cleanPath.startsWith(prefix + "/") &&
+        cleanPath.split("/").length === prefix.split("/").length + 1
+      );
+    }
+    return false;
+  });
 
   useLayoutEffect(() => {
     if (!page) return;
