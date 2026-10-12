@@ -18,6 +18,7 @@ interface HostMember {
   text: string;
   linkText?: string;
   linkUrl?: string;
+  phone?: string;
   isPlaceholder?: boolean;
 }
 
@@ -522,9 +523,22 @@ export default function About() {
             <h3 id="host-name">Meet <em>{host.name}.</em></h3>
             <span className="about-team__role">{host.role}</span>
             <p>{host.text}</p>
-            <Link className="about-team__host-link" to={host.linkUrl || "/contact"}>
-              {host.linkText || "Plan your stay"} <span aria-hidden="true">&#8599;</span>
-            </Link>
+            <div className="about-team__host-actions">
+              <Link className="about-team__host-link" to={host.linkUrl || "/contact"}>
+                {host.linkText || "Plan your stay"} <span aria-hidden="true">&#8599;</span>
+              </Link>
+              {host.phone && <a
+                className="about-team__call-link"
+                href={`tel:${host.phone.replace(/[^+\d]/g, "")}`}
+                aria-label={`Call ${host.name} at ${host.phone}`}
+                title={`Call ${host.phone}`}
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7.2 3.5h2.5l1.2 4.2-1.8 1.5a15 15 0 0 0 5.7 5.7l1.5-1.8 4.2 1.2v2.5a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.2 5.7a2 2 0 0 1 2-2.2Z" />
+                </svg>
+                <span className="about-team__call-label">Call</span>
+              </a>}
+            </div>
           </div>
         </article>
         <div className="about-team__cards">

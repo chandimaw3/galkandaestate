@@ -382,6 +382,7 @@ export const DEFAULT_HOST = {
   text: "Punya manages Galkanda Estate, where a family-inspired way of life brings nature, farming and warm Sri Lankan hospitality together.",
   linkText: "Plan your stay",
   linkUrl: "/contact",
+  phone: "",
   isPlaceholder: true,
 };
 
@@ -534,6 +535,7 @@ export async function getAboutTeamData() {
           label: f.label || "Your host",
           linkText: f.linkText || "Plan your stay",
           linkUrl: f.linkUrl || "/contact",
+          phone: f.phone || f.phoneNumber || f.telephone || "",
           isHost,
           isPlaceholder: !photoUrl,
         };
@@ -552,6 +554,7 @@ export async function getAboutTeamData() {
           text: hostEntry.text,
           linkText: hostEntry.linkText || "Plan your stay",
           linkUrl: hostEntry.linkUrl || "/contact",
+          phone: hostEntry.phone,
           isPlaceholder: hostEntry.isPlaceholder,
         }
       : DEFAULT_HOST;
