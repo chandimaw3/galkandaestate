@@ -628,7 +628,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Room.webp"]}
+                    src={images["Room2.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Living room with timber panelling and garden views"
                     loading="lazy"
