@@ -1,23 +1,10 @@
 import { Link } from "react-router-dom";
-import { useEffect, useLayoutEffect } from "react";
-import { runEstatePage } from "../behaviors/shared.js";
+import { useLayoutEffect } from "react";
+import { initContact } from "../behaviors/Contact.js";
+import { images } from "../images.js";
 
-export default function ContactV2() {
-  // Initialize the estate animations and navigation without the removed enquiry handler.
-  useLayoutEffect(() => runEstatePage(() => {}), []);
-
-  useEffect(() => {
-    // The Airbnb SDK must run after the embed exists in the DOM.
-    const script = document.createElement("script");
-    script.src = "https://www.airbnb.com.au/embeddable/airbnb_jssdk";
-    script.async = true;
-    script.dataset.airbnbContactV2 = "true";
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
-  }, []);
+export default function Contact() {
+  useLayoutEffect(initContact, []);
   return (
     <>
       <svg
@@ -407,7 +394,8 @@ export default function ContactV2() {
                 className={String.raw`lead text-base 2xl:text-lg [line-height:1.6] [color:var(--ink)] [max-width:34em] font-light`}
                 data-fade=""
               >
-                Explore our stay on Airbnb and book your preferred dates directly through the listing.
+                Plan your escape to Galkanda Estate. Check availability and book
+                your stay through Airbnb or Booking.com.
               </p>
             </div>
             <div
@@ -430,46 +418,57 @@ export default function ContactV2() {
 
         <section
           className={String.raw`sec cform-sec pr-0 [padding-bottom:var(--sec)] pl-0 relative [padding-top:clamp(40px,6vw,90px)]`}
-          aria-label="Book your stay on Airbnb"
+          aria-label="Book your stay"
         >
           <div
             className={String.raw`container-wide cgrid max-w-400 mt-0 [margin-right:auto] mb-0 [margin-left:auto] pt-0 [padding-right:var(--gutter)] pb-0 [padding-left:var(--gutter)] grid gap-18 min-[992px]:[grid-template-columns:minmax(0,7fr)_minmax(0,4fr)] min-[992px]:[column-gap:7vw]`}
           >
-            <div className="flex min-w-0 flex-col items-center lg:items-start" data-fade="">
-              <div className="airbnb-embed-frame"
-                data-id="1625391951294267587"
-                data-view="home"
-                data-hide-price="true"
-                style={{ width: "450px", height: "300px", maxWidth: "100%", margin: "0" }}
-              >
-                <a
-                  href="https://www.airbnb.com.au/rooms/1625391951294267587?guests=1&adults=1&s=66&source=embed_widget"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Show On Airbnb
-                </a>
-                <a
-                  href="https://www.airbnb.com.au/rooms/1625391951294267587?guests=1&adults=1&s=66&source=embed_widget"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  Home in Kandy · ★5.0 · 3 bedrooms · 3 beds · 2 baths
-                </a>
-              </div>
-
-              <a
-                href="https://www.airbnb.com.au/rooms/1625391951294267587?guests=1&adults=1&s=66&source=embed_widget"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group mt-8 inline-flex items-center justify-center gap-4 rounded-full bg-[#222820] px-8 py-4 text-sm font-medium tracking-wide text-white no-underline transition-all duration-300 hover:bg-[#384536] hover:shadow-lg"
-              >
-                Book with Airbnb
-                <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
-              </a>
-              <p className="mt-4 text-sm text-neutral-500">
-                Reservations are completed securely on Airbnb.
+            <div className="min-w-0">
+              <h2 className="[font-family:var(--f-serif)] text-4xl min-[768px]:text-5xl font-normal [letter-spacing:-.02em] mb-4">Your stay starts here.</h2>
+              <p className="text-base mb-8 [color:var(--muted)]">
+                Check availability, choose your dates and book through Airbnb or Booking.com.
               </p>
+              <div className="group relative overflow-hidden rounded-[var(--r-lg)] [aspect-ratio:16/10]">
+                <img
+                  src={images["house.jpg"]}
+                  alt="Galkanda Estate surrounded by lush greenery"
+                  className="w-full h-full object-cover [transition:scale_1.8s_cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.025] group-focus-within:scale-[1.025] motion-reduce:transition-none motion-reduce:scale-100"
+                  loading="lazy"
+                />
+                <span className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-3 py-2 text-[10px] uppercase tracking-widest [background:var(--bg)] [color:var(--ink)]">Entire home · Kandy</span>
+              </div>
+              <div className="py-6 [border-bottom:1px_solid_var(--line)]">
+                <h3 className="text-2xl font-normal mb-2 [letter-spacing:-.03em]">Galkanda Estate Eco Farm Villa</h3>
+                <p className="text-sm [color:var(--muted)]">3 bedrooms &nbsp;·&nbsp; 3 beds &nbsp;·&nbsp; 2 baths</p>
+              </div>
+              <div className="pt-7">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                  <h4 className="text-base font-medium">Choose where to book</h4>
+                  <span className="text-xs [color:var(--muted)]">Availability &amp; rates on each platform</span>
+                </div>
+                <div className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-4">
+                  <a
+                    className="group flex items-center justify-between gap-4 rounded-full h-16 px-6 text-sm font-medium [color:#b93849] [background:#f5e6e3] [border:1px_solid_#b9384933] no-underline transition-[background-color,box-shadow] duration-300 hover:[background:#eed5d1] hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none"
+                    href="https://www.airbnb.com.au/rooms/1625391951294267587"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Book Galkanda Estate with Airbnb"
+                  >
+                    <span className="flex items-center gap-3">Book with <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Airbnb%20Logo%20B%C3%A9lo.svg" alt="Airbnb" className="w-20 h-6 object-contain" /></span>
+                    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none" aria-hidden="true">&#8599;</span>
+                  </a>
+                  <a
+                    className="group flex items-center justify-between gap-4 rounded-full h-16 px-6 text-sm font-medium [color:#003b95] [background:#e5edf7] [border:1px_solid_#003b9533] no-underline transition-[background-color,box-shadow] duration-300 hover:[background:#d3e1f3] hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 motion-reduce:transition-none"
+                    href="https://www.booking.com/Share-0PNEE0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Book Galkanda Estate with Booking.com"
+                  >
+                    <span>Book with <span className="font-bold">Booking.com</span></span>
+                    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none" aria-hidden="true">&#8599;</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <aside
