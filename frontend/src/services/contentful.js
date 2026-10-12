@@ -1136,7 +1136,15 @@ export const DEFAULT_EXPERIENCE_DETAILS = {
 // Generates generic fallback detail for any experience slug
 export function getFallbackExperienceDetail(slug) {
   if (DEFAULT_EXPERIENCE_DETAILS[slug]) {
-    return DEFAULT_EXPERIENCE_DETAILS[slug];
+    const d = DEFAULT_EXPERIENCE_DETAILS[slug];
+    return {
+      ...d,
+      drivingTime: d.drivingTime || d.travelTime || "",
+      entryFee: d.entryFee || d.entryPrice || "",
+      whatToBring: d.whatToBring || "",
+      gettingThere: d.gettingThere || "",
+      season: d.season || "",
+    };
   }
   const exp = DEFAULT_EXPERIENCES.find((e) => e.id === slug) || DEFAULT_EXPERIENCES[0];
   return {
@@ -1145,15 +1153,20 @@ export function getFallbackExperienceDetail(slug) {
     category: exp.categoryName,
     categorySlug: exp.categorySlug,
     lead: exp.description,
-    distance: exp.distance || "[x km]",
-    travelTime: exp.travelTime || "[~x min by car]",
-    duration: "1 to 2 hours",
-    bestTime: "Morning or late afternoon",
-    location: "Near Kandy",
-    entryPrice: "Free or standard entry fee",
+    distance: exp.distance || "",
+    travelTime: exp.travelTime || "",
+    drivingTime: exp.travelTime || "",
+    duration: exp.duration || "",
+    bestTime: exp.bestTime || "",
+    location: exp.location || "",
+    entryPrice: exp.entryPrice || "",
+    entryFee: exp.entryFee || "",
     googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(exp.title + " Kandy")}`,
-    suitableFor: "All ages",
-    bookingInfo: "Inquire with Galkanda hosts or visit directly.",
+    suitableFor: exp.suitableFor || "",
+    whatToBring: exp.whatToBring || "",
+    gettingThere: exp.gettingThere || "",
+    season: exp.season || "",
+    bookingInfo: exp.bookingInfo || "",
     mainImage: {
       url: exp.image,
       alt: exp.imageAlt || exp.title,
@@ -1236,8 +1249,8 @@ export async function getExperienceDetail(slug, options = {}) {
           categorySlug: rf.categorySlug || "culture-heritage",
           image: resolveAssetUrl(rf.cardImage) || resolveAssetUrl(rf.image) || fallback.mainImage.url,
           imageAlt: rf.title || "",
-          distance: rf.distance || "[x km]",
-          travelTime: rf.travelTime || "[~x min by car]",
+          distance: rf.distance || "",
+          travelTime: rf.travelTime || "",
           description: rf.cardDescription || rf.shortDescription || "",
         };
       });
@@ -1249,15 +1262,20 @@ export async function getExperienceDetail(slug, options = {}) {
       category: f.category || f.categoryName || fallback.category,
       categorySlug: f.categorySlug || fallback.categorySlug,
       lead: f.lead || f.cardDescription || fallback.lead,
-      distance: f.distance || fallback.distance,
-      travelTime: f.travelTime || fallback.travelTime,
-      duration: f.duration || fallback.duration,
-      bestTime: f.bestTime || fallback.bestTime,
-      location: f.location || fallback.location,
-      entryPrice: f.entryPrice || fallback.entryPrice,
+      distance: f.distance || "",
+      travelTime: f.travelTime || f.drivingTime || "",
+      drivingTime: f.drivingTime || f.travelTime || "",
+      duration: f.duration || "",
+      bestTime: f.bestTime || "",
+      location: f.location || "",
+      entryPrice: f.entryPrice || f.entryFee || f.cost || "",
+      entryFee: f.entryFee || f.entryPrice || f.cost || "",
       googleMapsUrl: f.googleMapsUrl || fallback.googleMapsUrl,
-      suitableFor: f.suitableFor || fallback.suitableFor,
-      bookingInfo: f.bookingInfo || fallback.bookingInfo,
+      suitableFor: f.suitableFor || "",
+      whatToBring: f.whatToBring || "",
+      gettingThere: f.gettingThere || "",
+      season: f.season || "",
+      bookingInfo: f.bookingInfo || "",
       mainImage: {
         url: mainImgUrl,
         alt: f.mainImage?.fields?.title || f.mainImageCaption || fallback.mainImage.alt,
@@ -1269,6 +1287,7 @@ export async function getExperienceDetail(slug, options = {}) {
       aboutParagraph1: f.aboutParagraph1 || fallback.aboutParagraph1,
       section2Heading: f.section2Heading || fallback.section2Heading,
       section2Paragraph: f.section2Paragraph || fallback.section2Paragraph,
+      storyContent: f.storyContent || f.body || f.storyText || f.story || "",
       whyWeRecommend: f.whyWeRecommend || fallback.whyWeRecommend,
       galkandaTip: f.galkandaTip || fallback.galkandaTip,
       relatedExperiences: related,

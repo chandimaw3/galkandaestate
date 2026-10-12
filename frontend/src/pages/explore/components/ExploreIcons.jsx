@@ -148,6 +148,14 @@ export default function ExploreIcons() {
         <symbol id="i-quote" viewBox="0 0 24 24">
           <path d="M9.5 7C6.5 8 5 10.3 5 13.5V17h4.5v-4.5H7c0-2 .9-3.3 2.5-4zM18.5 7c-3 1-4.5 3.3-4.5 6.5V17h4.5v-4.5H16c0-2 .9-3.3 2.5-4z"></path>
         </symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24">
+          <path d="M6 8a6 6 0 0 1 12 0v10a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V8z"></path>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2M6 13h12M10 13v3h4v-3"></path>
+        </symbol>
+        <symbol id="i-compass" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"></circle>
+          <polygon points="16.2 7.8 14.1 14.1 7.8 16.2 9.9 9.9 16.2 7.8"></polygon>
+        </symbol>
       </defs>
     </svg>
   );
