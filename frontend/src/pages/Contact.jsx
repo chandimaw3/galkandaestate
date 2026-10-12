@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { initContact } from "../behaviors/Contact.js";
+import { images } from "../images.js";
 
 export default function Contact() {
   useLayoutEffect(initContact, []);
@@ -393,8 +394,8 @@ export default function Contact() {
                 className={String.raw`lead text-base 2xl:text-lg [line-height:1.6] [color:var(--ink)] [max-width:34em] font-light`}
                 data-fade=""
               >
-                Tell us a little about your trip — dates, who's travelling and
-                what you'd love to do — and we'll come back to you personally.
+                Plan your escape to Galkanda Estate. Check availability and book
+                your stay through Airbnb.
               </p>
             </div>
             <div
@@ -417,254 +418,71 @@ export default function Contact() {
 
         <section
           className={String.raw`sec cform-sec pr-0 [padding-bottom:var(--sec)] pl-0 relative [padding-top:clamp(40px,6vw,90px)]`}
-          aria-label="Enquiry"
+          aria-label="Airbnb booking"
         >
           <div
             className={String.raw`container-wide cgrid max-w-400 mt-0 [margin-right:auto] mb-0 [margin-left:auto] pt-0 [padding-right:var(--gutter)] pb-0 [padding-left:var(--gutter)] grid gap-18 min-[992px]:[grid-template-columns:minmax(0,7fr)_minmax(0,4fr)] min-[992px]:[column-gap:7vw]`}
           >
-            <form className={String.raw`cform`} id="enquiry" noValidate>
-              <div
-                className={String.raw`fgrid grid [gap:0_32px] min-[768px]:[grid-template-columns:1fr_1fr]`}
+            <div className="min-w-0">
+              <h2 className="[font-family:var(--f-serif)] text-4xl min-[768px]:text-5xl font-normal [letter-spacing:-.02em] mb-4">Your stay starts here.</h2>
+              <p className="text-base mb-8 [color:var(--muted)]">
+                Check availability, choose your dates and book through Airbnb.
+              </p>
+              <a
+                className="group block text-inherit no-underline"
+                href="https://www.airbnb.com.au/rooms/1625391951294267587"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book Galkanda Estate with Airbnb"
               >
-                <div className={String.raw`field relative mb-2`}>
-                  <input
-                    className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] [.field_&:focus]:[border-bottom-color:var(--ink)] [.field.is-invalid_&]:[border-bottom-color:#9b4a32]`}
-                    id="f-name"
-                    name="name"
-                    type="text"
-                    autoComplete="name"
-                    required
-                    placeholder=" "
+                <div className="relative overflow-hidden rounded-[var(--r-lg)] [aspect-ratio:16/10]">
+                  <img
+                    src={images["house.jpg"]}
+                    alt="Galkanda Estate surrounded by lush greenery"
+                    className="w-full h-full object-cover [transition:scale_1.8s_cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.025] group-focus-visible:scale-[1.025] motion-reduce:transition-none motion-reduce:transform-none motion-reduce:scale-100"
+                    loading="lazy"
                   />
-                  <label
-                    className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_input:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:focus_+_&]:[color:var(--ink)] [.field_input:not(:placeholder-shown)_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:not(:placeholder-shown)_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                    htmlFor="f-name"
-                  >
-                    Name
-                  </label>
-                </div>
-                <div className={String.raw`field relative mb-2`}>
-                  <input
-                    className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] [.field_&:focus]:[border-bottom-color:var(--ink)] [.field.is-invalid_&]:[border-bottom-color:#9b4a32]`}
-                    id="f-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    placeholder=" "
-                  />
-                  <label
-                    className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_input:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:focus_+_&]:[color:var(--ink)] [.field_input:not(:placeholder-shown)_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:not(:placeholder-shown)_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                    htmlFor="f-email"
-                  >
-                    Email
-                  </label>
-                </div>
-                <div className={String.raw`field relative mb-2`}>
-                  <input
-                    className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] [.field_&:focus]:[border-bottom-color:var(--ink)] [.field.is-invalid_&]:[border-bottom-color:#9b4a32]`}
-                    id="f-phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                    placeholder=" "
-                  />
-                  <label
-                    className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_input:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:focus_+_&]:[color:var(--ink)] [.field_input:not(:placeholder-shown)_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:not(:placeholder-shown)_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                    htmlFor="f-phone"
-                  >
-                    Phone / WhatsApp
-                  </label>
-                </div>
-                <div className={String.raw`field relative mb-2`}>
-                  <input
-                    className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] [.field_&:focus]:[border-bottom-color:var(--ink)] [.field.is-invalid_&]:[border-bottom-color:#9b4a32]`}
-                    id="f-country"
-                    name="country"
-                    type="text"
-                    autoComplete="country-name"
-                    placeholder=" "
-                  />
-                  <label
-                    className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_input:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:focus_+_&]:[color:var(--ink)] [.field_input:not(:placeholder-shown)_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:not(:placeholder-shown)_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                    htmlFor="f-country"
-                  >
-                    Country
-                  </label>
-                </div>
-                <div className={String.raw`field relative mb-2`}>
-                  <input
-                    className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] [.field_&:focus]:[border-bottom-color:var(--ink)] [.field.is-invalid_&]:[border-bottom-color:#9b4a32]`}
-                    id="f-dates"
-                    name="dates"
-                    type="text"
-                    placeholder=" "
-                  />
-                  <label
-                    className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_input:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:focus_+_&]:[color:var(--ink)] [.field_input:not(:placeholder-shown)_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_input:not(:placeholder-shown)_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                    htmlFor="f-dates"
-                  >
-                    Preferred travel dates
-                  </label>
-                </div>
-                <div className={String.raw`field field--select relative mb-2`}>
-                  <select
-                    className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] cursor-pointer [background-image:linear-gradient(45deg,transparent_50%,var(--muted)_50%),linear-gradient(135deg,var(--muted)_50%,transparent_50%)] [background-position:calc(100%_-_12px)_34px,calc(100%_-_7px)_34px] [background-size:5px_5px] [background-repeat:no-repeat] [.field_&:focus]:[border-bottom-color:var(--ink)] [.field.is-invalid_&]:[border-bottom-color:#9b4a32]`}
-                    defaultValue=""
-                    id="f-guests"
-                    name="guests"
-                    required
-                  >
-                    <option value="" disabled hidden></option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                  </select>
-                  <label
-                    className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_select:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_select:focus_+_&]:[color:var(--ink)] [.field_select:valid_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_select:valid_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                    htmlFor="f-guests"
-                  >
-                    Number of guests
-                  </label>
-                </div>
-              </div>
-              <fieldset
-                className={String.raw`chips border-0 pt-0 pr-0 pb-0 pl-0 mt-9 mr-0 [margin-bottom:18px] ml-0`}
-              >
-                <legend
-                  className={String.raw`text-sm [color:var(--muted)] [margin-bottom:14px]`}
-                >
-                  What would you like to experience?
-                </legend>
-                <div className={String.raw`chips__row flex flex-wrap gap-2`}>
-                  <label className={String.raw`chip relative cursor-pointer`}>
-                    <input
-                      className={String.raw`absolute opacity-0 [width:1px] [height:1px]`}
-                      type="checkbox"
-                      name="interests"
-                      defaultValue="Farm life"
-                    />
-                    <span
-                      className={String.raw`inline-block [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 [border:1px_solid_var(--line)] rounded-full text-sm [transition:background-color_.35s_var(--ease),color_.35s,border-color_.35s] [.chip:hover_&]:[border-color:var(--ink)] [.chip_input:checked_+_&]:[background:var(--deep)] [.chip_input:checked_+_&]:[border-color:var(--deep)] [.chip_input:checked_+_&]:[color:#fff] [.chip_input:focus-visible_+_&]:[outline:2px_solid_var(--earth)] [.chip_input:focus-visible_+_&]:[outline-offset:3px]`}
-                    >
-                      Farm life
-                    </span>
-                  </label>
-                  <label className={String.raw`chip relative cursor-pointer`}>
-                    <input
-                      className={String.raw`absolute opacity-0 [width:1px] [height:1px]`}
-                      type="checkbox"
-                      name="interests"
-                      defaultValue="Food &amp; cooking"
-                    />
-                    <span
-                      className={String.raw`inline-block [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 [border:1px_solid_var(--line)] rounded-full text-sm [transition:background-color_.35s_var(--ease),color_.35s,border-color_.35s] [.chip:hover_&]:[border-color:var(--ink)] [.chip_input:checked_+_&]:[background:var(--deep)] [.chip_input:checked_+_&]:[border-color:var(--deep)] [.chip_input:checked_+_&]:[color:#fff] [.chip_input:focus-visible_+_&]:[outline:2px_solid_var(--earth)] [.chip_input:focus-visible_+_&]:[outline-offset:3px]`}
-                    >
-                      Food &amp; cooking
-                    </span>
-                  </label>
-                  <label className={String.raw`chip relative cursor-pointer`}>
-                    <input
-                      className={String.raw`absolute opacity-0 [width:1px] [height:1px]`}
-                      type="checkbox"
-                      name="interests"
-                      defaultValue="Culture"
-                    />
-                    <span
-                      className={String.raw`inline-block [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 [border:1px_solid_var(--line)] rounded-full text-sm [transition:background-color_.35s_var(--ease),color_.35s,border-color_.35s] [.chip:hover_&]:[border-color:var(--ink)] [.chip_input:checked_+_&]:[background:var(--deep)] [.chip_input:checked_+_&]:[border-color:var(--deep)] [.chip_input:checked_+_&]:[color:#fff] [.chip_input:focus-visible_+_&]:[outline:2px_solid_var(--earth)] [.chip_input:focus-visible_+_&]:[outline-offset:3px]`}
-                    >
-                      Culture
-                    </span>
-                  </label>
-                  <label className={String.raw`chip relative cursor-pointer`}>
-                    <input
-                      className={String.raw`absolute opacity-0 [width:1px] [height:1px]`}
-                      type="checkbox"
-                      name="interests"
-                      defaultValue="Wildlife"
-                    />
-                    <span
-                      className={String.raw`inline-block [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 [border:1px_solid_var(--line)] rounded-full text-sm [transition:background-color_.35s_var(--ease),color_.35s,border-color_.35s] [.chip:hover_&]:[border-color:var(--ink)] [.chip_input:checked_+_&]:[background:var(--deep)] [.chip_input:checked_+_&]:[border-color:var(--deep)] [.chip_input:checked_+_&]:[color:#fff] [.chip_input:focus-visible_+_&]:[outline:2px_solid_var(--earth)] [.chip_input:focus-visible_+_&]:[outline-offset:3px]`}
-                    >
-                      Wildlife
-                    </span>
-                  </label>
-                  <label className={String.raw`chip relative cursor-pointer`}>
-                    <input
-                      className={String.raw`absolute opacity-0 [width:1px] [height:1px]`}
-                      type="checkbox"
-                      name="interests"
-                      defaultValue="Nature &amp; hiking"
-                    />
-                    <span
-                      className={String.raw`inline-block [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 [border:1px_solid_var(--line)] rounded-full text-sm [transition:background-color_.35s_var(--ease),color_.35s,border-color_.35s] [.chip:hover_&]:[border-color:var(--ink)] [.chip_input:checked_+_&]:[background:var(--deep)] [.chip_input:checked_+_&]:[border-color:var(--deep)] [.chip_input:checked_+_&]:[color:#fff] [.chip_input:focus-visible_+_&]:[outline:2px_solid_var(--earth)] [.chip_input:focus-visible_+_&]:[outline-offset:3px]`}
-                    >
-                      Nature &amp; hiking
-                    </span>
-                  </label>
-                  <label className={String.raw`chip relative cursor-pointer`}>
-                    <input
-                      className={String.raw`absolute opacity-0 [width:1px] [height:1px]`}
-                      type="checkbox"
-                      name="interests"
-                      defaultValue="Relaxation"
-                    />
-                    <span
-                      className={String.raw`inline-block [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 [border:1px_solid_var(--line)] rounded-full text-sm [transition:background-color_.35s_var(--ease),color_.35s,border-color_.35s] [.chip:hover_&]:[border-color:var(--ink)] [.chip_input:checked_+_&]:[background:var(--deep)] [.chip_input:checked_+_&]:[border-color:var(--deep)] [.chip_input:checked_+_&]:[color:#fff] [.chip_input:focus-visible_+_&]:[outline:2px_solid_var(--earth)] [.chip_input:focus-visible_+_&]:[outline-offset:3px]`}
-                    >
-                      Relaxation
-                    </span>
-                  </label>
-                </div>
-              </fieldset>
-              <div className={String.raw`field field--area relative mb-2`}>
-                <textarea
-                  className={String.raw`w-full border-0 [border-bottom:1px_solid_var(--line)] bg-transparent [border-radius:0] pt-7 pr-0 pb-3 pl-0 [font-family:inherit] [font-style:inherit] [font-weight:inherit] [font-variant:inherit] [font-stretch:inherit] [line-height:inherit] text-lg [color:var(--ink)] [outline:none] [-webkit-appearance:none] [appearance:none] [transition:border-color_.4s_var(--ease)] [resize:vertical] min-h-30 [.field_&:focus]:[border-bottom-color:var(--ink)]`}
-                  id="f-msg"
-                  name="message"
-                  rows="4"
-                  placeholder=" "
-                ></textarea>
-                <label
-                  className={String.raw`absolute left-0 top-7 text-base [color:var(--muted)] pointer-events-none [transform-origin:left_top] [transition:transform_.45s_var(--ease),color_.3s] [.field_textarea:focus_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_textarea:focus_+_&]:[color:var(--ink)] [.field_textarea:not(:placeholder-shown)_+_&]:[transform:translateY(-22px)_scale(.78)] [.field_textarea:not(:placeholder-shown)_+_&]:[color:var(--ink)] [.field.is-invalid_&]:[color:#9b4a32]`}
-                  htmlFor="f-msg"
-                >
-                  Message
-                </label>
-              </div>
-              <div
-                className={String.raw`cform__foot flex flex-wrap items-center [gap:16px_28px] mt-8`}
-              >
-                <button
-                  className={String.raw`btn-g btn-g--submit [--bb:var(--dark)] [--bf:#fff] inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] border-0 bg-transparent pt-0 pr-0 pb-0 pl-0 cursor-pointer`}
-                  type="submit"
-                >
-                  <span
-                    className={String.raw`btn-g__label [background:var(--bb)] [color:var(--bf)] [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px]`}
-                  >
-                    Send Enquiry
-                  </span>
-                  <span
-                    className={String.raw`btn-g__arrow w-11 h-11 [flex:0_0_44px] rounded-full [background:var(--bb)] [color:var(--bf)] grid place-items-center text-base [transition:background-color_.4s_var(--ease)]`}
+                  <div
+                    className="absolute inset-0 grid place-items-center bg-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100 [@media(hover:none)]:opacity-100 motion-reduce:transition-none"
                     aria-hidden="true"
                   >
-                    <span
-                      className={String.raw`inline-block [transition:transform_.5s_var(--ease)] [.btn-g:hover_.btn-g\_\_arrow_&]:[transform:rotate(45deg)] [.btn-g:focus-visible_.btn-g\_\_arrow_&]:[transform:rotate(45deg)]`}
-                    >
-                      &#8599;
+                    <span className="inline-flex items-center gap-4 rounded-full [background:var(--bg)] [color:var(--ink)] px-6 py-4 text-sm font-medium translate-y-3 transition-transform duration-500 group-hover:translate-y-0 group-focus-visible:translate-y-0 [@media(hover:none)]:translate-y-0 motion-reduce:transition-none motion-reduce:transform-none motion-reduce:scale-100">
+                      Book with
+                      <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Airbnb%20Logo%20B%C3%A9lo.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className="w-20 h-6 object-contain"
+                      />
+                      <span className="text-lg">&#8599;</span>
                     </span>
+                  </div>
+                  <span className="absolute bottom-5 left-5 rounded-full px-4 py-2 text-xs uppercase tracking-widest [background:var(--bg)] [color:var(--ink)]">
+                    Entire home · Kandy
                   </span>
-                </button>
-                <p
-                  className={String.raw`small cform__status text-sm [color:var(--muted)] [.is-dark_&]:[color:rgba(244,241,234,.66)] mt-0 mr-0 mb-0 ml-0`}
-                  role="status"
-                  aria-live="polite"
-                ></p>
-              </div>
-            </form>
+                </div>
+                <div className="flex flex-wrap items-start justify-between gap-4 py-6 [border-bottom:1px_solid_var(--line)]">
+                  <div>
+                    <h3 className="text-2xl font-normal mb-2 [letter-spacing:-.03em]">Galkanda Estate Eco Farm Villa</h3>
+                    <p className="text-sm [color:var(--muted)]">3 bedrooms &nbsp;·&nbsp; 3 beds &nbsp;·&nbsp; 2 baths</p>
+                  </div>
+                  <span className="text-sm [color:var(--green)]">View on Airbnb &#8599;</span>
+                </div>
+              </a>
+              <a
+                className="btn-g inline-flex items-center gap-1 mt-8 no-underline text-sm font-medium"
+                href="https://www.airbnb.com.au/rooms/1625391951294267587?guests=1&adults=1&s=66&source=embed_widget"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="rounded-full [background:var(--dark)] text-white px-7 py-4 [transition:background-color_.3s] hover:[background:var(--green)]">
+                  Book with Airbnb
+                </span>
+                <span className="w-12 h-12 rounded-full [background:var(--dark)] text-white grid place-items-center text-lg" aria-hidden="true">
+                  &#8599;
+                </span>
+              </a>
+            </div>
 
             <aside
               className={String.raw`cinfo grid gap-12 [align-content:start]`}
