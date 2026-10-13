@@ -208,8 +208,7 @@ export default function Contact() {
             >
               <img
                 className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                src="https://images.unsplash.com/photo-1514053026555-49ce8886ae41?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                srcSet="https://images.unsplash.com/photo-1514053026555-49ce8886ae41?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1514053026555-49ce8886ae41?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1514053026555-49ce8886ae41?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1514053026555-49ce8886ae41?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                src={images["Moments4.webp"]}
                 sizes="(min-width: 992px) 40vw, 100vw"
                 alt="A quiet corner of the terrace at Galkanda"
                 fetchPriority="high"
@@ -237,8 +236,8 @@ export default function Contact() {
               </div>
               <div className="grid grid-cols-1 min-[540px]:grid-cols-2 gap-5 min-[1200px]:gap-7">
                 {[
-                  { name: "Airbnb", image: "main2.jpg", imageAlt: "Galkanda Estate villa", accent: "#b93849", tint: "#f5e6e3", radius: "28px", tagline: "A place to feel at home", href: "https://www.airbnb.com.au/rooms/1625391951294267587" },
-                  { name: "Booking.com", image: "Interior.jpg", imageAlt: "Galkanda Estate living room opening onto the garden", accent: "#003b95", tint: "#e5edf7", radius: "12px", tagline: "Your next escape awaits", href: "https://www.booking.com/Share-0PNEE0" },
+                  { name: "Airbnb", image: "house.webp", imageAlt: "Galkanda Estate villa", accent: "#b93849", tint: "#f5e6e3", radius: "28px", tagline: "A place to feel at home", href: "https://www.airbnb.com.au/rooms/1625391951294267587" },
+                  { name: "Booking.com", image: "estate-garden.webp", imageAlt: "Galkanda Estate living room opening onto the garden", accent: "#003b95", tint: "#e5edf7", radius: "12px", tagline: "Your next escape awaits", href: "https://www.booking.com/Share-0PNEE0" },
                 ].map((platform) => (
                   <article key={platform.name} style={{ "--platform-accent": platform.accent, "--platform-tint": platform.tint, "--platform-radius": platform.radius }} className="min-w-0 flex flex-col">
                     <div data-fade="" className="flex items-center justify-between gap-3 mb-4">
