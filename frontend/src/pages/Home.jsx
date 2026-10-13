@@ -596,7 +596,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["Room4.webp"]}
+                    src={images["Room6.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Seating tucked into the garden beside the house"
                     loading="lazy"
@@ -640,7 +640,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["Estate4.webp"]}
+                    src={images["Estate6.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Dining table on the shaded terrace"
                     loading="lazy"
@@ -1178,7 +1178,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["main3.webp"]}
+                    src={images["paddy.webp"]}
                     sizes="100vw"
                     alt="Morning fields of the working farm at Galkanda"
                     fetchPriority="high"
