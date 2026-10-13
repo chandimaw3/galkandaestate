@@ -1189,10 +1189,10 @@ export default function Home() {
                 data-i="1"
               >
                 <div
-                  className={String.raw`mf__z absolute top-0 right-0 bottom-0 left-0 [.mf.is-pinned_&]:[top:calc(var(--nav-h)_+_3vh)] [.mf.is-pinned_&]:[bottom:5vh] [.mf.is-pinned_&]:[right:var(--gutter)] [.mf.is-pinned_&]:[left:38vw] [background:var(--cream)]`}
+                  className={String.raw`mf__z absolute top-0 right-0 bottom-0 left-0`}
                 >
                   <img
-                    className={String.raw`max-w-full block w-full h-full object-contain`}
+                    className={String.raw`max-w-full block w-full h-full object-cover`}
                     src={images["cowfeed.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"
@@ -1613,7 +1613,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                  src={images["Food2.webp"]}
+                  src={images["Food5.webp"]}
                   sizes="(min-width: 992px) 20vw, 45vw"
                   alt="Hands preparing fresh produce on a wooden table"
                   loading="lazy"
@@ -2593,7 +2593,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["Farm2.webp"]}
+                      src={images["cowfeed.webp"]}
                       sizes="45vw"
                       alt="Morning milking on the farm"
                       loading="lazy"

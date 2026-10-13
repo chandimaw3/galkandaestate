@@ -1,0 +1,1 @@
+import{t as e}from"./shared-CWsjbDzv.js";function t(){return e(()=>{})}export{t};
