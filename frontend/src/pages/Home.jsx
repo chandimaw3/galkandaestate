@@ -210,7 +210,7 @@ export default function Home() {
                 >
                   <img
                     className="max-w-full block w-full h-full object-cover"
-                    src={images["main1.webp"]}
+                    src={images["HomeHero.webp"]}
                     alt="Galkanda Estate villa surrounded by tropical greenery near Kandy"
                     fetchPriority="high"
                     decoding="async"
@@ -393,8 +393,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src="https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                    src={images["main1.webp"]}
                     sizes="(min-width: 992px) 38vw, 100vw"
                     alt="Galkanda Estate villa among the trees"
                     loading="lazy"
@@ -405,8 +404,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover`}
-                      src="https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      src={images["main2.webp"]}
                       sizes="100vw"
                       alt="Timber house with a shaded deck among tropical trees — arriving at Galkanda"
                       loading="eager"
@@ -1195,7 +1193,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["Farm2.webp"]}
+                    src={images["framecow.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
