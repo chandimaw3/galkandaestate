@@ -20,6 +20,12 @@
 .about-team__host h3{font-size:clamp(36px,4vw,56px);line-height:1.1;letter-spacing:-.035em;font-weight:400;margin:0 0 14px}
 .about-team__host p{font-size:16px;line-height:1.8;max-width:48ch;color:var(--muted);margin:12px 0 24px}
 .about-team__host-link{display:inline-flex;align-items:center;gap:24px;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:8px}
+.about-team__host-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px}
+.about-team__call-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:44px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:13px;transition:color .25s ease,border-color .25s ease,background-color .25s ease}
+.about-team__call-link:hover{color:var(--green);border-color:var(--green);background:rgba(91,112,73,.06)}
+.about-team__call-link:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.about-team__call-link svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.about-team__call-label{line-height:1}
 @media(max-width:767px){.about-team__host{grid-template-columns:1fr;gap:24px}.about-team__portrait.about-team__host-portrait{aspect-ratio:4/3}}
 .about-team__cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.5vw,36px)}
 .about-team__card{min-width:0}

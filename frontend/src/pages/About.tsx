@@ -6,8 +6,6 @@ import { initExperiences } from "../behaviors/Experiences.js";
 import { images } from "../images.js";
 import {
   getAboutTeamData,
-  DEFAULT_HOST,
-  DEFAULT_TEAM_MEMBERS,
 } from "../services/contentful.js";
 import "./About.css";
 
@@ -20,6 +18,7 @@ interface HostMember {
   text: string;
   linkText?: string;
   linkUrl?: string;
+  phone?: string;
   isPlaceholder?: boolean;
 }
 
@@ -51,30 +50,28 @@ const storyParagraphs = [
   "We hope guests leave not only with memories of a peaceful stay, but with a deeper appreciation of nature, food, community and the small choices through which all of us can live a little more sustainably."
 ];
 export default function About() {
-  const [team, setTeam] = useState<TeamMember[]>(DEFAULT_TEAM_MEMBERS);
-  const [host, setHost] = useState<HostMember>(DEFAULT_HOST);
+  const [team, setTeam] = useState<TeamMember[]>([]);
+  const [host, setHost] = useState<HostMember | null>(null);
+  const [teamLoaded, setTeamLoaded] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
     getAboutTeamData().then((res) => {
       if (isMounted && res) {
-        if (res.team && res.team.length > 0) {
-          setTeam(res.team);
-          // Shared scroll reveals initialize on mount, before async Contentful
-          // cards arrive. Apply the same host animation to those new elements.
-          requestAnimationFrame(() =>
-            (window as any).Galkanda?.initShared?.(),
-          );
-        }
-        if (res.host) setHost(res.host);
+        setTeam(res.team || []);
+        setHost(res.host || null);
       }
+      if (isMounted) setTeamLoaded(true);
     });
     return () => {
       isMounted = false;
     };
   }, []);
 
-  useLayoutEffect(initExperiences, []);
+  useLayoutEffect(() => {
+    if (!teamLoaded) return;
+    return initExperiences();
+  }, [teamLoaded]);
   return (<>
     <svg
       className={String.raw`absolute!`}
@@ -281,14 +278,14 @@ export default function About() {
     </section>
 
       <section className="about-story" id="estate" aria-labelledby="story-heading">
-        <h2 id="story-heading">Our Story &amp; Philosophy</h2>
+        <h2 id="story-heading" data-split="">Our Story &amp; Philosophy</h2>
         <div className="about-story__columns">
-          <div>{storyParagraphs.slice(0, 7).map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
-          <div>{storyParagraphs.slice(7).map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+          <div>{storyParagraphs.slice(0, 7).map(paragraph => <p data-fade="" key={paragraph}>{paragraph}</p>)}</div>
+          <div>{storyParagraphs.slice(7).map(paragraph => <p data-fade="" key={paragraph}>{paragraph}</p>)}</div>
         </div>
       </section>
       <section className="about-philosophy" id="philosophy" aria-label="Our philosophy">
-        <p>Live simply.<br />Grow responsibly.<br />Support locally.<br />Stay connected to <em>nature.</em></p>
+        <p data-split="">Live simply.<br />Grow responsibly.<br />Support locally.<br />Stay connected to <em>nature.</em></p>
       </section>
       <section className="about-team" id="team" aria-labelledby="team-heading">
         <div className="about-team__heading">
@@ -296,7 +293,7 @@ export default function About() {
           <h2 id="team-heading" data-split="">The people behind <em>your stay.</em></h2>
           <p data-fade="">Meet the team at Galkanda Estate.</p>
         </div>
-        <article className="about-team__host" aria-labelledby="host-name">
+        {host && <article className="about-team__host" aria-labelledby="host-name">
           <div className="about-team__portrait about-team__host-portrait" data-reveal="">
             {host.photo ? (
               <img
@@ -326,11 +323,24 @@ export default function About() {
             <h3 id="host-name">Meet <em>{host.name}.</em></h3>
             <span className="about-team__role">{host.role}</span>
             <p>{host.text}</p>
-            <Link className="about-team__host-link" to={host.linkUrl || "/contact"}>
-              {host.linkText || "Plan your stay"} <span aria-hidden="true">&#8599;</span>
-            </Link>
+            <div className="about-team__host-actions">
+              <Link className="about-team__host-link" to={host.linkUrl || "/contact"}>
+                {host.linkText || "Plan your stay"} <span aria-hidden="true">&#8599;</span>
+              </Link>
+              {host.phone && <a
+                className="about-team__call-link"
+                href={`tel:${host.phone.replace(/[^+\d]/g, "")}`}
+                aria-label={`Call ${host.name} at ${host.phone}`}
+                title={`Call ${host.phone}`}
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7.2 3.5h2.5l1.2 4.2-1.8 1.5a15 15 0 0 0 5.7 5.7l1.5-1.8 4.2 1.2v2.5a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.2 5.7a2 2 0 0 1 2-2.2Z" />
+                </svg>
+                <span className="about-team__call-label">Call</span>
+              </a>}
+            </div>
           </div>
-        </article>
+        </article>}
         <div className="about-team__cards">
           {team.map((member) => (
             <article className="about-team__card" key={member.id || member.name}>

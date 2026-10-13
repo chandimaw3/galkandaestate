@@ -373,48 +373,6 @@ export async function getExperienceDetail(slug) {
   }
 }
 
-export const DEFAULT_HOST = {
-  name: "Punya",
-  title: "Meet Punya.",
-  role: "Property manager",
-  label: "Your host",
-  photo: "https://i.pravatar.cc/600?img=11",
-  text: "Punya manages Galkanda Estate, where a family-inspired way of life brings nature, farming and warm Sri Lankan hospitality together.",
-  linkText: "Plan your stay",
-  linkUrl: "/contact",
-  isPlaceholder: true,
-};
-
-export const DEFAULT_TEAM_MEMBERS = [
-  {
-    name: "Ravi",
-    role: "Estate care & hospitality",
-    initial: "R",
-    photo: "https://i.pravatar.cc/600?img=12",
-    text: "Ravi lovingly cares for the estate alongside Sarojini and their family, helping guests feel welcomed and connected to the place.",
-    value: "Local knowledge",
-    isPlaceholder: true,
-  },
-  {
-    name: "Sarojini",
-    role: "Estate care & hospitality",
-    initial: "S",
-    photo: "https://i.pravatar.cc/600?img=47",
-    text: "Sarojini and her family bring warmth and genuine Sri Lankan hospitality to everyday life at Galkanda.",
-    value: "Warm hospitality",
-    isPlaceholder: true,
-  },
-  {
-    name: "Their family",
-    role: "The heart of the estate",
-    initial: "G",
-    photo: "https://i.pravatar.cc/600?img=49",
-    text: "Together, the family helps make Galkanda a comfortable, welcoming place to slow down and share the rhythm of the estate.",
-    value: "A personal welcome",
-    isPlaceholder: true,
-  },
-];
-
 let cachedAboutTeam = null;
 let cachedTeamMembers = null;
 
@@ -425,7 +383,7 @@ export async function getAboutTeamData() {
   }
 
   if (!isContentfulConfigured || !contentfulClient) {
-    return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+    return { host: null, team: [] };
   }
 
   try {
@@ -475,13 +433,13 @@ export async function getAboutTeamData() {
             content_type: "teamMember",
           });
         } catch {
-          return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+          return { host: null, team: [] };
         }
       }
     }
 
     if (!response || !response.items || response.items.length === 0) {
-      return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+      return { host: null, team: [] };
     }
 
     let rawItems = [];
@@ -527,13 +485,13 @@ export async function getAboutTeamData() {
           name,
           role,
           initial,
-          photo:
-            photoUrl || `https://i.pravatar.cc/600?img=${12 + index * 10}`,
+          photo: photoUrl,
           text: f.text || f.bio || f.description || f.about || "",
           value: f.value || f.highlight || f.tagline || "",
           label: f.label || "Your host",
           linkText: f.linkText || "Plan your stay",
           linkUrl: f.linkUrl || "/contact",
+          phone: f.phone || f.phoneNumber || f.telephone || "",
           isHost,
           isPlaceholder: !photoUrl,
         };
@@ -552,12 +510,13 @@ export async function getAboutTeamData() {
           text: hostEntry.text,
           linkText: hostEntry.linkText || "Plan your stay",
           linkUrl: hostEntry.linkUrl || "/contact",
+          phone: hostEntry.phone,
           isPlaceholder: hostEntry.isPlaceholder,
         }
-      : DEFAULT_HOST;
+      : null;
 
     const teamMembers = allMembers.filter((m) => m !== hostEntry);
-    const team = teamMembers.length > 0 ? teamMembers : DEFAULT_TEAM_MEMBERS;
+    const team = teamMembers;
 
     const result = { host, team };
     cachedAboutTeam = result;
@@ -565,11 +524,11 @@ export async function getAboutTeamData() {
     return result;
   } catch (err) {
     console.warn("Failed to fetch team members from Contentful:", err);
-    return { host: DEFAULT_HOST, team: DEFAULT_TEAM_MEMBERS };
+    return { host: null, team: [] };
   }
 }
 
-// Fetch Team Members from Contentful with fallback to DEFAULT_TEAM_MEMBERS
+// Fetch Team Members from Contentful.
 export async function getTeamMembers() {
   if (cachedTeamMembers) {
     return cachedTeamMembers;
