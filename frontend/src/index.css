@@ -268,3 +268,33 @@
     all: unset;
   }
 }
+/* Keep the call label from shrinking while the button expands. */
+.floating-call__label {
+  display: block;
+  flex: 0 0 auto;
+  width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: width .4s ease, margin-left .4s ease, opacity .25s ease;
+}
+.floating-call:hover .floating-call__label,
+.floating-call:focus-visible .floating-call__label {
+  width: 64px;
+  margin-left: 12px;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-call__label { transition: none; }
+}
+@keyframes call-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -4px; }
+}
+.floating-call { animation: call-float 3.6s ease-in-out infinite; }
+.floating-call:hover,
+.floating-call:focus-visible { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .floating-call { animation: none; }
+}

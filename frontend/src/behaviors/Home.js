@@ -489,10 +489,10 @@ export function initHome() {
             TOTAL = A + B + C;
           let cur = 0;
 
-          const clipTo = () => {
-            const s = slot.getBoundingClientRect(),
-              h = stage.getBoundingClientRect();
-            return `inset(${s.top - h.top}px ${h.right - s.right}px ${h.bottom - s.bottom}px ${s.left - h.left}px round 16px)`;
+          const cardBounds = () => {
+            const s = slot.getBoundingClientRect();
+            const h = stage.getBoundingClientRect();
+            return { top: s.top - h.top, left: s.left - h.left, width: s.width, height: s.height };
           };
           const setActive = (i) => {
             if (i === cur) return;
@@ -531,7 +531,7 @@ export function initHome() {
             cur = i;
           };
 
-          gsap.set(frame, { clipPath: "inset(0px 0px 0px 0px round 0px)" });
+          gsap.set(frame, { right: "auto", bottom: "auto", width: "100%", height: "100%" });
           gsap.set(panelBits, { opacity: 0, y: 24 });
 
           const tl = gsap.timeline({
@@ -574,12 +574,16 @@ export function initHome() {
             .to(l1, { xPercent: -14, duration: A }, 0)
             .to(l2, { xPercent: 14, duration: A }, 0)
             .to(mh, { opacity: 0, duration: A * 0.45 }, A * 0.5)
-            // B — the photograph crops into the farm-life frame
+            // B — resize the banner into the farm-life card
             .fromTo(
               frame,
-              { clipPath: "inset(0px 0px 0px 0px round 0px)" },
+              { top: 0, left: 0, width: () => stage.clientWidth, height: () => stage.clientHeight, borderRadius: 0 },
               {
-                clipPath: clipTo,
+                top: () => cardBounds().top,
+                left: () => cardBounds().left,
+                width: () => cardBounds().width,
+                height: () => cardBounds().height,
+                borderRadius: 16,
                 duration: B,
                 ease: "power2.inOut",
                 immediateRender: false,

@@ -1,3 +1,5 @@
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { initHome } from "../behaviors/Home.js";
@@ -181,205 +183,7 @@ export default function Home() {
         </div>
       </div>
 
-      <a
-        className={String.raw`skip-link fixed left-3 [top:-60px] [z-index:300] [background:var(--dark)] [color:#fff] [padding-top:10px] pr-4 [padding-bottom:10px] pl-4 rounded-full text-sm no-underline [transition:top_.3s] [&:focus]:top-3`}
-        href="#main"
-      >
-        Skip to content
-      </a>
-
-      <header
-        className={String.raw`site-header is-solid fixed top-0 right-0 [bottom:auto] left-0 [z-index:120] [height:var(--nav-h)] [color:var(--ink)] [border-bottom:1px_solid_transparent] [transition:background-color_.6s_var(--ease),color_.6s_var(--ease),border-color_.6s_var(--ease)] [&.is-solid]:[background:rgba(244,241,234,.92)] [&.is-solid]:[-webkit-backdrop-filter:blur(10px)] [&.is-solid]:[backdrop-filter:blur(10px)] [&.is-solid]:[border-bottom-color:var(--line)] [&.is-light]:[color:#fff] [&.is-light]:bg-transparent [&.is-light]:[border-bottom-color:transparent] [&.menu-open]:[color:var(--bg)] [&.menu-open]:bg-transparent [&.menu-open]:[border-bottom-color:transparent] [&.menu-open]:[-webkit-backdrop-filter:none] [&.menu-open]:[backdrop-filter:none]`}
-        id="siteHeader"
-      >
-        <nav
-          className={String.raw`site-header__inner navbar h-full max-w-400 mt-0 [margin-right:auto] mb-0 [margin-left:auto] pt-0 [padding-right:var(--gutter)] pb-0 [padding-left:var(--gutter)] grid [grid-template-columns:1fr_auto_1fr] items-center flex-nowrap max-[991.98px]:[grid-template-columns:1fr_auto]`}
-          aria-label="Main"
-        >
-          <Link
-            className={String.raw`brand inline-flex items-center [gap:11px] text-sm [letter-spacing:.2em] uppercase font-medium no-underline text-inherit whitespace-nowrap max-[389.98px]:gap-2 max-[389.98px]:[letter-spacing:.16em] max-[389.98px]:text-xs`}
-            to="/"
-            aria-label="Galkanda Estate — home"
-          >
-            <svg
-              className={String.raw`brand__mark [width:26px] [height:17px] flex-none [fill:none] [stroke:currentColor] [stroke-width:1.4] [stroke-linejoin:round] [stroke-linecap:round] [transition:transform_.6s_var(--ease)] [.brand:hover_&]:[transform:translateY(-1px)] max-[389.98px]:[width:22px] max-[389.98px]:[height:15px]`}
-              viewBox="0 0 28 18"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M1.5 16.5 9.6 4.2l4.6 6.6 3.4-4.4 8.9 10.1z"></path>
-              <path d="M7.4 7.6l2.2 1.6 1.9-1.4"></path>
-            </svg>
-            <span>Galkanda Estate</span>
-          </Link>
-          <ul
-            className={String.raw`nav-links hidden list-none mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 pb-0 pl-0 [gap:clamp(14px,1.8vw,28px)] min-[992px]:flex`}
-          >
-            <li>
-              <Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/about"
-              >About</Link>
-</li>
-<li>
-<Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/estate"
-              >
-                Estate
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/experiences"
-              >
-                Experiences
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/food"
-              >
-                Food &amp; Farm
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/explore"
-              >
-                Explore
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={String.raw`text-inherit relative no-underline text-sm [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.nav-links_&::after]:[content:""] [.nav-links_&::after]:absolute [.nav-links_&::after]:left-0 [.nav-links_&::after]:right-0 [.nav-links_&::after]:bottom-0 [.nav-links_&::after]:[height:1px] [.nav-links_&::after]:[background:currentColor] [.nav-links_&::after]:[transform:scaleX(0)] [.nav-links_&::after]:origin-left [.nav-links_&::after]:[transition:transform_.5s_var(--ease)] [.nav-links_&:hover::after]:[transform:scaleX(1)]`}
-                to="/gallery"
-              >
-                Gallery
-              </Link>
-            </li>
-          </ul>
-          <div
-            className={String.raw`header-end justify-self-end flex items-center [gap:14px]`}
-          >
-            <Link
-              className={String.raw`pill text-inherit hidden items-center gap-2 no-underline text-sm [padding-top:10px] [padding-right:18px] [padding-bottom:10px] [padding-left:18px] [border:1px_solid_currentColor] rounded-full [transition:background-color_.4s_var(--ease),color_.4s_var(--ease)] [.site-header.is-solid_&:hover]:[background:var(--dark)] [.site-header.is-solid_&:hover]:[color:#fff] [.site-header.is-solid_&:hover]:[border-color:var(--dark)] [.site-header.is-light_&:hover]:[background:#fff] [.site-header.is-light_&:hover]:[color:var(--ink)] min-[992px]:inline-flex`}
-              to="/contact"
-            >
-              <span>Plan Your Stay</span>
-              <i
-                className={String.raw`not-italic inline-block [transition:transform_.45s_var(--ease)] [.pill:hover_&]:[transform:rotate(45deg)]`}
-                aria-hidden="true"
-              >
-                &#8599;
-              </i>
-            </Link>
-            <button
-              className={String.raw`menu-toggle w-11 h-11 border-0 bg-transparent text-inherit relative pt-0 pr-0 pb-0 pl-0 [margin-right:-10px] min-[992px]:hidden`}
-              type="button"
-              aria-controls="siteMenu"
-              aria-expanded="false"
-              aria-label="Open menu"
-            >
-              <span
-                className={String.raw`absolute [left:11px] [right:11px] [height:1.5px] [background:currentColor] [transition:transform_.5s_var(--ease)] [top:18px]`}
-              ></span>
-              <span
-                className={String.raw`absolute [left:11px] [right:11px] [height:1.5px] [background:currentColor] [transition:transform_.5s_var(--ease)] [top:25px]`}
-              ></span>
-            </button>
-          </div>
-        </nav>
-      </header>
-
-      <div
-        className={String.raw`menu fixed top-0 right-0 bottom-0 left-0 [z-index:110] [background:var(--dark)] [color:var(--bg)] flex flex-col justify-between [padding-top:calc(var(--nav-h)_+_4vh)] [padding-right:var(--gutter)] pb-7 [padding-left:var(--gutter)] invisible [clip-path:inset(0_0_100%_0)] [&.is-open]:visible [&.is-open]:[clip-path:inset(0_0_0_0)]`}
-        id="siteMenu"
-        aria-hidden="true"
-        role="dialog"
-        aria-label="Site menu"
-      >
-        <ul
-          className={String.raw`menu__links list-none mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 pb-0 pl-0`}
-        >
-          <li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/about"
-            >
-              <span className={String.raw`block`}>About</span>
-            </Link>
-          </li>
-<li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/estate"
-            >
-              <span className={String.raw`block`}>Estate</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/experiences"
-            >
-              <span className={String.raw`block`}>Experiences</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/food"
-            >
-              <span className={String.raw`block`}>Food &amp; Farm</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/explore"
-            >
-              <span className={String.raw`block`}>Explore</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/gallery"
-            >
-              <span className={String.raw`block`}>Gallery</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={String.raw`text-inherit block overflow-hidden no-underline text-4xl md:text-7xl [letter-spacing:-.045em] [line-height:1.06] [padding-top:.04em] pr-0 [padding-bottom:.04em] pl-0`}
-              to="/contact"
-            >
-              <span className={String.raw`block`}>Contact</span>
-            </Link>
-          </li>
-        </ul>
-        <div
-          className={String.raw`menu__foot flex justify-between items-center text-sm [color:rgba(244,241,234,.66)] [border-top:1px_solid_var(--line-light)] pt-5`}
-        >
-          <span>Kandy, Sri Lanka</span>
-          <Link
-            className={String.raw`link-u link-u--light [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100 [color:var(--bg)]`}
-            to="/contact"
-          >
-            Plan Your Stay{" "}
-            <i
-              className={String.raw`not-italic inline-block [transition:transform_.45s_var(--ease)] [.link-u:hover_&]:[transform:rotate(45deg)]`}
-              aria-hidden="true"
-            >
-              &#8599;
-            </i>
-          </Link>
-        </div>
-      </div>
+      <Header />
 
       <main className={String.raw`block`} id="main">
         <section
@@ -406,7 +210,7 @@ export default function Home() {
                 >
                   <img
                     className="max-w-full block w-full h-full object-cover"
-                    src={images["main1.jpg"]}
+                    src={images["HomeHero.webp"]}
                     alt="Galkanda Estate villa surrounded by tropical greenery near Kandy"
                     fetchPriority="high"
                     decoding="async"
@@ -416,7 +220,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover`}
-                      src={images["main2.jpg"]}
+                      src={images["main2.webp"]}
                       sizes="100vw"
                       alt="Timber house with a shaded deck among tropical trees — arriving at Galkanda"
                       loading="eager"
@@ -589,8 +393,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src="https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1676794944553-399cade9cd39?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                    src={images["main1.webp"]}
                     sizes="(min-width: 992px) 38vw, 100vw"
                     alt="Galkanda Estate villa among the trees"
                     loading="lazy"
@@ -601,8 +404,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover`}
-                      src="https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1783334418852-0b86d67d4c01?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      src={images["main2.webp"]}
                       sizes="100vw"
                       alt="Timber house with a shaded deck among tropical trees — arriving at Galkanda"
                       loading="eager"
@@ -619,7 +421,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["main3.jpg"]}
+                    src={images["main3.webp"]}
                     sizes="(min-width: 992px) 24vw, 100vw"
                     alt="Green paddy fields of the organic farm at Galkanda"
                     loading="lazy"
@@ -748,7 +550,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["sleep.jpg"]}                    
+                    src={images["Room1.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Bedroom with a king bed and large windows looking onto the trees"
                     loading="lazy"
@@ -770,7 +572,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["gather.jpg"]}
+                    src={images["gather.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Living room with timber panelling and garden views"
                     loading="lazy"
@@ -792,7 +594,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["outside.jpg"]}
+                    src={images["Room6.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Seating tucked into the garden beside the house"
                     loading="lazy"
@@ -814,7 +616,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["cookingarea.jpg"]}
+                    src={images["cookingarea.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="The kitchen with wooden cabinets"
                     loading="lazy"
@@ -836,7 +638,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["share.jpg"]}
+                    src={images["Estate6.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Dining table on the shaded terrace"
                     loading="lazy"
@@ -1374,7 +1176,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["main3.jpg"]}
+                    src={images["paddy.webp"]}
                     sizes="100vw"
                     alt="Morning fields of the working farm at Galkanda"
                     fetchPriority="high"
@@ -1391,7 +1193,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["cow.jpg"]}
+                    src={images["cowfeed.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
@@ -1408,7 +1210,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["walk.jpg"]}
+                    src={images["Farm1.webp"]}
                     sizes="100vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"
@@ -1425,7 +1227,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["farmwork.jpg"]}
+                    src={images["farmwork.webp"]}
                     sizes="100vw"
                     alt="Hands planting seedlings into garden soil"
                     loading="lazy"
@@ -1442,7 +1244,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["curdnbutter.jpg"]}
+                    src={images["curdbutter.webp"]}
                     sizes="100vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1477,7 +1279,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["tea.jpg"]}
+                    src={images["tea.webp"]}
                     sizes="100vw"
                     alt="Tea being poured at a garden table"
                     loading="lazy"
@@ -1547,7 +1349,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["main3.jpg"]}
+                    src={images["main3.webp"]}
                     alt="Morning fields of the working farm at Galkanda"
                     loading="lazy"
                     decoding="async"
@@ -1578,7 +1380,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["cow.jpg"]}
+                    src={images["Farm2.webp"]}
                     sizes="80vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
@@ -1609,7 +1411,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["walk.jpg"]}
+                    src={images["Farm1.wwbp"]}
                     sizes="80vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"
@@ -1641,7 +1443,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["farmwork.jpg"]}
+                    src={images["farmwork.webp"]}
                     sizes="80vw"
                     alt="Hands planting seedlings into garden soil"
                     loading="lazy"
@@ -1672,7 +1474,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["curdbutter.jpg"]}
+                    src={images["curdbutter.webp"]}
                     sizes="80vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1736,7 +1538,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["tea.jpg"]}
+                    src={images["tea.webp"]}
                     alt="Tea being poured at a garden table"
                     loading="lazy"
                     decoding="async"
@@ -1794,7 +1596,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transform-origin:50%_50%]`}
-                  src={images["food.jpg"]}
+                  src={images["Food3.webp"]}
                   sizes="(min-width: 992px) 55vw, 100vw"
                   alt="A traditional Sri Lankan meal of rice and curries served on a leaf"
                   loading="lazy"
@@ -1811,7 +1613,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                  src={images["food2.jpg"]}
+                  src={images["Food5.webp"]}
                   sizes="(min-width: 992px) 20vw, 45vw"
                   alt="Hands preparing fresh produce on a wooden table"
                   loading="lazy"
@@ -2577,7 +2379,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["teastate.jpg"]}
+                        src={images["Nature1.webp"]}
                         sizes="90vw"
                         alt="Misty morning view over fields and hills"
                         loading="lazy"
@@ -2613,7 +2415,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["cow.jpg"]}
+                        src={images["Farm2.webp"]}
                         sizes="90vw"
                         alt="Morning milking on the farm"
                         loading="lazy"
@@ -2649,7 +2451,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["walk.jpg"]}
+                        src={images["Farm1.webp"]}
                         alt="Temple of the Tooth in Kandy"
                         loading="lazy"
                         decoding="async"
@@ -2684,7 +2486,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["walk.jpg"]}
+                        src={images["Farm1.webp"]}
                         sizes="90vw"
                         alt="Walking through the fields in the late afternoon"
                         loading="lazy"
@@ -2720,7 +2522,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["tea.jpg"]}
+                        src={images["tea.webp"]}
                         sizes="90vw"
                         alt="Tea being poured as evening falls"
                         loading="lazy"
@@ -2756,7 +2558,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["gather.jpg"]}
+                        src={images["Room2.webp"]}
                         alt="Wooden table set with Sri Lankan dishes"
                         loading="lazy"
                         decoding="async"
@@ -2778,7 +2580,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["teastate.jpg"]}
+                      src={images["Nature1.webp"]}
                       sizes="45vw"
                       alt="Misty morning view over fields and hills"
                       loading="lazy"
@@ -2791,7 +2593,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["cow.jpg"]}
+                      src={images["cowfeed.webp"]}
                       sizes="45vw"
                       alt="Morning milking on the farm"
                       loading="lazy"
@@ -2818,7 +2620,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["walk.jpg"]}
+                      src={images["Farm1.webp"]}
                       sizes="45vw"
                       alt="Walking through the fields in the late afternoon"
                       loading="lazy"
@@ -2831,7 +2633,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["tea.jpg"]}
+                      src={images["tea.webp"]}
                       sizes="45vw"
                       alt="Tea being poured as evening falls"
                       loading="lazy"
@@ -2844,7 +2646,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["gather.jpg"]}
+                      src={images["Homegather.webp"]}
                       sizes="45vw"
                       alt="Wooden table set with Sri Lankan dishes"
                       loading="lazy"
@@ -2871,7 +2673,7 @@ export default function Home() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["testate2.jpg"]}
+                src={images["HomeFooter.webp"]}
                 sizes="100vw"
                 alt="Mist drifting over the hill country near Kandy"
                 loading="lazy"
@@ -2921,7 +2723,7 @@ export default function Home() {
             >
               <img
                 className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                src={images["house.jpg"]} 
+                src={images["house.webp"]}
                 sizes="(min-width: 992px) 34vw, 100vw"
                 alt="Guests gathered around a table under a tree at Galkanda (placeholder photo)"
                 loading="lazy"
@@ -3351,7 +3153,7 @@ export default function Home() {
           >
             <img
               className={String.raw`max-w-full block w-full h-full object-cover`}
-              src={images["mountains.jpg"]}
+              src={images["mountains.webp"]}
               sizes="100vw"
               alt="Golden evening light over the hills around Kandy"
               loading="lazy"
@@ -3412,14 +3214,14 @@ export default function Home() {
                   </span>
                 </span>
               </Link>
-              <Link
+              <a
                 className={String.raw`btn-g btn-g--line [--bb:var(--dark)] [--bf:#fff] inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] [color:#fff]`}
-                to="/estate"
+                href="tel:+94711659004"
               >
                 <span
                   className={String.raw`btn-g__label [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}
                 >
-                  Explore the Estate
+                  Call now
                 </span>
                 <span
                   className={String.raw`btn-g__arrow w-11 h-11 [flex:0_0_44px] rounded-full grid place-items-center text-base [transition:background-color_.4s_var(--ease)] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}
@@ -3431,7 +3233,7 @@ export default function Home() {
                     &#8599;
                   </span>
                 </span>
-              </Link>
+              </a>
             </div>
             <p
               className={String.raw`fin__note text-sm [color:rgba(255,255,255,.72)] mt-0 mr-0 mb-0 ml-0`}
@@ -3442,161 +3244,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer
-        className={String.raw`site-footer [background:var(--dark)] [color:var(--bg)] [padding-top:clamp(72px,10vw,120px)] pr-0 pb-7 pl-0`}
-        data-header="light"
-      >
-        <div
-          className={String.raw`container-xxl max-w-375 [padding-left:var(--gutter)] [padding-right:var(--gutter)] w-full mx-auto`}
-        >
-          <div
-            className={String.raw`footer-grid grid gap-11 [padding-bottom:clamp(56px,8vw,110px)] min-[768px]:[grid-template-columns:2fr_1fr_1fr] min-[992px]:[grid-template-columns:1.3fr_1fr_.6fr]`}
-          >
-            <div className={String.raw`footer-brand`}>
-              <Link
-                className={String.raw`brand brand--lg inline-flex items-center [gap:11px] [letter-spacing:.2em] uppercase font-medium no-underline text-inherit whitespace-nowrap max-[389.98px]:gap-2 max-[389.98px]:[letter-spacing:.16em] text-sm`}
-                to="/"
-              >
-                <svg
-                  className={String.raw`brand__mark [width:26px] [height:17px] flex-none [fill:none] [stroke:currentColor] [stroke-width:1.4] [stroke-linejoin:round] [stroke-linecap:round] [transition:transform_.6s_var(--ease)] [.brand:hover_&]:[transform:translateY(-1px)] max-[389.98px]:[width:22px] max-[389.98px]:[height:15px]`}
-                  viewBox="0 0 28 18"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path d="M1.5 16.5 9.6 4.2l4.6 6.6 3.4-4.4 8.9 10.1z"></path>
-                  <path d="M7.4 7.6l2.2 1.6 1.9-1.4"></path>
-                </svg>
-                <span>Galkanda Estate</span>
-              </Link>
-              <p
-                className={String.raw`mt-4 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] italic text-2xl xl:text-4xl [line-height:1.1] [letter-spacing:-.01em] [color:rgba(244,241,234,.9)] [max-width:12em]`}
-              >
-                A slower way to experience Sri Lanka.
-              </p>
-            </div>
-            <ul
-              className={String.raw`footer-links list-none mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 pb-0 pl-0 grid gap-2 [align-content:start] min-[992px]:[grid-template-columns:1fr_1fr] min-[992px]:gap-x-10`}
-              aria-label="Pages"
-            >
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/about"
-                >About</Link>
-</li>
-<li>
-<Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/estate"
-                >
-                  Estate
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/experiences"
-                >
-                  Experiences
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/food"
-                >
-                  Food &amp; Farm
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/explore"
-                >
-                  Explore
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/gallery"
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-            <ul
-              className={String.raw`footer-links footer-links--end list-none mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 pb-0 pl-0 grid gap-2 [align-content:start] min-[992px]:gap-x-10 min-[992px]:[grid-template-columns:1fr]`}
-              aria-label="Contact"
-            >
-              <li>
-                <Link
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  to="/contact"
-                >
-                  Plan Your Stay{" "}
-                  <i
-                    className={String.raw`not-italic text-xs`}
-                    aria-hidden="true"
-                  >
-                    &#8599;
-                  </i>
-                </Link>
-              </li>
-              <li>
-                <a
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  href="#"
-                  rel="noopener"
-                >
-                  Instagram{" "}
-                  <i
-                    className={String.raw`not-italic text-xs`}
-                    aria-hidden="true"
-                  >
-                    &#8599;
-                  </i>
-                </a>
-              </li>
-              <li>
-                <a
-                  className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  href="https://maps.google.com/?q=Kandy,Sri+Lanka"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Location{" "}
-                  <i
-                    className={String.raw`not-italic text-xs`}
-                    aria-hidden="true"
-                  >
-                    &#8599;
-                  </i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            className={String.raw`footer-bottom flex flex-wrap [gap:10px_32px] justify-between pt-6 [border-top:1px_solid_var(--line-light)] text-xs [color:rgba(244,241,234,.55)]`}
-          >
-            <span>Galkanda Estate Eco Farm Stay · Kandy, Sri Lanka</span>
-            <span>
-              © <span data-year="">2026</span> Galkanda Estate
-            </span>
-            <a className={String.raw`text-inherit no-underline`} href="#">
-              Privacy
-            </a>
-          </div>
-        </div>
-      </footer>
+
+      <Footer />
 
       <div
         className={String.raw`cursor fixed left-0 top-0 [z-index:400] pointer-events-none hidden opacity-0 [.has-cursor_&]:block`}
