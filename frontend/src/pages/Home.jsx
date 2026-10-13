@@ -1176,7 +1176,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["paddy.webp"]}
+                    src={images["home-1.7.webp"]}
                     sizes="100vw"
                     alt="Morning fields of the working farm at Galkanda"
                     fetchPriority="high"
@@ -1193,7 +1193,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["cowfeed.webp"]}
+                    src={images["home-2.7.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
@@ -1210,7 +1210,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["Farm1.webp"]}
+                    src={images["home-3.7.webp"]}
                     sizes="100vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"
@@ -1227,7 +1227,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["farmwork.webp"]}
+                    src={images["home-8.7.webp"]}
                     sizes="100vw"
                     alt="Hands planting seedlings into garden soil"
                     loading="lazy"
@@ -1244,7 +1244,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["curdbutter.webp"]}
+                    src={images["home-5.7.webp"]}
                     sizes="100vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1279,7 +1279,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["tea.webp"]}
+                    src={images["home-7.7.webp"]}
                     sizes="100vw"
                     alt="Tea being poured at a garden table"
                     loading="lazy"
@@ -2486,7 +2486,7 @@ export default function Home() {
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["Farm1.webp"]}
+                        src={images["home-3.7.webp"]}
                         sizes="90vw"
                         alt="Walking through the fields in the late afternoon"
                         loading="lazy"
@@ -2620,7 +2620,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["Farm1.webp"]}
+                      src={images["home-3.7.webp"]}
                       sizes="45vw"
                       alt="Walking through the fields in the late afternoon"
                       loading="lazy"
@@ -2633,7 +2633,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["tea.webp"]}
+                      src={images["home-7.7.webp"]}
                       sizes="45vw"
                       alt="Tea being poured as evening falls"
                       loading="lazy"
@@ -2646,7 +2646,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["Homegather.webp"]}
+                      src={images["home-9.7.webp"]}
                       sizes="45vw"
                       alt="Wooden table set with Sri Lankan dishes"
                       loading="lazy"
