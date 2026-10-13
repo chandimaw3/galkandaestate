@@ -175,7 +175,7 @@ export default function Experiences() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["mountains.webp"]}
+                src={images["exp-hero.webp"]}
                 sizes="100vw"
                 alt="A farmer standing in the paddy fields at Galkanda"
                 fetchPriority="high"
@@ -292,7 +292,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["main3.webp"]}
+                      src={images["exp-1.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Green fields of the working farm"
                       loading="lazy"
@@ -387,7 +387,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["Farm2.webp"]}
+                      src={images["exp-2.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="A cow being milked by hand"
                       loading="lazy"
@@ -482,7 +482,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["Farm1.webp"]}
+                      src={images["exp-3.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="A path through green paddy fields"
                       loading="lazy"
@@ -577,7 +577,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["farmwork.webp"]}
+                      src={images["exp-4.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Hands planting seedlings into soil"
                       loading="lazy"
@@ -672,7 +672,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["curdbutter.webp"]}
+                      src={images["exp-5.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Clay pots used for setting curd"
                       loading="lazy"
@@ -767,7 +767,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["teamaking.webp"]}
+                      src={images["exp-6.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Cooking over a traditional clay stove"
                       loading="lazy"
@@ -958,7 +958,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["tea.webp"]}
+                      src={images["exp-7.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Tea being poured in the garden"
                       loading="lazy"
@@ -2363,7 +2363,7 @@ export default function Experiences() {
           >
             <img
               className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-              src={images["HeroGallery.webp"]}
+              src={images["exp-footer.webp"]}
               sizes="100vw"
               alt="Walking through the fields at Galkanda"
               loading="lazy"

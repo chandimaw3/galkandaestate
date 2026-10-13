@@ -241,7 +241,7 @@ export default function About() {
         >
           <img
             className={String.raw`max-w-full block w-full h-full object-cover`}
-            src={images["Interior.webp"]}
+            src={images["about-hero.webp"]}
             sizes="100vw"
             alt="Open living spaces overlooking the gardens at Galkanda Estate"
             fetchPriority="high"
@@ -367,7 +367,7 @@ export default function About() {
           ))}
         </div>      </section>
       <section className="about-stay" aria-labelledby="stay-heading" data-header="light">
-        <img src={images["Estate1.webp"]} alt="The countryside home at Galkanda Estate" loading="lazy" decoding="async" />
+        <img src={images["about-footer.webp"]} alt="The countryside home at Galkanda Estate" loading="lazy" decoding="async" />
         <div className="about-stay__copy"><h2 id="stay-heading">Make Galkanda<br />Your Home in <em>Kandy.</em></h2><p>Enquire about dates, guests and the experiences you&#8217;d like.</p><div className="about-stay__actions"><Link to="/contact#enquiry">Plan Your Stay <span aria-hidden="true">&#8599;</span></Link><a href="tel:+94711659004">Call now <span aria-hidden="true">&#8599;</span></a></div></div>
       </section>
     </main>      <Footer />

@@ -175,7 +175,7 @@ export default function Estate() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["main2.webp"]}
+                src={images["estate-hero.webp"]}
                 sizes="100vw"
                 alt="Timber house with deck surrounded by tropical trees"
                 fetchPriority="high"
@@ -408,7 +408,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Room3.webp"]}
+                    src={images["estate-bed1.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Master bedroom with king bed and forest view"
                     loading="lazy"
@@ -465,8 +465,8 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src="https://images.unsplash.com/photo-1621626806480-53591486f446?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1621626806480-53591486f446?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1621626806480-53591486f446?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1621626806480-53591486f446?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1621626806480-53591486f446?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                    src={images["estate-bed2.webp"]}                    
+                    srcSet = {images["estate-bed2.webp"]} 
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Second bedroom with a wooden king bed"
                     loading="lazy"
@@ -523,8 +523,8 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src="https://images.unsplash.com/photo-1760067537376-265afef0f362?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1760067537376-265afef0f362?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1760067537376-265afef0f362?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1760067537376-265afef0f362?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1760067537376-265afef0f362?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                    src={images["estate-bed3.webp"]}                    
+                    srcSet = {images["estate-bed3.webp"]} 
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Third bedroom with tall windows"
                     loading="lazy"
@@ -628,7 +628,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Room2.webp"]}
+                    src={images["estate-living.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Living room with timber panelling and garden views"
                     loading="lazy"
@@ -655,7 +655,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["cookingarea.webp"]}
+                    src={images["estate-kitchen.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="The kitchen with wooden cabinets"
                     loading="lazy"
@@ -682,7 +682,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["outside.webp"]}
+                    src={images["estate-garden.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Table and wicker chair on the shaded terrace"
                     loading="lazy"
@@ -1704,7 +1704,7 @@ export default function Estate() {
           >
             <img
               className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-              src={images["main1.webp"]}
+              src={images["estate-footer.webp"]}
               sizes="100vw"
               alt="The house at Galkanda among the trees"
               loading="lazy"

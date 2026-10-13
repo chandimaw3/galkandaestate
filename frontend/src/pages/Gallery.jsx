@@ -1042,7 +1042,7 @@ export default function Gallery() {
           >
             <img
               className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-              src={images["CTAGallery.webp"]}
+              src={images["gallery-out2.webp"]}
               sizes="100vw"
               alt="The house at Galkanda among the trees"
               loading="lazy"
