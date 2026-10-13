@@ -1193,7 +1193,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["framecow.webp"]}
+                    src={images["cowfeed.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
