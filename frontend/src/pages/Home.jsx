@@ -2673,7 +2673,7 @@ export default function Home() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["HeroGallery.webp"]}
+                src={images["HomeFooter.webp"]}
                 sizes="100vw"
                 alt="Mist drifting over the hill country near Kandy"
                 loading="lazy"
