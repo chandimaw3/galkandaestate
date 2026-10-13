@@ -1189,10 +1189,10 @@ export default function Home() {
                 data-i="1"
               >
                 <div
-                  className={String.raw`mf__z absolute top-0 right-0 bottom-0 left-0`}
+                  className={String.raw`mf__z absolute top-0 right-0 bottom-0 left-0 [.mf.is-pinned_&]:[top:calc(var(--nav-h)_+_3vh)] [.mf.is-pinned_&]:[bottom:5vh] [.mf.is-pinned_&]:[right:var(--gutter)] [.mf.is-pinned_&]:[left:38vw] [background:var(--cream)]`}
                 >
                   <img
-                    className={String.raw`max-w-full block w-full h-full object-cover`}
+                    className={String.raw`max-w-full block w-full h-full object-contain`}
                     src={images["cowfeed.webp"]}
                     sizes="100vw"
                     alt="Cow being milked by hand in the early morning"

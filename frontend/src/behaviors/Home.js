@@ -524,7 +524,7 @@ export function initHome() {
             );
             gsap.fromTo(
               next.querySelector("img"),
-              { scale: 1.06 },
+              { scale: i === 1 ? 1 : 1.06 },
               { scale: 1, duration: 1.1, ease: "power2.out", overwrite: true },
             );
             items.forEach((it, k) => it.classList.toggle("is-active", k === i));
@@ -880,7 +880,7 @@ export function initHome() {
             );
             gsap.fromTo(
               b.querySelector("img"),
-              { scale: 1.06 },
+              { scale: i === 1 ? 1 : 1.06 },
               { scale: 1, duration: 1.2, ease: "power2.out", overwrite: true },
             );
             items.forEach((it, k) => it.classList.toggle("is-active", k === i));
@@ -1288,7 +1288,7 @@ export function initHome() {
               { xPercent: 0, scale: 1 },
               0,
             )
-            .fromTo(".fin__media img", { scale: 1.06 }, { scale: 1 }, 0);
+            .fromTo(".fin__media img", { scale: i === 1 ? 1 : 1.06 }, { scale: 1 }, 0);
         });
       }
     },
