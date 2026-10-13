@@ -6,8 +6,6 @@ import { initExperiences } from "../behaviors/Experiences.js";
 import { images } from "../images.js";
 import {
   getAboutTeamData,
-  DEFAULT_HOST,
-  DEFAULT_TEAM_MEMBERS,
 } from "../services/contentful.js";
 import "./About.css";
 
@@ -52,30 +50,28 @@ const storyParagraphs = [
   "We hope guests leave not only with memories of a peaceful stay, but with a deeper appreciation of nature, food, community and the small choices through which all of us can live a little more sustainably."
 ];
 export default function About() {
-  const [team, setTeam] = useState<TeamMember[]>(DEFAULT_TEAM_MEMBERS);
-  const [host, setHost] = useState<HostMember>(DEFAULT_HOST);
+  const [team, setTeam] = useState<TeamMember[]>([]);
+  const [host, setHost] = useState<HostMember | null>(null);
+  const [teamLoaded, setTeamLoaded] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
     getAboutTeamData().then((res) => {
       if (isMounted && res) {
-        if (res.team && res.team.length > 0) {
-          setTeam(res.team);
-          // Shared scroll reveals initialize on mount, before async Contentful
-          // cards arrive. Apply the same host animation to those new elements.
-          requestAnimationFrame(() =>
-            (window as any).Galkanda?.initShared?.(),
-          );
-        }
-        if (res.host) setHost(res.host);
+        setTeam(res.team || []);
+        setHost(res.host || null);
       }
+      if (isMounted) setTeamLoaded(true);
     });
     return () => {
       isMounted = false;
     };
   }, []);
 
-  useLayoutEffect(initExperiences, []);
+  useLayoutEffect(() => {
+    if (!teamLoaded) return;
+    return initExperiences();
+  }, [teamLoaded]);
   return (<>
     <svg
       className={String.raw`absolute!`}
@@ -282,14 +278,14 @@ export default function About() {
     </section>
 
       <section className="about-story" id="estate" aria-labelledby="story-heading">
-        <h2 id="story-heading">Our Story &amp; Philosophy</h2>
+        <h2 id="story-heading" data-split="">Our Story &amp; Philosophy</h2>
         <div className="about-story__columns">
-          <div>{storyParagraphs.slice(0, 7).map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
-          <div>{storyParagraphs.slice(7).map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
+          <div>{storyParagraphs.slice(0, 7).map(paragraph => <p data-fade="" key={paragraph}>{paragraph}</p>)}</div>
+          <div>{storyParagraphs.slice(7).map(paragraph => <p data-fade="" key={paragraph}>{paragraph}</p>)}</div>
         </div>
       </section>
       <section className="about-philosophy" id="philosophy" aria-label="Our philosophy">
-        <p>Live simply.<br />Grow responsibly.<br />Support locally.<br />Stay connected to <em>nature.</em></p>
+        <p data-split="">Live simply.<br />Grow responsibly.<br />Support locally.<br />Stay connected to <em>nature.</em></p>
       </section>
       <section className="about-team" id="team" aria-labelledby="team-heading">
         <div className="about-team__heading">
@@ -297,7 +293,7 @@ export default function About() {
           <h2 id="team-heading" data-split="">The people behind <em>your stay.</em></h2>
           <p data-fade="">Meet the team at Galkanda Estate.</p>
         </div>
-        <article className="about-team__host" aria-labelledby="host-name">
+        {host && <article className="about-team__host" aria-labelledby="host-name">
           <div className="about-team__portrait about-team__host-portrait" data-reveal="">
             {host.photo ? (
               <img
@@ -344,7 +340,7 @@ export default function About() {
               </a>}
             </div>
           </div>
-        </article>
+        </article>}
         <div className="about-team__cards">
           {team.map((member) => (
             <article className="about-team__card" key={member.id || member.name}>
