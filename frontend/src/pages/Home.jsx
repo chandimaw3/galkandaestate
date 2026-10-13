@@ -2646,7 +2646,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["gather.webp"]}
+                      src={images["Homegather.webp"]}
                       sizes="45vw"
                       alt="Wooden table set with Sri Lankan dishes"
                       loading="lazy"
