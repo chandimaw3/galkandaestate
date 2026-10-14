@@ -4,16 +4,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useLayoutEffect } from "react";
 import { initExplore } from "../behaviors/Explore.js";
 import {
-  DEFAULT_EXPLORE_PAGE,
-  DEFAULT_EXPERIENCES,
   DEFAULT_EXPLORE_CATEGORIES,
   getExploreExperiences,
 } from "../services/contentful.js";
 
 export default function Explore() {
-  const pageData = DEFAULT_EXPLORE_PAGE;
   const [experiences, setExperiences] = useState([]);
-  const [categories] = useState(DEFAULT_EXPLORE_CATEGORIES);
+  const categories = DEFAULT_EXPLORE_CATEGORIES;
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -233,8 +230,8 @@ export default function Explore() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={pageData.hero.image}
-                alt={pageData.hero.imageAlt}
+                src="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&fit=crop&w=1600&q=78"
+                alt="The Temple of the Tooth across Kandy Lake"
                 fetchPriority="high"
                 decoding="async"
               />
@@ -255,7 +252,7 @@ export default function Explore() {
                   className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)] [color:rgba(255,255,255,.8)]`}
                   data-hero-fade=""
                 >
-                  {pageData.hero.eyebrow}
+                  Explore Kandy
                 </span>
                 <h1
                   className={String.raw`h-xl [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit [line-height:.94] text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl`}
@@ -274,7 +271,7 @@ export default function Explore() {
                 className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
                 data-hero-fade=""
               >
-                {pageData.hero.description}
+                Places we love near the estate — temples and forests, tea country, markets and day trips — each with the practical details to plan your visit.
               </div>
             </div>
           </div>
@@ -294,7 +291,7 @@ export default function Explore() {
                 <span
                   className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--muted)] [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 >
-                  {pageData.section.eyebrow}
+                  Things to Do Near Kandy
                 </span>
                 <h2
                   className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02]`}
@@ -315,7 +312,7 @@ export default function Explore() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                {pageData.section.description}
+                Galkanda is a base for exploring, not a tour company. Off-site experiences are arranged with independent providers where applicable — we're always happy to help you plan.
               </p>
             </div>
             <div
@@ -460,7 +457,7 @@ export default function Explore() {
               <span
                 className={String.raw`label inline-flex items-center [gap:10px] text-xs [letter-spacing:.16em] uppercase font-medium [color:var(--muted)] [margin-bottom:22px] [&::before]:[content:""] [&::before]:[width:18px] [&::before]:[height:1px] [&::before]:[background:currentColor] [&::before]:[opacity:.6] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
               >
-                {pageData.cta.eyebrow}
+                Stay at Galkanda
               </span>
               <h2
                 className={String.raw`h-md [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 ml-0 text-inherit text-3xl lg:text-4xl xl:text-5xl [line-height:1.02] mb-3`}
@@ -476,7 +473,7 @@ export default function Explore() {
               <p
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] mt-0 mr-0 mb-0 ml-0`}
               >
-                {pageData.cta.description}
+                Come back to the farm after a day out — tea in the garden, dinner from the estate, and a slower pace.
               </p>
             </div>
             <div
@@ -504,9 +501,9 @@ export default function Explore() {
               </Link>
               <Link
                 className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}
-                to={pageData.cta.secondaryButtonLink}
+                to="/estate"
               >
-                {pageData.cta.secondaryButtonText}{" "}
+                See the Estate{" "}
                 <i
                   className={String.raw`not-italic inline-block [transition:transform_.45s_var(--ease)] [.link-u:hover_&]:[transform:rotate(45deg)]`}
                   aria-hidden="true"
