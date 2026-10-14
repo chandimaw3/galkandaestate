@@ -8,10 +8,10 @@ export const isContentfulConfigured = Boolean(space && accessToken);
 
 export const contentfulClient = isContentfulConfigured
   ? createClient({
-      space,
-      accessToken,
-      environment,
-    })
+    space,
+    accessToken,
+    environment,
+  })
   : null;
 
 export const DEFAULT_EXPLORE_CATEGORIES = [
@@ -67,47 +67,13 @@ export function resolveCategory(rawCategory, rawCategorySlug) {
 
   const slug =
     rawCategorySlug &&
-    typeof rawCategorySlug === "string" &&
-    rawCategorySlug.trim()
+      typeof rawCategorySlug === "string" &&
+      rawCategorySlug.trim()
       ? rawCategorySlug.trim()
       : toCategorySlug(name);
 
   return { name, slug };
 }
-
-export const DEFAULT_EXPLORE_PAGE = {
-  hero: {
-    eyebrow: "Explore Kandy",
-    title: "A Local Travel Journal",
-    subtitle: "by Galkanda",
-    accent: "Estate.",
-    description:
-      "Places we love near the estate — temples and forests, tea country, markets and day trips — each with the practical details to plan your visit.",
-    image:
-      "https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&fit=crop&w=1600&q=78",
-    imageAlt: "The Temple of the Tooth across Kandy Lake",
-  },
-  section: {
-    eyebrow: "Things to Do Near Kandy",
-    title: "Curated Experiences Around",
-    accent: "Galkanda.",
-    description:
-      "Galkanda is a base for exploring, not a tour company. Off-site experiences are arranged with independent providers where applicable — we're always happy to help you plan.",
-  },
-  cta: {
-    eyebrow: "Stay at Galkanda",
-    title: "A Quiet Base for",
-    accent: "Exploring.",
-    description:
-      "Come back to the farm after a day out — tea in the garden, dinner from the estate, and a slower pace.",
-    primaryButtonText: "Plan Your Stay",
-    primaryButtonLink: "/contact",
-    secondaryButtonText: "See the Estate",
-    secondaryButtonLink: "/estate",
-  },
-};
-
-export const DEFAULT_EXPERIENCES = [];
 
 // Helper to resolve Contentful Asset image URLs
 function resolveAssetUrl(asset) {
@@ -117,7 +83,7 @@ function resolveAssetUrl(asset) {
   return fileUrl.startsWith("//") ? `https:${fileUrl}` : fileUrl;
 }
 
-// Explore page content fetch removed (not needed)
+
 
 // In-memory caches to eliminate double-loading and repeated network fetches
 let cachedExploreExperiences = null;
@@ -149,8 +115,8 @@ export async function getExploreExperiences() {
       const link = rawSlug.startsWith("/explore/")
         ? rawSlug
         : rawSlug.startsWith("/")
-        ? rawSlug
-        : `/explore/${rawSlug}`;
+          ? rawSlug
+          : `/explore/${rawSlug}`;
 
       const { name: categoryName, slug: categorySlug } = resolveCategory(
         f.category || f.categoryName,
@@ -234,11 +200,11 @@ export async function getExperienceDetail(slug) {
     const heroUrl = resolveAssetUrl(heroAsset);
     const mainImage = heroUrl
       ? {
-          url: heroUrl,
-          alt: heroAsset?.fields?.title || f.mainImageCaption || f.title || "",
-          caption: f.mainImageCaption || heroAsset?.fields?.description || "",
-          full: heroUrl,
-        }
+        url: heroUrl,
+        alt: heroAsset?.fields?.title || f.mainImageCaption || f.title || "",
+        caption: f.mainImageCaption || heroAsset?.fields?.description || "",
+        full: heroUrl,
+      }
       : null;
 
     // Related experiences - strictly from Contentful references
@@ -437,17 +403,17 @@ export async function getAboutTeamData() {
     const hostEntry = allMembers.find((m) => m.isHost);
     const host = hostEntry
       ? {
-          name: hostEntry.name,
-          title: `Meet ${hostEntry.name}.`,
-          role: hostEntry.role,
-          label: hostEntry.label || "Your host",
-          photo: hostEntry.photo,
-          text: hostEntry.text,
-          linkText: hostEntry.linkText || "Plan your stay",
-          linkUrl: hostEntry.linkUrl || "/contact",
-          phone: hostEntry.phone,
-          isPlaceholder: hostEntry.isPlaceholder,
-        }
+        name: hostEntry.name,
+        title: `Meet ${hostEntry.name}.`,
+        role: hostEntry.role,
+        label: hostEntry.label || "Your host",
+        photo: hostEntry.photo,
+        text: hostEntry.text,
+        linkText: hostEntry.linkText || "Plan your stay",
+        linkUrl: hostEntry.linkUrl || "/contact",
+        phone: hostEntry.phone,
+        isPlaceholder: hostEntry.isPlaceholder,
+      }
       : null;
 
     const teamMembers = allMembers.filter((m) => m !== hostEntry);
