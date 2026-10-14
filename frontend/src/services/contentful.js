@@ -117,72 +117,7 @@ function resolveAssetUrl(asset) {
   return fileUrl.startsWith("//") ? `https:${fileUrl}` : fileUrl;
 }
 
-// Fetch Explore Page main metadata and content
-export async function getExplorePageContent() {
-  if (!isContentfulConfigured || !contentfulClient) {
-    return DEFAULT_EXPLORE_PAGE;
-  }
-
-  try {
-    const response = await contentfulClient.getEntries({
-      content_type: "explorePage",
-      limit: 1,
-    });
-
-    if (!response.items || response.items.length === 0) {
-      return DEFAULT_EXPLORE_PAGE;
-    }
-
-    const item = response.items[0];
-    const fields = item.fields;
-
-    return {
-      hero: {
-        eyebrow: fields.heroEyebrow || DEFAULT_EXPLORE_PAGE.hero.eyebrow,
-        title: fields.heroTitle || DEFAULT_EXPLORE_PAGE.hero.title,
-        subtitle: fields.heroSubtitle || DEFAULT_EXPLORE_PAGE.hero.subtitle,
-        accent: fields.heroAccent || DEFAULT_EXPLORE_PAGE.hero.accent,
-        description:
-          fields.heroDescription || DEFAULT_EXPLORE_PAGE.hero.description,
-        image:
-          resolveAssetUrl(fields.heroImage) || DEFAULT_EXPLORE_PAGE.hero.image,
-        imageAlt:
-          fields.heroImage?.fields?.title ||
-          DEFAULT_EXPLORE_PAGE.hero.imageAlt,
-      },
-      section: {
-        eyebrow:
-          fields.sectionEyebrow || DEFAULT_EXPLORE_PAGE.section.eyebrow,
-        title: fields.sectionTitle || DEFAULT_EXPLORE_PAGE.section.title,
-        accent: fields.sectionAccent || DEFAULT_EXPLORE_PAGE.section.accent,
-        description:
-          fields.sectionDescription || DEFAULT_EXPLORE_PAGE.section.description,
-      },
-      cta: {
-        eyebrow: fields.ctaEyebrow || DEFAULT_EXPLORE_PAGE.cta.eyebrow,
-        title: fields.ctaTitle || DEFAULT_EXPLORE_PAGE.cta.title,
-        accent: fields.ctaAccent || DEFAULT_EXPLORE_PAGE.cta.accent,
-        description:
-          fields.ctaDescription || DEFAULT_EXPLORE_PAGE.cta.description,
-        primaryButtonText:
-          fields.ctaPrimaryButtonText ||
-          DEFAULT_EXPLORE_PAGE.cta.primaryButtonText,
-        primaryButtonLink:
-          fields.ctaPrimaryButtonLink ||
-          DEFAULT_EXPLORE_PAGE.cta.primaryButtonLink,
-        secondaryButtonText:
-          fields.ctaSecondaryButtonText ||
-          DEFAULT_EXPLORE_PAGE.cta.secondaryButtonText,
-        secondaryButtonLink:
-          fields.ctaSecondaryButtonLink ||
-          DEFAULT_EXPLORE_PAGE.cta.secondaryButtonLink,
-      },
-    };
-  } catch (err) {
-    console.warn("Failed to fetch explore page from Contentful:", err);
-    return DEFAULT_EXPLORE_PAGE;
-  }
-}
+// Explore page content fetch removed (not needed)
 
 // In-memory caches to eliminate double-loading and repeated network fetches
 let cachedExploreExperiences = null;
