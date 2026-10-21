@@ -293,8 +293,8 @@ export default function Food() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Vegetable plots, rice fields and the estate's cows — what's on
-                the table depends on what the land is giving at the time.
+                From vegetable plots and rice fields to the estate's cows,
+                what reaches the table follows the seasons.
               </p>
             </div>
             <div
@@ -415,7 +415,7 @@ export default function Food() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Everything on the table starts somewhere on the estate — or very
+                Everything on the table starts somewhere on the estate or very
                 close by.
               </p>
             </div>

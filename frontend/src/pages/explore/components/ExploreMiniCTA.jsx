@@ -39,8 +39,8 @@ export default function ExploreMiniCTA() {
           <p
             className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] mt-0 mr-0 mb-0 ml-0`}
           >
-            Come back to the farm after a day out — tea in the garden, dinner
-            from the estate, and a slower pace.
+            Come back to the farm after a day out for tea in the garden, dinner
+            from the estate and a slower pace.
           </p>
         </div>
         <div

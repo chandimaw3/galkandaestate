@@ -21,5 +21,8 @@
     "postcss-selector-parser": "^7.1.6",
     "prettier": "^3.9.9",
     "specificity": "^1.0.0"
+  },
+  "dependencies": {
+    "contentful": "^11.12.10"
   }
 }

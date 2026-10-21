@@ -34,20 +34,20 @@ interface TeamMember {
 }
 
 const storyParagraphs = [
-  "Galkanda Estate Eco Farm Stay is a family-inspired retreat created to share a slower, more meaningful way of experiencing Sri Lanka \u2014 one that brings together nature, traditional food, farming, sustainability and warm Sri Lankan hospitality.",
-  "Set within a working organic farm in the countryside near Kandy, the estate offers the best of both worlds. It is close enough to the city for guests to easily explore Kandy\u2019s cultural and historical attractions, yet sufficiently removed from the bustle to offer peace, privacy and tranquillity.",
-  "The idea behind the estate has always been about more than creating a comfortable home. It grew from a belief that the way we live should respect the natural world, use resources thoughtfully and remain connected to the land that sustains us.",
-  "That philosophy shaped both the house and the farm around it.",
-  "The open design of the home makes extensive use of natural light and encourages air to move freely through the living spaces and indoor open garden. Natural ventilation helps keep the house cool and comfortable while allowing the sounds, light and rhythms of nature to remain part of everyday life.",
-  "Sustainability extends throughout the estate. Solar energy supports lighting and hot water, while a biogas system provides an alternative source of energy for cooking. Around the house is a functioning dairy and organic farm producing vegetables, fruits, fresh milk, butter and curd. Wherever possible, what is needed is grown or produced on the estate.",
-  "What cannot be produced here is sourced, wherever possible, from people in the surrounding community. For us, sustainability is not simply about reducing environmental impact. It is also about supporting local livelihoods, strengthening relationships with neighbouring communities and recognising that a sustainable way of living should benefit both people and nature.",
-  "Biodiversity is equally important. The gardens, cultivated areas and natural spaces around the property are managed with the hope that agriculture, people and wildlife can coexist. The estate offers an opportunity to understand where food comes from, observe the changing seasons, appreciate other living things and rediscover a connection with the natural world.",
-  "Today, we have opened Galkanda Estate to guests so that this way of life can be shared.",
-  "Guests are invited not simply to stay, but to become part of the rhythm of the estate. They may enjoy freshly prepared farm-to-table meals, walk through the gardens and paddy fields, experience aspects of traditional farming and food production, watch birds and other wildlife, or simply find a quiet place to relax surrounded by nature.",
-  "The experience can also extend beyond the estate. While Kandy\u2019s well-known attractions are within easy reach, we hope to introduce guests to some of the region\u2019s lesser-known places, local landscapes, villages and everyday aspects of rural Sri Lankan life that can easily be missed on a conventional itinerary.",
-  "The property is managed by Punya and lovingly cared for by Ravi, Sarojini and their family. Their warmth, local knowledge and genuine hospitality are an important part of the Galkanda experience, helping guests feel welcomed, comfortable and connected to the place throughout their stay.",
-  "Ultimately, Galkanda Estate Eco Farm Stay is not intended to be merely a place to sleep while visiting Kandy. It is a place to experience, learn, reconnect and slow down.",
-  "We hope guests leave not only with memories of a peaceful stay, but with a deeper appreciation of nature, food, community and the small choices through which all of us can live a little more sustainably."
+  "Galkanda Estate Eco Farm Stay is a family-inspired retreat where nature, traditional food, farming and warm Sri Lankan hospitality come together. We created it to share a slower, more thoughtful way of experiencing Sri Lanka, rooted in care for the land and the people around us.",
+  "Set on a working organic farm in the countryside near Kandy, the estate offers space to unwind while staying within easy reach of the city. Guests can explore Kandy's cultural and historical attractions, then return to the peace and privacy of the farm.",
+  "Galkanda began with a simple belief: a comfortable home can also be a thoughtful one. The way we live should respect nature, use resources carefully and keep us connected to the land that sustains us.",
+  "That belief continues to shape the house, the farm and the welcome we offer.",
+  "The home's open design welcomes natural light and lets air flow through the living spaces and indoor garden. Natural ventilation helps keep the house cool, while birdsong, shifting light and the rhythms of the outdoors become part of daily life.",
+  "Thoughtful use of resources runs throughout the estate. Solar energy supports lighting and hot water, and a biogas system provides energy for cooking. The dairy and organic farm produce vegetables, fruit, fresh milk, butter and curd. Wherever possible, what we serve is grown or made here.",
+  "What we cannot produce ourselves, we source from the surrounding community wherever possible. Supporting local livelihoods and building lasting relationships with our neighbours are part of our approach to sustainability, alongside caring for the environment.",
+  "We also care for the variety of life that makes the estate its home. Our gardens, cultivated land and natural spaces are managed to encourage farming and wildlife to coexist. Time here offers a chance to see where food comes from, notice the seasons and reconnect with nature.",
+  "By welcoming guests to Galkanda, we share this way of life and invite others to enjoy its simple pleasures.",
+  "Days can unfold at your own pace. Enjoy a freshly prepared meal from the farm, wander through gardens and paddy fields, learn about traditional farming and food preparation, or watch the birds. There is just as much room to find a quiet corner and rest.",
+  "Beyond the estate, Kandy's celebrated sights sit alongside quieter places worth discovering. We hope to introduce guests to nearby villages, rural landscapes and everyday moments of Sri Lankan life that a busy itinerary can overlook.",
+  "The property is managed by Punya and lovingly cared for by Ravi, Sarojini and their family. Their warmth, local knowledge and personal care help guests feel at home and connected to the estate throughout their stay.",
+  "Galkanda is a place to slow down, learn something new and enjoy a closer connection with the world around you.",
+  "We hope you leave with memories of a peaceful stay and a deeper appreciation of nature, food and community, along with small ideas for living more thoughtfully every day."
 ];
 export default function About() {
   const [team, setTeam] = useState<TeamMember[]>([]);
@@ -271,7 +271,7 @@ export default function About() {
             className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
             data-hero-fade=""
           >
-            About Galkanda Estate Eco Farm Stay — a family-inspired retreat where farming, nature and warm Sri Lankan hospitality come together.
+            About Galkanda Estate Eco Farm Stay, a family-inspired retreat where farming, nature and warm Sri Lankan hospitality come together.
           </div>
         </div>
       </div>

@@ -271,7 +271,7 @@ export default function Explore() {
                 className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
                 data-hero-fade=""
               >
-                Places we love near the estate — temples and forests, tea country, markets and day trips — each with the practical details to plan your visit.
+                Discover places we love near the estate, from temples and forests to tea country and markets, with practical details to help you plan each visit or day trip.
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@ export default function Explore() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Galkanda is a base for exploring, not a tour company. Off-site experiences are arranged with independent providers where applicable — we're always happy to help you plan.
+                Galkanda is a base for exploring, not a tour company. Off-site experiences are arranged with independent providers where applicable, and we're always happy to help you plan.
               </p>
             </div>
             <div
@@ -473,7 +473,7 @@ export default function Explore() {
               <p
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] mt-0 mr-0 mb-0 ml-0`}
               >
-                Come back to the farm after a day out — tea in the garden, dinner from the estate, and a slower pace.
+                Come back to the farm after a day out for tea in the garden, dinner from the estate and a slower pace.
               </p>
             </div>
             <div

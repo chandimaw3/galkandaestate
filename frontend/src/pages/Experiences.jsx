@@ -219,7 +219,7 @@ export default function Experiences() {
                 className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
                 data-hero-fade=""
               >
-                Everyday rhythms of the estate you're welcome to join — and
+                Join the everyday rhythms of the estate and discover
                 the best of Kandy beyond the gate.
               </div>
             </div>
