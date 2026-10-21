@@ -460,8 +460,8 @@ export default function Food() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 [margin-bottom:10px] ml-0`}
                 >
-                  The estate's cows are milked morning and evening — milk for
-                  tea, butter and curd.
+                  Our cows provide fresh milk morning and evening
+                  for tea, butter and curd.
                 </p>
                 <Link
                   className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}
@@ -558,7 +558,7 @@ export default function Food() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 [margin-bottom:10px] ml-0`}
                 >
-                  Fresh milk made into butter and set into curd — best with
+                  Fresh milk becomes butter and curd. Enjoy the curd with
                   treacle, the Sri Lankan way.
                 </p>
                 <Link
@@ -614,8 +614,8 @@ export default function Food() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 [margin-bottom:10px] ml-0`}
                 >
-                  Rice and curries, sambols and mallum — Sri Lankan home
-                  cooking, shared by the family.
+                  The family shares Sri Lankan home cooking with rice,
+                  curries, sambols and mallum.
                 </p>
               </article>
             </div>

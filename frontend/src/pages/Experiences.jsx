@@ -274,7 +274,7 @@ export default function Experiences() {
                 <p
                   className={String.raw`small xs-hint text-sm [color:var(--muted)] [.is-dark_&]:[color:rgba(244,241,234,.66)] mt-3 mr-0 mb-0 ml-0`}
                 >
-                  Hover a card for times and notice — or tap{" "}
+                  Hover a card for times and notice, or tap{" "}
                   <b className={String.raw`font-medium [color:var(--ink)]`}>
                     Details
                   </b>{" "}

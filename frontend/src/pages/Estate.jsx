@@ -642,7 +642,7 @@ export default function Estate() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 mb-0 ml-0`}
                 >
-                  Timber, daylight and air moving through — somewhere to read,
+                  Timber, daylight and flowing air create a space to read,
                   talk or watch the rain.
                 </p>
               </article>
@@ -669,8 +669,8 @@ export default function Estate() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 mb-0 ml-0`}
                 >
-                  Cook for yourselves, or reserve home-cooked Sri Lankan meals
-                  made with produce from the farm.
+                  Cook for yourselves, or reserve Sri Lankan meals cooked at home
+                  with produce from the farm.
                 </p>
               </article>
               <article className={String.raw`space min-w-0`}>
@@ -996,7 +996,7 @@ export default function Estate() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Anything else? Ask us when you enquire — we're happy to help
+                Anything else? Ask us when you enquire, and we're happy to help
                 you plan.
               </p>
             </div>
@@ -1569,7 +1569,7 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Yes. Airport pickup and drop-off can be arranged at
+                        Yes. Airport pickup and drop off can be arranged at
                         competitive rates.
                       </p>
                     </div>
