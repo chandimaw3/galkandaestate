@@ -210,7 +210,7 @@ export default function Home() {
                 >
                   <img
                     className="max-w-full block w-full h-full object-cover"
-                    src={images["HomeHero.webp"]}
+                    src={images["HomeHero1.webp"]}
                     alt="Galkanda Estate villa surrounded by tropical greenery near Kandy"
                     fetchPriority="high"
                     decoding="async"
