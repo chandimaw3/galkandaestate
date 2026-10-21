@@ -312,7 +312,7 @@ export default function Explore() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Galkanda is a base for exploring, not a tour company. Off-site experiences are arranged with independent providers where applicable, and we're always happy to help you plan.
+                Galkanda is a base for exploring, not a tour company. Experiences outside the estate are arranged with independent providers where applicable, and we're always happy to help you plan.
               </p>
             </div>
             <div

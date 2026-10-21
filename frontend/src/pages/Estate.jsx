@@ -218,7 +218,7 @@ export default function Estate() {
                 data-hero-fade=""
               >
                 Three bedrooms, open living spaces, gardens and terraces, all
-                within a private single-floor home on a working farm near Kandy.
+                within a private single floor home on a working farm near Kandy.
               </div>
             </div>
           </div>
@@ -642,7 +642,7 @@ export default function Estate() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 mb-0 ml-0`}
                 >
-                  Timber, daylight and air moving through — somewhere to read,
+                  Timber, daylight and flowing air create a space to read,
                   talk or watch the rain.
                 </p>
               </article>
@@ -669,8 +669,8 @@ export default function Estate() {
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 mb-0 ml-0`}
                 >
-                  Cook for yourselves, or reserve home-cooked Sri Lankan meals
-                  made with produce from the farm.
+                  Cook for yourselves, or reserve Sri Lankan meals cooked at home
+                  with produce from the farm.
                 </p>
               </article>
               <article className={String.raw`space min-w-0`}>
@@ -802,7 +802,7 @@ export default function Estate() {
                 >
                   <use href="#i-home"></use>
                 </svg>
-                <span>Single-floor home</span>
+                <span>Single floor home</span>
               </li>
               <li
                 className={String.raw`flex items-center gap-3 [padding-top:15px] [padding-right:10px] [padding-bottom:15px] pl-0 [border-bottom:1px_solid_var(--line)] text-sm`}
@@ -996,7 +996,7 @@ export default function Estate() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Anything else? Ask us when you enquire — we're happy to help
+                Anything else? Ask us when you enquire, and we're happy to help
                 you plan.
               </p>
             </div>
@@ -1111,7 +1111,7 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Three king beds — one in each bedroom.
+                        Each of the three bedrooms has a king bed.
                       </p>
                     </div>
                   </div>
@@ -1254,7 +1254,7 @@ export default function Estate() {
                         </svg>
                       </span>
                       <span className={String.raw`faq__t [flex:1]`}>
-                        What are the check-in and check-out times?
+                        What are the check in and check out times?
                       </span>
                       <span
                         className={String.raw`faq__plus [display:inline-grid] [transition:transform_.5s_var(--ease)] [color:var(--muted)]`}
@@ -1280,7 +1280,7 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Check-in from [time to be confirmed] and check-out by
+                        Check in from [time to be confirmed] and check out by
                         [time to be confirmed]. Share your expected arrival time
                         when you enquire.
                       </p>
@@ -1338,8 +1338,8 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Home-cooked Sri Lankan lunch and dinner can be reserved
-                        in advance, and the kitchen is available for your own
+                        Sri Lankan lunch and dinner cooked at home can be reserved
+                        in advance. The kitchen is also available for your own
                         cooking. Rates on request.
                       </p>
                     </div>
@@ -1455,7 +1455,7 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Galkanda is a single-floor home. If you have specific
+                        Galkanda is a single floor home. If you have specific
                         accessibility needs, please contact us before you book.
                       </p>
                     </div>
@@ -1569,7 +1569,7 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Yes. Airport pickup and drop-off can be arranged at
+                        Yes. Airport pickup and drop off can be arranged at
                         competitive rates.
                       </p>
                     </div>
@@ -1626,7 +1626,7 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Yes — children of any age are welcome, and a feeding
+                        Yes. Children of any age are welcome, and a feeding
                         chair is available.
                       </p>
                     </div>

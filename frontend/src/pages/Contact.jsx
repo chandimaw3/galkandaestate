@@ -302,7 +302,7 @@ export default function Contact() {
                 <h2
                   className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 mb-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] [max-width:16em]`}
                 >
-                  Airport pickup &amp; drop-off can be arranged at competitive
+                  Airport pickup &amp; drop off can be arranged at competitive
                   rates.
                 </h2>
               </div>

@@ -34,7 +34,7 @@ interface TeamMember {
 }
 
 const storyParagraphs = [
-  "Galkanda Estate Eco Farm Stay is a family-inspired retreat where nature, traditional food, farming and warm Sri Lankan hospitality come together. We created it to share a slower, more thoughtful way of experiencing Sri Lanka, rooted in care for the land and the people around us.",
+  "Galkanda Estate Eco Farm Stay is a retreat inspired by family where nature, traditional food, farming and warm Sri Lankan hospitality come together. We created it to share a slower, more thoughtful way of experiencing Sri Lanka, rooted in care for the land and the people around us.",
   "Set on a working organic farm in the countryside near Kandy, the estate offers space to unwind while staying within easy reach of the city. Guests can explore Kandy's cultural and historical attractions, then return to the peace and privacy of the farm.",
   "Galkanda began with a simple belief: a comfortable home can also be a thoughtful one. The way we live should respect nature, use resources carefully and keep us connected to the land that sustains us.",
   "That belief continues to shape the house, the farm and the welcome we offer.",
@@ -271,7 +271,7 @@ export default function About() {
             className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
             data-hero-fade=""
           >
-            About Galkanda Estate Eco Farm Stay, a family-inspired retreat where farming, nature and warm Sri Lankan hospitality come together.
+            About Galkanda Estate Eco Farm Stay, a retreat inspired by family where farming, nature and warm Sri Lankan hospitality come together.
           </div>
         </div>
       </div>
