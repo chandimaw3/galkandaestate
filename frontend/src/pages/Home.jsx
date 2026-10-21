@@ -421,7 +421,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["main3.webp"]}
+                    src={images["main3.1.webp"]}
                     sizes="(min-width: 992px) 24vw, 100vw"
                     alt="Green paddy fields of the organic farm at Galkanda"
                     loading="lazy"
@@ -638,7 +638,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 absolute top-0 right-0 bottom-0 left-0`}
-                    src={images["Estate6.webp"]}
+                    src={images["Estate6.1.webp"]}
                     sizes="(min-width: 992px) 42vw, 60vw"
                     alt="Dining table on the shaded terrace"
                     loading="lazy"

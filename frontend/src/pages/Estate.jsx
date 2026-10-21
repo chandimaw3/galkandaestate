@@ -175,7 +175,7 @@ export default function Estate() {
             >
               <img
                 className={String.raw`max-w-full block w-full h-full object-cover`}
-                src={images["estate-hero.webp"]}
+                src={images["estate-hero1.webp"]}
                 sizes="100vw"
                 alt="Timber house with deck surrounded by tropical trees"
                 fetchPriority="high"
