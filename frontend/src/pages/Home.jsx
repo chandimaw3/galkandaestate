@@ -336,7 +336,7 @@ export default function Home() {
                   <em
                     className={String.raw`[font-family:var(--f-serif)] italic font-normal [letter-spacing:-.02em]`}
                   >
-                    Life.
+                    Relax Life.
                   </em>
                 </h2>
               </div>
@@ -436,7 +436,9 @@ export default function Home() {
                   >
                     Set within a working organic farm near Kandy, Galkanda
                     Estate brings together comfortable living, traditional food,
-                    farming, nature and warm Sri Lankan hospitality.
+                    farming, nature and warm Sri Lankan hospitality. A quiet
+                    library invites you to settle in with a good book and enjoy
+                    a slower moment in the day.
                   </p>
                   <Link
                     className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}
@@ -481,8 +483,8 @@ export default function Home() {
               <p
                 className={String.raw`body hx__hb hx__hintro text-base [line-height:1.7] [color:var(--muted)] [.is-dark_&]:[color:rgba(244,241,234,.66)] [grid-column:2] [grid-row:1] [align-self:end] [max-width:24em] mt-0 mr-0 mb-0 ml-0`}
               >
-                From the gate to the garden — the rooms, corners and terraces
-                where days at Galkanda unfold.
+                From the gate to the garden, discover the rooms, corners and
+                terraces where days at Galkanda unfold.
               </p>
               <div
                 className={String.raw`hx__hslot [grid-column:1] [grid-row:2]`}
@@ -491,9 +493,8 @@ export default function Home() {
                 className={String.raw`cap hx__hb hx__hcap flex justify-between gap-4 text-xs [letter-spacing:.02em] [color:var(--muted)] [grid-column:2] [grid-row:2] [align-self:end] mt-0 mr-0 mb-0 ml-0 max-w-55`}
               >
                 <b className={String.raw`font-medium [color:var(--ink)]`}>
-                  Arrive
+                  Make Yourself at Home
                 </b>
-                <span>00</span>
               </p>
             </div>
           </div>
@@ -535,8 +536,8 @@ export default function Home() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                From the gate to the garden — the rooms, corners and terraces
-                where days at Galkanda unfold.
+                From the gate to the garden, discover the rooms, corners and
+                terraces where days at Galkanda unfold.
               </p>
             </div>
             <div
@@ -560,7 +561,6 @@ export default function Home() {
                     className={String.raw`hp__cap absolute [left:14px] [right:14px] bottom-3 [z-index:2] flex justify-between text-xs [letter-spacing:.14em] uppercase [color:#fff] [text-shadow:0_1px_14px_rgba(0,0,0,.45)] pointer-events-none min-[768px]:[left:18px] min-[768px]:[right:18px] min-[768px]:bottom-4`}
                   >
                     <b className={String.raw`font-medium`}>Sleep</b>
-                    <span>01</span>
                   </figcaption>
                 </div>
               </figure>
@@ -582,7 +582,6 @@ export default function Home() {
                     className={String.raw`hp__cap absolute [left:14px] [right:14px] bottom-3 [z-index:2] flex justify-between text-xs [letter-spacing:.14em] uppercase [color:#fff] [text-shadow:0_1px_14px_rgba(0,0,0,.45)] pointer-events-none min-[768px]:[left:18px] min-[768px]:[right:18px] min-[768px]:bottom-4`}
                   >
                     <b className={String.raw`font-medium`}>Gather</b>
-                    <span>02</span>
                   </figcaption>
                 </div>
               </figure>
@@ -604,7 +603,6 @@ export default function Home() {
                     className={String.raw`hp__cap absolute [left:14px] [right:14px] bottom-3 [z-index:2] flex justify-between text-xs [letter-spacing:.14em] uppercase [color:#fff] [text-shadow:0_1px_14px_rgba(0,0,0,.45)] pointer-events-none min-[768px]:[left:18px] min-[768px]:[right:18px] min-[768px]:bottom-4`}
                   >
                     <b className={String.raw`font-medium`}>Step Outside</b>
-                    <span>03</span>
                   </figcaption>
                 </div>
               </figure>
@@ -626,7 +624,6 @@ export default function Home() {
                     className={String.raw`hp__cap absolute [left:14px] [right:14px] bottom-3 [z-index:2] flex justify-between text-xs [letter-spacing:.14em] uppercase [color:#fff] [text-shadow:0_1px_14px_rgba(0,0,0,.45)] pointer-events-none min-[768px]:[left:18px] min-[768px]:[right:18px] min-[768px]:bottom-4`}
                   >
                     <b className={String.raw`font-medium`}>Cook</b>
-                    <span>04</span>
                   </figcaption>
                 </div>
               </figure>
@@ -648,7 +645,6 @@ export default function Home() {
                     className={String.raw`hp__cap absolute [left:14px] [right:14px] bottom-3 [z-index:2] flex justify-between text-xs [letter-spacing:.14em] uppercase [color:#fff] [text-shadow:0_1px_14px_rgba(0,0,0,.45)] pointer-events-none min-[768px]:[left:18px] min-[768px]:[right:18px] min-[768px]:bottom-4`}
                   >
                     <b className={String.raw`font-medium`}>Share</b>
-                    <span>05</span>
                   </figcaption>
                 </div>
               </figure>
@@ -2001,11 +1997,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    01
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2039,11 +2030,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    02
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2077,11 +2063,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    03
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2115,11 +2096,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    04
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2153,11 +2129,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    05
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2191,11 +2162,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    06
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2229,11 +2195,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    07
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2267,11 +2228,6 @@ export default function Home() {
                 <figcaption
                   className={String.raw`flex gap-4 [padding-top:14px] text-sm`}
                 >
-                  <span
-                    className={String.raw`bcard__n text-xs [color:var(--earth)] pt-1`}
-                  >
-                    08
-                  </span>
                   <span>
                     <b
                       className={String.raw`block font-medium [letter-spacing:-.01em] text-base 2xl:text-lg`}
@@ -2359,11 +2315,6 @@ export default function Home() {
                       className={String.raw`day__dot absolute [left:-34px] [top:7px] [width:11px] [height:11px] rounded-full [background:var(--bg)] [border:1px_solid_var(--muted)] [transition:background-color_.5s,border-color_.5s] [.day\_\_item.is-active_&]:[background:var(--earth)] [.day\_\_item.is-active_&]:[border-color:var(--earth)]`}
                       aria-hidden="true"
                     ></span>
-                    <time
-                      className={String.raw`day__time block text-xs [letter-spacing:.08em] [color:var(--earth)] [margin-bottom:10px]`}
-                    >
-                      06:30
-                    </time>
                     <h3
                       className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2 min-[992px]:text-2xl min-[992px]:xl:text-3xl min-[992px]:2xl:text-4xl`}
                     >
@@ -2395,11 +2346,6 @@ export default function Home() {
                       className={String.raw`day__dot absolute [left:-34px] [top:7px] [width:11px] [height:11px] rounded-full [background:var(--bg)] [border:1px_solid_var(--muted)] [transition:background-color_.5s,border-color_.5s] [.day\_\_item.is-active_&]:[background:var(--earth)] [.day\_\_item.is-active_&]:[border-color:var(--earth)]`}
                       aria-hidden="true"
                     ></span>
-                    <time
-                      className={String.raw`day__time block text-xs [letter-spacing:.08em] [color:var(--earth)] [margin-bottom:10px]`}
-                    >
-                      08:00
-                    </time>
                     <h3
                       className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2 min-[992px]:text-2xl min-[992px]:xl:text-3xl min-[992px]:2xl:text-4xl`}
                     >
@@ -2431,11 +2377,6 @@ export default function Home() {
                       className={String.raw`day__dot absolute [left:-34px] [top:7px] [width:11px] [height:11px] rounded-full [background:var(--bg)] [border:1px_solid_var(--muted)] [transition:background-color_.5s,border-color_.5s] [.day\_\_item.is-active_&]:[background:var(--earth)] [.day\_\_item.is-active_&]:[border-color:var(--earth)]`}
                       aria-hidden="true"
                     ></span>
-                    <time
-                      className={String.raw`day__time block text-xs [letter-spacing:.08em] [color:var(--earth)] [margin-bottom:10px]`}
-                    >
-                      11:00
-                    </time>
                     <h3
                       className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2 min-[992px]:text-2xl min-[992px]:xl:text-3xl min-[992px]:2xl:text-4xl`}
                     >
@@ -2466,11 +2407,6 @@ export default function Home() {
                       className={String.raw`day__dot absolute [left:-34px] [top:7px] [width:11px] [height:11px] rounded-full [background:var(--bg)] [border:1px_solid_var(--muted)] [transition:background-color_.5s,border-color_.5s] [.day\_\_item.is-active_&]:[background:var(--earth)] [.day\_\_item.is-active_&]:[border-color:var(--earth)]`}
                       aria-hidden="true"
                     ></span>
-                    <time
-                      className={String.raw`day__time block text-xs [letter-spacing:.08em] [color:var(--earth)] [margin-bottom:10px]`}
-                    >
-                      16:30
-                    </time>
                     <h3
                       className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2 min-[992px]:text-2xl min-[992px]:xl:text-3xl min-[992px]:2xl:text-4xl`}
                     >
@@ -2502,11 +2438,6 @@ export default function Home() {
                       className={String.raw`day__dot absolute [left:-34px] [top:7px] [width:11px] [height:11px] rounded-full [background:var(--bg)] [border:1px_solid_var(--muted)] [transition:background-color_.5s,border-color_.5s] [.day\_\_item.is-active_&]:[background:var(--earth)] [.day\_\_item.is-active_&]:[border-color:var(--earth)]`}
                       aria-hidden="true"
                     ></span>
-                    <time
-                      className={String.raw`day__time block text-xs [letter-spacing:.08em] [color:var(--earth)] [margin-bottom:10px]`}
-                    >
-                      18:00
-                    </time>
                     <h3
                       className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2 min-[992px]:text-2xl min-[992px]:xl:text-3xl min-[992px]:2xl:text-4xl`}
                     >
@@ -2538,11 +2469,6 @@ export default function Home() {
                       className={String.raw`day__dot absolute [left:-34px] [top:7px] [width:11px] [height:11px] rounded-full [background:var(--bg)] [border:1px_solid_var(--muted)] [transition:background-color_.5s,border-color_.5s] [.day\_\_item.is-active_&]:[background:var(--earth)] [.day\_\_item.is-active_&]:[border-color:var(--earth)]`}
                       aria-hidden="true"
                     ></span>
-                    <time
-                      className={String.raw`day__time block text-xs [letter-spacing:.08em] [color:var(--earth)] [margin-bottom:10px]`}
-                    >
-                      19:30
-                    </time>
                     <h3
                       className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2 min-[992px]:text-2xl min-[992px]:xl:text-3xl min-[992px]:2xl:text-4xl`}
                     >
@@ -2653,11 +2579,6 @@ export default function Home() {
                       decoding="async"
                     />
                   </figure>
-                  <span
-                    className={String.raw`day__badge min-[992px]:absolute min-[992px]:[left:22px] min-[992px]:bottom-5 min-[992px]:[z-index:3] min-[992px]:[color:#fff] min-[992px]:text-sm min-[992px]:[letter-spacing:.1em] min-[992px]:[background:rgba(16,18,13,.4)] min-[992px]:[-webkit-backdrop-filter:blur(6px)] min-[992px]:[backdrop-filter:blur(6px)] min-[992px]:rounded-full min-[992px]:pt-2 min-[992px]:[padding-right:14px] min-[992px]:pb-2 min-[992px]:[padding-left:14px]`}
-                  >
-                    06:30
-                  </span>
                 </div>
               </div>
             </div>

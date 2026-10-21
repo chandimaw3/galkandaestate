@@ -217,8 +217,8 @@ export default function Estate() {
                 className={String.raw`phero__aside text-base [line-height:1.6] [max-width:24em] [color:rgba(255,255,255,.86)]`}
                 data-hero-fade=""
               >
-                Three bedrooms, open living spaces, gardens and terraces — a
-                private single-floor home on a working farm near Kandy.
+                Three bedrooms, open living spaces, gardens and terraces, all
+                within a private single-floor home on a working farm near Kandy.
               </div>
             </div>
           </div>
@@ -392,8 +392,7 @@ export default function Estate() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Each bedroom has a king bed. The master has its own en-suite;
-                the other two share one bathroom.
+                All three bedrooms have king beds. The master has an en-suite; the other two share a bathroom.
               </p>
             </div>
             <div
@@ -611,7 +610,7 @@ export default function Estate() {
                 className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 data-fade=""
               >
-                Open rooms, a working kitchen and shaded terraces — the house
+                With open rooms, a working kitchen and shaded terraces, the house
                 is built around time spent together.
               </p>
             </div>

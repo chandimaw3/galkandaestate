@@ -859,8 +859,7 @@ export function initHome() {
 ========================================================= */
         mm.add("(min-width: 992px)", () => {
           const items = $$(".day__item"),
-            frames = $$(".day__frame"),
-            badge = $(".day__badge");
+            frames = $$(".day__frame");
           let cur = 0;
           const setDay = (i) => {
             if (i === cur) return;
@@ -888,7 +887,6 @@ export function initHome() {
               { scale: 1, duration: 1.2, ease: "power2.out", overwrite: true },
             );
             items.forEach((it, k) => it.classList.toggle("is-active", k === i));
-            badge.textContent = items[i].querySelector("time").textContent;
             cur = i;
           };
           gsap.set(frames, { opacity: 0 });
