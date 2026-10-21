@@ -482,7 +482,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["exp-3.webp"]}
+                      src={images["exp-1.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="A path through green paddy fields"
                       loading="lazy"

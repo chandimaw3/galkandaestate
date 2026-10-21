@@ -209,7 +209,7 @@ export default function Home() {
                   className={String.raw`hx__zoom absolute top-0 right-0 bottom-0 left-0 overflow-visible`}
                 >
                   <img
-                    className="max-w-full block w-full h-full object-cover"
+                    className="max-w-full block w-full h-full object-cover object-left-bottom"
                     src={images["HomeHero1.webp"]}
                     alt="Galkanda Estate villa surrounded by tropical greenery near Kandy"
                     fetchPriority="high"
@@ -1210,7 +1210,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["home-3.7.webp"]}
+                    src={images["home-3.71.webp"]}
                     sizes="100vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"
@@ -1244,7 +1244,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover`}
-                    src={images["home-5.7.webp"]}
+                    src={images["home-5.71.webp"]}
                     sizes="100vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1596,7 +1596,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transform-origin:50%_50%]`}
-                  src={images["Food3.webp"]}
+                  src={images["Food3.1.png"]}
                   sizes="(min-width: 992px) 55vw, 100vw"
                   alt="A traditional Sri Lankan meal of rice and curries served on a leaf"
                   loading="lazy"
@@ -1613,7 +1613,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                  src={images["Food5.webp"]}
+                  src={images["Food3.webp"]}
                   sizes="(min-width: 992px) 20vw, 45vw"
                   alt="Hands preparing fresh produce on a wooden table"
                   loading="lazy"
@@ -2633,7 +2633,7 @@ export default function Home() {
                   >
                     <img
                       className={String.raw`max-w-full block min-[992px]:w-full min-[992px]:h-full min-[992px]:object-cover`}
-                      src={images["home-7.7.webp"]}
+                      src={images["tea22.webp"]}
                       sizes="45vw"
                       alt="Tea being poured as evening falls"
                       loading="lazy"
