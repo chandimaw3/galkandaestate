@@ -2725,8 +2725,7 @@ export default function Home() {
                     <p
                       className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-2xl xl:text-3xl 2xl:text-4xl [line-height:1.2] [letter-spacing:-.01em] [max-width:22em]`}
                     >
-                      “[Short guest review — one or two sentences from a real
-                      stay at Galkanda.]”
+                      Amazing place!!!! The maid suranja and Punya were extremely kind. Beautiful home.
                     </p>
                   </blockquote>
                   <figcaption
@@ -2746,12 +2745,12 @@ export default function Home() {
                     </span>
                     <span>
                       <b className={String.raw`block font-medium`}>
-                        [Guest name]
+                        Majidah
                       </b>
                       <em
                         className={String.raw`not-italic text-xs [color:var(--muted)]`}
                       >
-                        [Country] · Family stay
+                        Markham, Canada · Stayed with kids
                       </em>
                     </span>
                   </figcaption>
@@ -2807,8 +2806,7 @@ export default function Home() {
                     <p
                       className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-2xl xl:text-3xl 2xl:text-4xl [line-height:1.2] [letter-spacing:-.01em] [max-width:22em]`}
                     >
-                      “[Short guest review — e.g. what they loved about the
-                      farm, food or hosts.]”
+                      We enjoyed our stay so much! I wish we had more nights since we were there for only one night.
                     </p>
                   </blockquote>
                   <figcaption
@@ -2828,12 +2826,12 @@ export default function Home() {
                     </span>
                     <span>
                       <b className={String.raw`block font-medium`}>
-                        [Guest name]
+                        Mirai
                       </b>
                       <em
                         className={String.raw`not-italic text-xs [color:var(--muted)]`}
                       >
-                        [Country] · Couple
+                        Kawachinagano, Japan · Stayed one night
                       </em>
                     </span>
                   </figcaption>
@@ -2889,8 +2887,7 @@ export default function Home() {
                     <p
                       className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-2xl xl:text-3xl 2xl:text-4xl [line-height:1.2] [letter-spacing:-.01em] [max-width:22em]`}
                     >
-                      “[Short guest review — keep it under 30 words for the
-                      cleanest layout.]”
+                      The field tour, the Sri Lankan cooking demonstration, and the butter making were great learning experiences.
                     </p>
                   </blockquote>
                   <figcaption
@@ -2910,12 +2907,12 @@ export default function Home() {
                     </span>
                     <span>
                       <b className={String.raw`block font-medium`}>
-                        [Guest name]
+                        Joji
                       </b>
                       <em
                         className={String.raw`not-italic text-xs [color:var(--muted)]`}
                       >
-                        [Country] · Friends
+                        Kyoto, Japan · Stayed with kids
                       </em>
                     </span>
                   </figcaption>
@@ -2963,7 +2960,7 @@ export default function Home() {
                 <span
                   className={String.raw`testi__src [margin-left:auto] text-xs [color:var(--muted)]`}
                 >
-                  [Overall rating · source, e.g. Airbnb]
+                  [Airbnb]
                 </span>
               </div>
             </div>
