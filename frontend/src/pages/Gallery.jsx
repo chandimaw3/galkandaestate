@@ -324,7 +324,7 @@ export default function Gallery() {
               data-lightbox-group=""
             >
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c7 r6 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="estate"
               >
                 <button
@@ -350,7 +350,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="rooms"
               >
                 <button
@@ -376,7 +376,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="farm"
               >
                 <button
@@ -402,7 +402,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="food"
               >
                 <button
@@ -428,7 +428,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r5 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="nature"
               >
                 <button
@@ -454,7 +454,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="estate"
               >
                 <button
@@ -480,7 +480,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c6 r4 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="farm"
               >
                 <button
@@ -506,7 +506,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r4 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="rooms"
               >
                 <button
@@ -532,7 +532,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r4 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="nature"
               >
                 <button
@@ -558,7 +558,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="food"
               >
                 <button
@@ -584,7 +584,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="kandy"
               >
                 <button
@@ -611,7 +611,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="estate"
               >
                 <button
@@ -637,7 +637,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c7 r6 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="farm"
               >
                 <button
@@ -663,7 +663,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="rooms"
               >
                 <button
@@ -689,7 +689,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="nature"
               >
                 <button
@@ -715,7 +715,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="food"
               >
                 <button
@@ -741,7 +741,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r5 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="kandy"
               >
                 <button
@@ -768,7 +768,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="estate"
               >
                 <button
@@ -794,7 +794,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c6 r4 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="farm"
               >
                 <button
@@ -820,7 +820,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r4 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="food"
               >
                 <button
@@ -846,7 +846,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r4 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="nature"
               >
                 <button
@@ -872,7 +872,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="rooms"
               >
                 <button
@@ -898,7 +898,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="kandy"
               >
                 <button
@@ -925,7 +925,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="farm"
               >
                 <button
@@ -951,7 +951,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c7 r6 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="nature"
               >
                 <button
@@ -977,7 +977,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="kandy"
               >
                 <button
@@ -1003,7 +1003,7 @@ export default function Gallery() {
                 </button>
               </figure>
               <figure
-                className={String.raw`m-item relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
                 data-cat="kandy"
               >
                 <button
@@ -1025,6 +1025,396 @@ export default function Gallery() {
                     className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
                   >
                     Kandy 4
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="estate"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Estate 5"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Estate 5"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Estate 5
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c5 r5 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="farm"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Farm 6"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Farm 6"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Farm 6
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="rooms"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Room 5"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Room 5"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Room 5
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c6 r4 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="estate"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Estate 6"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Estate 6"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Estate 6
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c3 r4 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="farm"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Farm 7"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Farm 7"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Farm 7
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c3 r4 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="rooms"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Room 6"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Room 6"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Room 6
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="estate"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Estate 7"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Estate 7"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Estate 7
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c5 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="farm"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Farm 8"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Farm 8"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Farm 8
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="rooms"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Room 7"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Room 7"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Room 7
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c7 r6 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="estate"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Estate 8"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Estate 8"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Estate 8
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="farm"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Farm 9"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Farm 9"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Farm 9
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c5 r3 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="rooms"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Room 8"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Room 8"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Room 8
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c4 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="estate"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Estate 9"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Estate 9"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Estate 9
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c5 r5 w-full relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="farm"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Farm 10"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Farm 10"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Farm 10
+                  </span>
+                </button>
+              </figure>
+              <figure
+                className={String.raw`m-item c3 r5 relative mt-0 mr-0 mb-0 ml-0 [grid-column:span_1] [aspect-ratio:4/5] [&.w-full]:[grid-column:span_2] [&.w-full]:[aspect-ratio:16/10] min-[768px]:[aspect-ratio:auto] min-[768px]:[&.w-full]:[aspect-ratio:auto] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [&.is-hidden]:hidden`}
+                data-cat="rooms"
+              >
+                <button
+                  className={String.raw`m-btn absolute top-0 right-0 bottom-0 left-0 cursor-pointer overflow-hidden [border-radius:var(--r-sm)] [background:var(--stone)] block focus-visible:[outline:2px_solid_var(--earth)] focus-visible:[outline-offset:3px] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_&[data-cursor]]:[cursor:none]`}
+                  type="button"
+                  data-cursor="view"
+                  aria-label="View photo: Room 9"
+                >
+                  {/* Add your photo from src/img by filling in the filename below. */}
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover [transition:transform_1.1s_var(--ease)] [.m-btn:hover_&]:[transform:scale(1.035)] [&:not([src])]:invisible`}
+                    src={images[""]}
+                    sizes="(min-width: 768px) 40vw, 50vw"
+                    alt="Room 9"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    className={String.raw`m-tag absolute [left:14px] bottom-3 text-xs [letter-spacing:.14em] uppercase [color:#fff] opacity-0 [transform:translateY(6px)] [transition:opacity_.45s_var(--ease),transform_.45s_var(--ease)] [text-shadow:0_1px_12px_rgba(0,0,0,.35)] pointer-events-none [.m-btn:hover_&]:opacity-100 [.m-btn:hover_&]:[transform:none] [.m-btn:focus-visible_&]:opacity-100 [.m-btn:focus-visible_&]:[transform:none] [@media((hover:none))]:opacity-100 [@media((hover:none))]:[transform:none] min-[768px]:[.mosaic_&.c3]:[grid-column:span_3] min-[768px]:[.mosaic_&.c4]:[grid-column:span_4] min-[768px]:[.mosaic_&.c5]:[grid-column:span_5] min-[768px]:[.mosaic_&.c6]:[grid-column:span_6] min-[768px]:[.mosaic_&.c7]:[grid-column:span_7] min-[768px]:[.mosaic_&.c8]:[grid-column:span_8] min-[768px]:[.mosaic_&.c12]:[grid-column:span_12] min-[768px]:[.mosaic_&.r2]:[grid-row:span_2] min-[768px]:[.mosaic_&.r3]:[grid-row:span_3] min-[768px]:[.mosaic_&.r4]:[grid-row:span_4] min-[768px]:[.mosaic_&.r5]:[grid-row:span_5] min-[768px]:[.mosaic_&.r6]:[grid-row:span_6] [.has-cursor_[data-cursor]_&]:[cursor:none]`}
+                  >
+                    Room 9
                   </span>
                 </button>
               </figure>
