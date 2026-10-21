@@ -921,8 +921,8 @@ export default function Home() {
                     <p
                       className={String.raw`overflow-hidden mt-0 mr-0 mb-0 ml-0 [padding-left:38px] text-sm [color:var(--muted)] [max-width:28em] [.mf\_\_item.is-active_.mf\_\_d_&]:[padding-bottom:1.4vh]`}
                     >
-                      Walk the estate with the people who work it — fields,
-                      plots and animals.
+                      Explore the estate's fields, plots and animals with
+                      the people who work here.
                     </p>
                   </div>
                   <span
@@ -1027,8 +1027,7 @@ export default function Home() {
                     <p
                       className={String.raw`overflow-hidden mt-0 mr-0 mb-0 ml-0 [padding-left:38px] text-sm [color:var(--muted)] [max-width:28em] [.mf\_\_item.is-active_.mf\_\_d_&]:[padding-bottom:1.4vh]`}
                     >
-                      Plant, weed or harvest — whatever the season is asking
-                      for.
+                      Plant, weed or harvest as the season calls for.
                     </p>
                   </div>
                   <span
@@ -1364,8 +1363,8 @@ export default function Home() {
                 <p
                   className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 >
-                  Walk the estate with the people who work it — fields, plots
-                  and animals.
+                  Explore the estate's fields, plots and animals with
+                  the people who work here.
                 </p>
               </article>
               <article
@@ -1459,7 +1458,7 @@ export default function Home() {
                 <p
                   className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                 >
-                  Plant, weed or harvest — whatever the season is asking for.
+                  Plant, weed or harvest as the season calls for.
                 </p>
               </article>
               <article
@@ -2477,7 +2476,7 @@ export default function Home() {
                     <p
                       className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
                     >
-                      Home-cooked Sri Lankan food, shared.
+                      Sri Lankan food cooked at home and shared.
                     </p>
                     <div
                       className={String.raw`frame ar-4x3 day__mimg relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mr-0 mb-0 ml-0 [isolation:isolate] [aspect-ratio:4/3] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] mt-5 min-[992px]:hidden`}
@@ -3019,8 +3018,8 @@ export default function Home() {
                 className={String.raw`lead text-base 2xl:text-lg [line-height:1.6] [color:var(--ink)] [max-width:34em] [margin-bottom:34px] font-light`}
                 data-fade=""
               >
-                Tell us how much time you have and what you love — culture,
-                wildlife, nature, food or simply slowing down — and we can help
+                Tell us how much time you have and whether you love culture,
+                wildlife, nature, food or simply slowing down. We can help
                 suggest how Galkanda fits into your Sri Lankan journey.
               </p>
               <div
