@@ -1592,7 +1592,7 @@ export default function Home() {
               >
                 <img
                   className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transform-origin:50%_50%]`}
-                  src={images["Food3.1.png"]}
+                  src={images["Food3.1.webp"]}
                   sizes="(min-width: 992px) 55vw, 100vw"
                   alt="A traditional Sri Lankan meal of rice and curries served on a leaf"
                   loading="lazy"
