@@ -2671,11 +2671,11 @@ export default function Home() {
                 </em>
               </h2>
               <div
-                className={String.raw`testi__slides grid [touch-action:pan-y]`}
+                className={String.raw`testi__slides relative grid [touch-action:pan-y]`}
                 aria-live="polite"
               >
                 <figure
-                  className={String.raw`testi__slide is-active [grid-area:1_/_1] mt-0 mr-0 mb-0 ml-0 opacity-0 invisible [&.is-active]:opacity-100 [&.is-active]:visible`}
+                  className={String.raw`testi__slide is-active [grid-area:1_/_1] absolute top-0 left-0 w-full [&.is-active]:relative mt-0 mr-0 mb-0 ml-0 opacity-0 invisible [&.is-active]:opacity-100 [&.is-active]:visible`}
                   data-i="0"
                   aria-hidden="false"
                 >
@@ -2723,7 +2723,7 @@ export default function Home() {
                     className={String.raw`testi__quote mt-0 mr-0 [margin-bottom:22px] ml-0`}
                   >
                     <p
-                      className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-2xl xl:text-3xl 2xl:text-4xl [line-height:1.2] [letter-spacing:-.01em] [max-width:22em]`}
+                      className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-xl xl:text-2xl 2xl:text-3xl [line-height:1.2] [letter-spacing:-.01em]`}
                     >
                       Amazing place!!!! The maid suranja and Punya were extremely kind. Beautiful home.
                     </p>
@@ -2756,7 +2756,7 @@ export default function Home() {
                   </figcaption>
                 </figure>
                 <figure
-                  className={String.raw`testi__slide [grid-area:1_/_1] mt-0 mr-0 mb-0 ml-0 opacity-0 invisible [&.is-active]:opacity-100 [&.is-active]:visible`}
+                  className={String.raw`testi__slide [grid-area:1_/_1] absolute top-0 left-0 w-full [&.is-active]:relative mt-0 mr-0 mb-0 ml-0 opacity-0 invisible [&.is-active]:opacity-100 [&.is-active]:visible`}
                   data-i="1"
                   aria-hidden="true"
                 >
@@ -2804,10 +2804,9 @@ export default function Home() {
                     className={String.raw`testi__quote mt-0 mr-0 [margin-bottom:22px] ml-0`}
                   >
                     <p
-                      className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-2xl xl:text-3xl 2xl:text-4xl [line-height:1.2] [letter-spacing:-.01em] [max-width:22em]`}
+                      className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-xl xl:text-2xl 2xl:text-3xl [line-height:1.2] [letter-spacing:-.01em]`}
                     >
-                      We enjoyed our stay so much! I wish we had more nights since we were there for only one night.
-                    </p>
+                    We enjoyed our stay so much! I wish we had more nights since we were there for only one night. The family who lives near by and takes care of the place was sooo sweet. When they helped our checkin we felt so welcomed. The rooms are clean and nice and I liked how the living area was so open and big. If there was a thing to mention it would be bugs because it’s surrounded by beautiful farms and nature. If you are not used to bugs it might not be a place for you or I suggest you bring some items.                    </p>
                   </blockquote>
                   <figcaption
                     className={String.raw`testi__who flex items-center [gap:14px] text-sm`}
@@ -2837,7 +2836,7 @@ export default function Home() {
                   </figcaption>
                 </figure>
                 <figure
-                  className={String.raw`testi__slide [grid-area:1_/_1] mt-0 mr-0 mb-0 ml-0 opacity-0 invisible [&.is-active]:opacity-100 [&.is-active]:visible`}
+                  className={String.raw`testi__slide [grid-area:1_/_1] absolute top-0 left-0 w-full [&.is-active]:relative mt-0 mr-0 mb-0 ml-0 opacity-0 invisible [&.is-active]:opacity-100 [&.is-active]:visible`}
                   data-i="2"
                   aria-hidden="true"
                 >
@@ -2885,10 +2884,9 @@ export default function Home() {
                     className={String.raw`testi__quote mt-0 mr-0 [margin-bottom:22px] ml-0`}
                   >
                     <p
-                      className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-2xl xl:text-3xl 2xl:text-4xl [line-height:1.2] [letter-spacing:-.01em] [max-width:22em]`}
+                      className={String.raw`mt-0 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] text-xl xl:text-2xl 2xl:text-3xl [line-height:1.2] [letter-spacing:-.01em]`}
                     >
-                      The field tour, the Sri Lankan cooking demonstration, and the butter making were great learning experiences.
-                    </p>
+My stay here was a very good time, and I had a great experience.We stayed for three nights, but we hardly left the property and enjoyed it.The children also seemed to be really enjoying themselves, playing with the dog in nature and chasing fireflies at night.The field tour, the Sri Lankan cooking demonstration, and the butter making were great learning experiences.And Sarojini's home cooking was really delicious, and she took great care of everything.Punya was also kind to our children, and our stay here was an unforgettable experience.I would like to stay there again when I visit Sri Lanka.Thank you very much.                    </p>
                   </blockquote>
                   <figcaption
                     className={String.raw`testi__who flex items-center [gap:14px] text-sm`}
