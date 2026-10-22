@@ -465,12 +465,12 @@ export default function Contact() {
                     >
                       <use href="#i-chat"></use>
                     </svg>{" "}
-                    WhatsApp
+                    Phone
                   </dt>
                   <dd
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
-                    <a href="tel:+94711659004" className="text-inherit no-underline hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">+94 71 165 9004</a>
+                    <a href="tel:+94778072329" className="text-inherit no-underline hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">+94 77 807 2329</a>
                   </dd>
                 </div>
                 <div
@@ -491,8 +491,13 @@ export default function Contact() {
                   <dd
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
-                    <a className={String.raw`text-inherit`} href="#">
-                      @[handle]
+                    <a
+                      className={String.raw`text-inherit`}
+                      href="https://www.instagram.com/galkanda_eco?psln=ZjJiM215d204cjFz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      @galkanda_eco
                     </a>
                   </dd>
                 </div>

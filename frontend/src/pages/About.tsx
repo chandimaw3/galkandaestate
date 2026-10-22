@@ -33,6 +33,13 @@ interface TeamMember {
   isPlaceholder?: boolean;
 }
 
+// Add portrait filenames relative to src/img here (for example, "punya.webp").
+const teamPortraits = {
+  host: images["Punya.webp"],
+  ravi: images["Ravi.webp"],
+  sarojini: images["Saro.webp"],
+};
+
 const storyParagraphs = [
   "Galkanda Estate Eco Farm Stay is a retreat inspired by family where nature, traditional food, farming and warm Sri Lankan hospitality come together. We created it to share a slower, more thoughtful way of experiencing Sri Lanka, rooted in care for the land and the people around us.",
   "Set on a working organic farm in the countryside near Kandy, the estate offers space to unwind while staying within easy reach of the city. Guests can explore Kandy's cultural and historical attractions, then return to the peace and privacy of the farm.",
@@ -51,7 +58,7 @@ const storyParagraphs = [
 ];
 export default function About() {
   const [team, setTeam] = useState<TeamMember[]>([]);
-  const [host, setHost] = useState<HostMember | null>(null);
+  const [loadedHost, setHost] = useState<HostMember | null>(null);
   const [teamLoaded, setTeamLoaded] = useState(false);
 
   useEffect(() => {
@@ -72,6 +79,21 @@ export default function About() {
     if (!teamLoaded) return;
     return initExperiences();
   }, [teamLoaded]);
+  const host: HostMember = loadedHost ? { ...loadedHost, phone: "+94778072329" } : {
+    name: "Punya",
+    role: "Property manager",
+    photo: "",
+    text: "A personal welcome and thoughtful care to help you feel at home at Galkanda.",
+    phone: "+94778072329",
+  };
+  const estateTeam = [
+    { name: "Ravi", portrait: teamPortraits.ravi, text: "Ravi cares for the estate and helps guests feel welcome and connected to life at Galkanda." },
+    { name: "Sarojini", portrait: teamPortraits.sarojini, text: "Sarojini and her family bring warmth and Sri Lankan hospitality to your stay." },
+  ].map((person) => ({
+    ...person,
+    ...team.find((member) => member.name.trim().toLowerCase() === person.name.toLowerCase()),
+    portrait: person.portrait,
+  }));
   return (<>
     <svg
       className={String.raw`absolute!`}
@@ -286,24 +308,23 @@ export default function About() {
       </section>
       <section className="about-philosophy" id="philosophy" aria-label="Our philosophy">
         <p data-split="">Live simply.<br />Grow responsibly.<br />Support locally.<br />Stay connected to <em>nature.</em></p>
+        
       </section>
       <section className="about-team" id="team" aria-labelledby="team-heading">
         <div className="about-team__heading">
           <span className="about-team__eyebrow" data-fade="">A personal welcome</span>
           <h2 id="team-heading" data-split="">The people behind <em>your stay.</em></h2>
           <p data-fade="">Meet the team at Galkanda Estate.</p>
+          <span className="about-team__host-label">{host.label || "Your host"}</span>
         </div>
-        {host && <article className="about-team__host" aria-labelledby="host-name">
+        <div className="about-team__layout">
+        <article className="about-team__host" aria-labelledby="host-name">
           <div className="about-team__portrait about-team__host-portrait" data-reveal="">
-            {host.photo ? (
+            {teamPortraits.host ? (
               <img
                 className="about-team__photo"
-                src={host.photo}
-                alt={
-                  host.isPlaceholder
-                    ? `Temporary host portrait; not a photo of ${host.name}`
-                    : `Portrait of ${host.name}`
-                }
+                src={teamPortraits.host}
+                alt={`Portrait of ${host.name}`}
                 loading="lazy"
                 decoding="async"
               />
@@ -314,13 +335,9 @@ export default function About() {
                 </span>
               </div>
             )}
-            {host.isPlaceholder && (
-              <span className="about-team__placeholder">Temporary photo</span>
-            )}
           </div>
           <div className="about-team__host-copy" data-fade="">
-            <span className="about-team__host-label">{host.label || "Your host"}</span>
-            <h3 id="host-name">Meet <em>{host.name}.</em></h3>
+            <h3 id="host-name">Talk to <em>{host.name}.</em></h3>
             <span className="about-team__role">{host.role}</span>
             <p>{host.text}</p>
             <div className="about-team__host-actions">
@@ -340,20 +357,16 @@ export default function About() {
               </a>}
             </div>
           </div>
-        </article>}
+        </article>
         <div className="about-team__cards">
-          {team.map((member) => (
+          {estateTeam.map((member) => (
             <article className="about-team__card" key={member.id || member.name}>
               <div className="about-team__portrait" data-reveal="">
-                {member.photo ? (
+                {member.portrait ? (
                   <img
                     className="about-team__photo"
-                    src={member.photo}
-                    alt={
-                      member.isPlaceholder
-                        ? `Temporary portrait placeholder for ${member.name}`
-                        : `Portrait of ${member.name}`
-                    }
+                    src={member.portrait}
+                    alt={`Portrait of ${member.name}`}
                     loading="lazy"
                     decoding="async"
                   />
@@ -364,21 +377,20 @@ export default function About() {
                     </span>
                   </div>
                 )}
-                {member.isPlaceholder && (
-                  <span className="about-team__placeholder">Temporary photo</span>
-                )}
               </div>
               <div className="about-team__card-copy" data-fade="">
                 <h3>{member.name}</h3>
-                <span className="about-team__role">{member.role}</span>
+                <span className="about-team__role">{member.role || "Estate care & hospitality"}</span>
                 <p>{member.text}</p>
               </div>
             </article>
           ))}
-        </div>      </section>
+        </div>
+        </div>
+      </section>
       <section className="about-stay" aria-labelledby="stay-heading" data-header="light">
         <img src={images["about-footer.webp"]} alt="The countryside home at Galkanda Estate" loading="lazy" decoding="async" />
-        <div className="about-stay__copy"><h2 id="stay-heading">Make Galkanda<br />Your Home in <em>Kandy.</em></h2><p>Enquire about dates, guests and the experiences you&#8217;d like.</p><div className="about-stay__actions"><Link to="/contact#enquiry">Plan Your Stay <span aria-hidden="true">&#8599;</span></Link><a href="tel:+94711659004">Call now <span aria-hidden="true">&#8599;</span></a></div></div>
+        <div className="about-stay__copy"><h2 id="stay-heading">Make Galkanda<br />Your Home in <em>Kandy.</em></h2><p>Enquire about dates, guests and the experiences you&#8217;d like.</p><div className="about-stay__actions"><Link to="/contact#enquiry">Plan Your Stay <span aria-hidden="true">&#8599;</span></Link><a href="tel:+94778072329">Call now <span aria-hidden="true">&#8599;</span></a></div></div>
       </section>
     </main>      <Footer />
 

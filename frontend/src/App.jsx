@@ -84,9 +84,9 @@ export default function App() {
         <EstateRoutes />
       </Suspense>
       <a
-        href="tel:+94711659004"
-        aria-label="Call Galkanda Estate on +94 71 165 9004"
-        title="Call +94 71 165 9004"
+        href="tel:+94778072329"
+        aria-label="Call Galkanda Estate on +94 77 807 2329"
+        title="Call +94 77 807 2329"
         className="floating-call fixed right-6 bottom-10 z-[130] flex h-12 items-center rounded-full px-[13.5px] [background:var(--green)] text-white shadow-lg no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:[outline-color:var(--green)] motion-reduce:transition-none motion-reduce:transform-none [margin-bottom:env(safe-area-inset-bottom)]"
       >
         <svg className="shrink-0" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

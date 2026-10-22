@@ -1873,12 +1873,12 @@ export default function Home() {
                 className={String.raw`h-lg [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] [line-height:.98] mt-0 mr-0 ml-0 text-inherit text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-7`}
                 id="people-h"
               >
-                Cared for Like
-                <br />a Home Should{" "}
+                The People Who
+                <br />Make It{" "}
                 <em
                   className={String.raw`[font-family:var(--f-serif)] italic font-normal [letter-spacing:-.02em]`}
                 >
-                  Be.
+                  Home.
                 </em>
               </h2>
               <p
@@ -1920,6 +1920,18 @@ export default function Home() {
                   </dd>
                 </div>
               </dl>
+              <Link
+                className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}
+                to="/about#team"
+              >
+                Meet the Team{" "}
+                <i
+                  className={String.raw`not-italic inline-block [transition:transform_.45s_var(--ease)] [.link-u:hover_&]:[transform:rotate(45deg)]`}
+                  aria-hidden="true"
+                >
+                  &#8599;
+                </i>
+              </Link>
             </div>
           </div>
         </section>
@@ -3131,7 +3143,7 @@ My stay here was a very good time, and I had a great experience.We stayed for th
               </Link>
               <a
                 className={String.raw`btn-g btn-g--line [--bb:var(--dark)] [--bf:#fff] inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] [color:#fff]`}
-                href="tel:+94711659004"
+                href="tel:+94778072329"
               >
                 <span
                   className={String.raw`btn-g__label [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px] bg-transparent [box-shadow:inset_0_0_0_1px_currentColor] text-inherit`}

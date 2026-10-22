@@ -465,7 +465,7 @@ export default function Contact() {
                   <dd
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
-                    [phone number]
+                    <a className="text-inherit" href="https://wa.me/94778072329" target="_blank" rel="noopener noreferrer">+94 77 807 2329</a>
                   </dd>
                 </div>
                 <div
