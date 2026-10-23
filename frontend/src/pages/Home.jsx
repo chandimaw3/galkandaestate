@@ -829,16 +829,7 @@ export default function Home() {
                   </svg>
                   Free Parking
                 </li>
-                <li className={String.raw`inline-flex items-center [gap:9px]`}>
-                  <svg
-                    className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [color:var(--green)] [width:18px] [height:18px]`}
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use href="#i-snow"></use>
-                  </svg>
-                  Air Conditioning
-                </li>
+                
                 <li className={String.raw`inline-flex items-center [gap:9px]`}>
                   <svg
                     className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [color:var(--green)] [width:18px] [height:18px]`}
@@ -2129,8 +2120,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`bcard__img max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [.beyond.is-h_&]:absolute [.beyond.is-h_&]:top-0 [.beyond.is-h_&]:[left:-8%] [.beyond.is-h_&]:[width:116%] [.beyond.is-h_&]:[max-width:none] [.beyond.is-h_&]:h-full`}
-                    src="https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                    src={images["exx1.webp"]}
                     sizes="(min-width: 992px) 46vw, 80vw"
                     alt="Great trees on open lawns at the botanical gardens"
                     loading="lazy"

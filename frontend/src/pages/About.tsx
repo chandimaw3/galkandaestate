@@ -259,9 +259,9 @@ export default function About() {
             />
           </div>
           <div className="about-team__host-copy" data-fade="">
-            <h3 id="host-name">Talk to <em>Punya.</em></h3>
+            <h3 id="host-name">Talk to <em>Punya Sooriyaarachchi.</em></h3>
             <span className="about-team__role">Property manager</span>
-            <p>A personal welcome and thoughtful care to help you feel at home at Galkanda.</p>
+            <p>A former corporate Human Resources executive, Punya brings her passion for people, nature, and hospitality to Galkanda Estate. With her warm personality, excellent communication skills, and love for gardening, she creates meaningful experiences, ensuring every guest feels welcome, cared for, and at home.</p>
             <div className="about-team__host-actions">
               <Link className="about-team__host-link" to="/contact">
                 Plan your stay <span aria-hidden="true">&#8599;</span>
@@ -293,8 +293,9 @@ export default function About() {
             </div>
             <div className="about-team__card-copy" data-fade="">
               <h3>Ravi</h3>
-              <span className="about-team__role">Estate care &amp; hospitality</span>
-              <p>Ravi cares for the estate and helps guests feel welcome and connected to life at Galkanda.</p>
+              <span className="about-team__role">Farm Operations Manager
+</span>
+              <p>Having been part of Galkanda Estate since its inception, Ravi brings years of farming experience and a deep connection to the land. He oversees animal care, vegetable cultivation, and spice gardens. Quiet yet warm-hearted, he welcomes guests through thoughtful actions. He lives on the farm with his wife, Sarojini, and their family.</p>
             </div>
           </article>
           <article className="about-team__card">
@@ -309,8 +310,8 @@ export default function About() {
             </div>
             <div className="about-team__card-copy" data-fade="">
               <h3>Sarojini</h3>
-              <span className="about-team__role">Estate care &amp; hospitality</span>
-              <p>Sarojini and her family bring warmth and Sri Lankan hospitality to your stay.</p>
+              <span className="about-team__role">Farmhouse  &amp; Hospitality Manager</span>
+              <p>The heart of hospitality at Galkanda Estate, Sarojini ensures the farmhouse is beautifully maintained and every guest feels at home. A caring host and exceptional cook, she prepares authentic Sri Lankan dishes using the farm's flavours. Living on the property with Ravi and their children, she shares her family home with guests, bringing genuine warmth and personal care to every stay.</p>
             </div>
           </article>
         </div>
