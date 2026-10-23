@@ -155,8 +155,8 @@ className={String.raw`brand inline-flex items-center gap-4 text-[18px] md:text-[
             <span>
               © <span data-year="">{new Date().getFullYear()}</span> Galkanda Estate
             </span>
-            <a className={String.raw`text-inherit no-underline`} href="#">
-              Privacy
+            <a className={String.raw`text-inherit no-underline`} href="https://w3icon.com/" target="_blank" rel="noopener noreferrer">
+              Built by W3ICON
             </a>
           </div>
         </div>

@@ -576,6 +576,64 @@ export default function Estate() {
         </section>
 
         <section
+          className="sec relative py-[calc(var(--sec)*.6)]"
+          aria-labelledby="bathrooms-h"
+        >
+          <div className="container-wide max-w-400 mx-auto px-[var(--gutter)] grid gap-8 min-[992px]:grid-cols-[minmax(0,4fr)_minmax(0,7fr)] min-[992px]:gap-[clamp(32px,5vw,80px)] items-center">
+            <div>
+              <span className={String.raw`label inline-flex items-center gap-[10px] text-xs tracking-[.16em] uppercase font-medium [color:var(--muted)] mb-[22px] before:content-[""] before:w-[18px] before:h-px before:bg-current before:opacity-60`}>
+                Bathrooms
+              </span>
+              <h2
+                id="bathrooms-h"
+                className="h-md [font-family:var(--f-sans)] font-normal tracking-[-.045em] text-3xl lg:text-4xl xl:text-5xl leading-[1.02] m-0"
+                data-split=""
+              >
+                Refresh in <em className="[font-family:var(--f-serif)] italic font-normal tracking-[-.02em]">Comfort.</em>
+              </h2>
+              <p className="text-base leading-[1.7] [color:var(--muted)] max-w-[32em] mt-6 mb-0" data-fade="">
+                Thoughtfully designed bathrooms offer a clean, comfortable, and refreshing space to unwind, combining modern conveniences with the peaceful charm of Galkanda Estate.
+              </p>
+            </div>
+            <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] grid-rows-2 gap-3 min-[768px]:gap-5 aspect-[4/3]">
+              <div className="relative row-span-2 overflow-hidden rounded-[var(--r-lg)] [background:var(--stone)]" data-reveal="">
+                {/* Main bathroom photo: add its filename from src/img below. */}
+                <img
+                  className="absolute inset-0 block w-full h-full object-cover [&:not([src])]:invisible"
+                  src={images[""]}
+                  alt="Bathroom at Galkanda Estate"
+                  sizes="(min-width: 992px) 32vw, 55vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="relative min-h-0 overflow-hidden rounded-[var(--r-sm)] [background:var(--stone)]" data-reveal="">
+                {/* Top-right bathroom photo. */}
+                <img
+                  className="absolute inset-0 block w-full h-full object-cover [&:not([src])]:invisible"
+                  src={images[""]}
+                  alt="Bathroom amenities at Galkanda Estate"
+                  sizes="(min-width: 992px) 25vw, 45vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="relative min-h-0 overflow-hidden rounded-[var(--r-sm)] [background:var(--stone)]" data-reveal="">
+                {/* Bottom-right bathroom photo. */}
+                <img
+                  className="absolute inset-0 block w-full h-full object-cover [&:not([src])]:invisible"
+                  src={images[""]}
+                  alt="Bathroom details at Galkanda Estate"
+                  sizes="(min-width: 992px) 25vw, 45vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
           className={String.raw`sec sec--tight sec--warm relative [padding-top:calc(var(--sec)_*_.6)] pr-0 [padding-bottom:calc(var(--sec)_*_.6)] pl-0 [background:var(--bg-warm)]`}
           aria-labelledby="spaces-h"
         >
