@@ -449,7 +449,7 @@ export default function Contact() {
                   <dd
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
-                    [email address]
+                    info@galkandaestate.lk
                   </dd>
                 </div>
                 <div
@@ -516,8 +516,7 @@ export default function Contact() {
           >
             <img
               className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-              src="https://images.unsplash.com/photo-1752426614042-903c03929e66?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-              srcSet="https://images.unsplash.com/photo-1752426614042-903c03929e66?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1752426614042-903c03929e66?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1752426614042-903c03929e66?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1752426614042-903c03929e66?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                src={images["ctt1.webp"]}
               sizes="33vw"
               alt=""
               loading="lazy"
@@ -530,7 +529,7 @@ export default function Contact() {
           >
             <img
               className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-              src={images["c1.webp"]}
+              src={images["ctt2.webp"]}
               sizes="33vw"
               alt=""
               loading="lazy"
@@ -543,7 +542,7 @@ export default function Contact() {
           >
             <img
               className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-              src={images["c2.webp"]}
+              src={images["ctt3.webp"]}
               sizes="33vw"
               alt=""
               loading="lazy"

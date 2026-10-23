@@ -2054,9 +2054,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`bcard__img max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [.beyond.is-h_&]:absolute [.beyond.is-h_&]:top-0 [.beyond.is-h_&]:[left:-8%] [.beyond.is-h_&]:[width:116%] [.beyond.is-h_&]:[max-width:none] [.beyond.is-h_&]:h-full`}
-                    src="https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                    sizes="(min-width: 992px) 46vw, 80vw"
+src={images["h3.webp"]}                    sizes="(min-width: 992px) 46vw, 80vw"
                     alt="Mountain road winding through the Knuckles range"
                     loading="lazy"
                     decoding="async"
@@ -2120,7 +2118,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`bcard__img max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [.beyond.is-h_&]:absolute [.beyond.is-h_&]:top-0 [.beyond.is-h_&]:[left:-8%] [.beyond.is-h_&]:[width:116%] [.beyond.is-h_&]:[max-width:none] [.beyond.is-h_&]:h-full`}
-                    src={images["exx1.webp"]}
+                    src={images["h1.webp"]}
                     sizes="(min-width: 992px) 46vw, 80vw"
                     alt="Great trees on open lawns at the botanical gardens"
                     loading="lazy"
@@ -2152,9 +2150,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`bcard__img max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [.beyond.is-h_&]:absolute [.beyond.is-h_&]:top-0 [.beyond.is-h_&]:[left:-8%] [.beyond.is-h_&]:[width:116%] [.beyond.is-h_&]:[max-width:none] [.beyond.is-h_&]:h-full`}
-                    src="https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                    srcSet="https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
-                    sizes="(min-width: 992px) 46vw, 80vw"
+src={images["h2.webp"]}                    sizes="(min-width: 992px) 46vw, 80vw"
                     alt="Traditional fire dancers performing in Kandy"
                     loading="lazy"
                     decoding="async"
