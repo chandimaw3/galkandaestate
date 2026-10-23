@@ -602,7 +602,7 @@ export default function Home() {
                   <figcaption
                     className={String.raw`hp__cap absolute [left:14px] [right:14px] bottom-3 [z-index:2] flex justify-between text-xs [letter-spacing:.14em] uppercase [color:#fff] [text-shadow:0_1px_14px_rgba(0,0,0,.45)] pointer-events-none min-[768px]:[left:18px] min-[768px]:[right:18px] min-[768px]:bottom-4`}
                   >
-                    <b className={String.raw`font-medium`}>Step Outside</b>
+                    <b className={String.raw`font-medium`}>Indoor Mini Garden</b>
                   </figcaption>
                 </div>
               </figure>
