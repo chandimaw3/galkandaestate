@@ -600,7 +600,7 @@ export default function Estate() {
                 {/* Main bathroom photo: add its filename from src/img below. */}
                 <img
                   className="absolute inset-0 block w-full h-full object-cover [&:not([src])]:invisible"
-                  src={images[""]}
+                  src={images["b1.webp"]}
                   alt="Bathroom at Galkanda Estate"
                   sizes="(min-width: 992px) 32vw, 55vw"
                   loading="lazy"
@@ -611,7 +611,7 @@ export default function Estate() {
                 {/* Top-right bathroom photo. */}
                 <img
                   className="absolute inset-0 block w-full h-full object-cover [&:not([src])]:invisible"
-                  src={images[""]}
+                  src={images["b2.webp"]}
                   alt="Bathroom amenities at Galkanda Estate"
                   sizes="(min-width: 992px) 25vw, 45vw"
                   loading="lazy"
@@ -622,7 +622,7 @@ export default function Estate() {
                 {/* Bottom-right bathroom photo. */}
                 <img
                   className="absolute inset-0 block w-full h-full object-cover [&:not([src])]:invisible"
-                  src={images[""]}
+                  src={images["b3.webp"]}
                   alt="Bathroom details at Galkanda Estate"
                   sizes="(min-width: 992px) 25vw, 45vw"
                   loading="lazy"
