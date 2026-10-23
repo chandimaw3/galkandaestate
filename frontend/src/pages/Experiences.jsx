@@ -1359,8 +1359,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src="https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1562835593-fead16b5ea19?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      src={images["exx1.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Great trees on the lawns of the botanical gardens"
                       loading="lazy"
@@ -1482,8 +1481,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src="https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1566766188646-5d0310191714?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      src={images["exx2.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Traditional Kandyan dancers performing"
                       loading="lazy"
@@ -1605,8 +1603,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src="https://images.unsplash.com/photo-1749527520635-e375ec34c783?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1749527520635-e375ec34c783?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1749527520635-e375ec34c783?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1749527520635-e375ec34c783?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1749527520635-e375ec34c783?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      src={images["exx3.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Clouds moving over the Knuckles range"
                       loading="lazy"
