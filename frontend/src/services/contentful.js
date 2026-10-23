@@ -138,7 +138,7 @@ export async function getExploreExperiences() {
         categorySlug,
         categoryName,
         link,
-        title: f.title || "Experience",
+        title: exploreImages[rawSlug]?.title || f.title || "Experience",
         description: f.shortDescription || f.cardDescription || f.description || "",
         image: cardImg,
         imageAlt: f.cardImage?.fields?.title || f.mainHeroImage?.fields?.title || f.title || "",

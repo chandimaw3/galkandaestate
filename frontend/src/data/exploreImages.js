@@ -27,6 +27,7 @@ export const exploreImages = {
   },
   // Hill Country Tea Estate Visit
   "tea-estate-visit": {
+    title: "Tea Estate Visit",
     galleryImages: [
       images[""], // Top-left: blank keeps existing photo.
       images[""], // Top-right: blank keeps existing photo.
@@ -86,6 +87,7 @@ export function applyLocalExploreImages(data) {
   ).filter(Boolean) || [];
   return {
     ...data,
+    title: local.title || data.title,
     mainImage: local.mainImage
       ? { url: local.mainImage, full: local.mainImage, alt: data.title, caption: "" }
       : data.mainImage,
