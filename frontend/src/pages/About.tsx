@@ -1,44 +1,10 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import { initExperiences } from "../behaviors/Experiences.js";
 import { images } from "../images.js";
-import {
-  getAboutTeamData,
-} from "../services/contentful.js";
 import "./About.css";
-
-interface HostMember {
-  name: string;
-  title?: string;
-  role: string;
-  label?: string;
-  photo: string;
-  text: string;
-  linkText?: string;
-  linkUrl?: string;
-  phone?: string;
-  isPlaceholder?: boolean;
-}
-
-interface TeamMember {
-  id?: string;
-  name: string;
-  role: string;
-  initial?: string;
-  photo: string;
-  text: string;
-  value?: string;
-  isPlaceholder?: boolean;
-}
-
-// Add portrait filenames relative to src/img here (for example, "punya.webp").
-const teamPortraits = {
-  host: images["Punya.webp"],
-  ravi: images["Ravi.webp"],
-  sarojini: images["Saro.webp"],
-};
 
 const storyParagraphs = [
   "Galkanda Estate Eco Farm Stay is a retreat inspired by family where nature, traditional food, farming and warm Sri Lankan hospitality come together. We created it to share a slower, more thoughtful way of experiencing Sri Lanka, rooted in care for the land and the people around us.",
@@ -57,43 +23,7 @@ const storyParagraphs = [
   "We hope you leave with memories of a peaceful stay and a deeper appreciation of nature, food and community, along with small ideas for living more thoughtfully every day."
 ];
 export default function About() {
-  const [team, setTeam] = useState<TeamMember[]>([]);
-  const [loadedHost, setHost] = useState<HostMember | null>(null);
-  const [teamLoaded, setTeamLoaded] = useState(false);
-
-  useEffect(() => {
-    let isMounted = true;
-    getAboutTeamData().then((res) => {
-      if (isMounted && res) {
-        setTeam(res.team || []);
-        setHost(res.host || null);
-      }
-      if (isMounted) setTeamLoaded(true);
-    });
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  useLayoutEffect(() => {
-    if (!teamLoaded) return;
-    return initExperiences();
-  }, [teamLoaded]);
-  const host: HostMember = loadedHost ? { ...loadedHost, phone: "+94778072329" } : {
-    name: "Punya",
-    role: "Property manager",
-    photo: "",
-    text: "A personal welcome and thoughtful care to help you feel at home at Galkanda.",
-    phone: "+94778072329",
-  };
-  const estateTeam = [
-    { name: "Ravi", portrait: teamPortraits.ravi, text: "Ravi cares for the estate and helps guests feel welcome and connected to life at Galkanda." },
-    { name: "Sarojini", portrait: teamPortraits.sarojini, text: "Sarojini and her family bring warmth and Sri Lankan hospitality to your stay." },
-  ].map((person) => ({
-    ...person,
-    ...team.find((member) => member.name.trim().toLowerCase() === person.name.toLowerCase()),
-    portrait: person.portrait,
-  }));
+  useLayoutEffect(initExperiences, []);
   return (<>
     <svg
       className={String.raw`absolute!`}
@@ -315,76 +245,74 @@ export default function About() {
           <span className="about-team__eyebrow" data-fade="">A personal welcome</span>
           <h2 id="team-heading" data-split="">The people behind <em>your stay.</em></h2>
           <p data-fade="">Meet the team at Galkanda Estate.</p>
-          <span className="about-team__host-label">{host.label || "Your host"}</span>
+          <span className="about-team__host-label">Your host</span>
         </div>
         <div className="about-team__layout">
         <article className="about-team__host" aria-labelledby="host-name">
           <div className="about-team__portrait about-team__host-portrait" data-reveal="">
-            {teamPortraits.host ? (
-              <img
-                className="about-team__photo"
-                src={teamPortraits.host}
-                alt={`Portrait of ${host.name}`}
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <div className="about-team__silhouette">
-                <span className="about-team__monogram">
-                  {host.name ? host.name.charAt(0) : "P"}
-                </span>
-              </div>
-            )}
+            <img
+              className="about-team__photo"
+              src={images["Punya.webp"]}
+              alt="Portrait of Punya"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="about-team__host-copy" data-fade="">
-            <h3 id="host-name">Talk to <em>{host.name}.</em></h3>
-            <span className="about-team__role">{host.role}</span>
-            <p>{host.text}</p>
+            <h3 id="host-name">Talk to <em>Punya.</em></h3>
+            <span className="about-team__role">Property manager</span>
+            <p>A personal welcome and thoughtful care to help you feel at home at Galkanda.</p>
             <div className="about-team__host-actions">
-              <Link className="about-team__host-link" to={host.linkUrl || "/contact"}>
-                {host.linkText || "Plan your stay"} <span aria-hidden="true">&#8599;</span>
+              <Link className="about-team__host-link" to="/contact">
+                Plan your stay <span aria-hidden="true">&#8599;</span>
               </Link>
-              {host.phone && <a
+              <a
                 className="about-team__call-link"
-                href={`tel:${host.phone.replace(/[^+\d]/g, "")}`}
-                aria-label={`Call ${host.name} at ${host.phone}`}
-                title={`Call ${host.phone}`}
+                href="tel:+94778072329"
+                aria-label="Call Punya at +94 77 807 2329"
+                title="Call +94 77 807 2329"
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M7.2 3.5h2.5l1.2 4.2-1.8 1.5a15 15 0 0 0 5.7 5.7l1.5-1.8 4.2 1.2v2.5a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.2 5.7a2 2 0 0 1 2-2.2Z" />
                 </svg>
                 <span className="about-team__call-label">Call</span>
-              </a>}
+              </a>
             </div>
           </div>
         </article>
         <div className="about-team__cards">
-          {estateTeam.map((member) => (
-            <article className="about-team__card" key={member.id || member.name}>
-              <div className="about-team__portrait" data-reveal="">
-                {member.portrait ? (
-                  <img
-                    className="about-team__photo"
-                    src={member.portrait}
-                    alt={`Portrait of ${member.name}`}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <div className="about-team__silhouette">
-                    <span className="about-team__monogram">
-                      {member.initial || (member.name ? member.name.charAt(0) : "G")}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div className="about-team__card-copy" data-fade="">
-                <h3>{member.name}</h3>
-                <span className="about-team__role">{member.role || "Estate care & hospitality"}</span>
-                <p>{member.text}</p>
-              </div>
-            </article>
-          ))}
+          <article className="about-team__card">
+            <div className="about-team__portrait" data-reveal="">
+              <img
+                className="about-team__photo"
+                src={images["Ravi.webp"]}
+                alt="Portrait of Ravi"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="about-team__card-copy" data-fade="">
+              <h3>Ravi</h3>
+              <span className="about-team__role">Estate care &amp; hospitality</span>
+              <p>Ravi cares for the estate and helps guests feel welcome and connected to life at Galkanda.</p>
+            </div>
+          </article>
+          <article className="about-team__card">
+            <div className="about-team__portrait" data-reveal="">
+              <img
+                className="about-team__photo"
+                src={images["Saro.webp"]}
+                alt="Portrait of Sarojini"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="about-team__card-copy" data-fade="">
+              <h3>Sarojini</h3>
+              <span className="about-team__role">Estate care &amp; hospitality</span>
+              <p>Sarojini and her family bring warmth and Sri Lankan hospitality to your stay.</p>
+            </div>
+          </article>
         </div>
         </div>
       </section>
