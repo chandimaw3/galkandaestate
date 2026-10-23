@@ -1269,8 +1269,8 @@ export default function Estate() {
                       <p
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
-                        Check in from [time to be confirmed] and check out by
-                        [time to be confirmed]. Share your expected arrival time
+                        Check in from 2 pm and check out by
+                        10 am. Share your expected arrival time
                         when you enquire.
                       </p>
                     </div>

@@ -1214,8 +1214,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
-                  </li>
+                    Approximately 12 km                 </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
                   >
@@ -1226,7 +1225,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 20 -45 minutes
                   </li>
                 </ul>
                 <button
@@ -1352,7 +1351,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Approximately 12 km
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -1364,7 +1363,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 25-45 minutes
                   </li>
                 </ul>
                 <button
@@ -1490,7 +1489,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Approximately 18 km
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -1502,7 +1501,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 45-60 minutes
                   </li>
                 </ul>
                 <button
@@ -1628,7 +1627,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Approximately 12 km
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -1640,7 +1639,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 30-40 minutes
                   </li>
                 </ul>
                 <button
@@ -1766,7 +1765,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Approximately 24 km
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -1778,7 +1777,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 50-60 minutes
                   </li>
                 </ul>
                 <button
@@ -1904,7 +1903,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Depends on the waterfall and contry side selected
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -1916,7 +1915,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Depends on the waterfall and contry side selected
                   </li>
                 </ul>
                 <button
@@ -2042,7 +2041,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [25 - 30 km]
+                    [20 - 30 km]
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -2180,7 +2179,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Approximately 88 km
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -2192,7 +2191,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 140 - 150 minutes
                   </li>
                 </ul>
                 <button
@@ -2318,7 +2317,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    Approximately 98 km
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}
@@ -2330,7 +2329,7 @@ export default function Experiences() {
                     >
                       <use href="#i-car"></use>
                     </svg>
-                    [~x min]
+                    Around 150-160 minutes
                   </li>
                 </ul>
                 <button
