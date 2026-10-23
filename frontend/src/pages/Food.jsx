@@ -320,10 +320,8 @@ export default function Food() {
                 <figcaption
                   className={String.raw`cap flex justify-between gap-4 mt-3 text-xs [letter-spacing:.02em] [color:var(--muted)]`}
                 >
-                  <b className={String.raw`font-medium [color:var(--ink)]`}>
-                    Rice fields
-                  </b>
-                  <span>Seasonal</span>
+                  
+                  
                 </figcaption>
               </figure>
               <figure
@@ -345,10 +343,7 @@ export default function Food() {
                 <figcaption
                   className={String.raw`cap flex justify-between gap-4 mt-3 text-xs [letter-spacing:.02em] [color:var(--muted)]`}
                 >
-                  <b className={String.raw`font-medium [color:var(--ink)]`}>
-                    Vegetable plots
-                  </b>
-                  <span>Seasonal</span>
+                  
                 </figcaption>
               </figure>
               <figure
@@ -370,10 +365,7 @@ export default function Food() {
                 <figcaption
                   className={String.raw`cap flex justify-between gap-4 mt-3 text-xs [letter-spacing:.02em] [color:var(--muted)]`}
                 >
-                  <b className={String.raw`font-medium [color:var(--ink)]`}>
-                    The herd
-                  </b>
-                  <span>Daily</span>
+                  
                 </figcaption>
               </figure>
             </div>
@@ -454,7 +446,7 @@ export default function Food() {
                   <h3
                     className={String.raw`h-sm [font-family:var(--f-sans)] font-normal text-inherit [letter-spacing:-.03em] [line-height:1.15] mt-0 mr-0 mb-0 ml-0 text-base xl:text-lg 2xl:text-xl`}
                   >
-                    Dairy
+                    Curd
                   </h3>
                 </div>
                 <p

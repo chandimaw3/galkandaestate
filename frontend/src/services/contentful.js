@@ -1,3 +1,4 @@
+import { degaldoruwaCard, degaldoruwaDetail } from "../data/degaldoruwa.js";
 import { createClient } from "contentful";
 
 const space = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
@@ -96,7 +97,7 @@ export async function getExploreExperiences() {
   }
 
   if (!isContentfulConfigured || !contentfulClient) {
-    return [];
+    return [degaldoruwaCard];
   }
 
   try {
@@ -106,7 +107,7 @@ export async function getExploreExperiences() {
     });
 
     if (!response.items || response.items.length === 0) {
-      return [];
+      return [degaldoruwaCard];
     }
 
     const items = response.items.map((item, index) => {
@@ -145,16 +146,20 @@ export async function getExploreExperiences() {
       };
     });
 
+    if (!items.some((item) => item.slug === degaldoruwaCard.slug || item.title.toLowerCase().includes("degaldoruwa"))) {
+      items.push(degaldoruwaCard);
+    }
     cachedExploreExperiences = items;
     return items;
   } catch (err) {
     console.warn("Failed to fetch experiences from Contentful:", err);
-    return [];
+    return [degaldoruwaCard];
   }
 }
 
-// Fetch single experience detail from Contentful by slug (strictly from Contentful, NO fallbacks)
+// Fetch experience details, including the locally maintained Degaldoruwa entry.
 export async function getExperienceDetail(slug) {
+  if (slug === degaldoruwaDetail.slug) return degaldoruwaDetail;
   if (!slug) return null;
 
   if (cachedExperienceDetails.has(slug)) {

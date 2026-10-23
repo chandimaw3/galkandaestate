@@ -2042,7 +2042,7 @@ export default function Experiences() {
                     >
                       <use href="#i-pin"></use>
                     </svg>
-                    [x km]
+                    [25 - 30 km]
                   </li>
                   <li
                     className={String.raw`inline-flex items-center [gap:6px]`}

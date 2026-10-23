@@ -407,7 +407,7 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["estate-bed1.webp"]}
+                    src={images["estate-bed3.webp"]}
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Master bedroom with king bed and forest view"
                     loading="lazy"
@@ -464,8 +464,8 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["estate-bed2.webp"]}                    
-                    srcSet = {images["estate-bed2.webp"]} 
+                    src={images["estate-bed1.webp"]}                    
+                    srcSet = {images["estate-bed1.webp"]} 
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Second bedroom with a wooden king bed"
                     loading="lazy"
@@ -522,8 +522,8 @@ export default function Estate() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["estate-bed3.webp"]}                    
-                    srcSet = {images["estate-bed3.webp"]} 
+                    src={images["estate-bed2.webp"]}                    
+                    srcSet = {images["estate-bed2.webp"]} 
                     sizes="(min-width: 992px) 30vw, 80vw"
                     alt="Third bedroom with tall windows"
                     loading="lazy"
@@ -691,7 +691,7 @@ export default function Estate() {
                 <h3
                   className={String.raw`h-sm [font-family:var(--f-sans)] font-normal text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mt-0 mr-0 [margin-bottom:6px] ml-0`}
                 >
-                  Gardens &amp; Terraces
+                  Gardens &amp; Indoor Gardens
                 </h3>
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 mb-0 ml-0`}
@@ -864,18 +864,7 @@ export default function Estate() {
                 </svg>
                 <span>Free parking</span>
               </li>
-              <li
-                className={String.raw`flex items-center gap-3 [padding-top:15px] [padding-right:10px] [padding-bottom:15px] pl-0 [border-bottom:1px_solid_var(--line)] text-sm`}
-              >
-                <svg
-                  className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [color:var(--green)] w-5 h-5`}
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <use href="#i-snow"></use>
-                </svg>
-                <span>Air-conditioning</span>
-              </li>
+              
               <li
                 className={String.raw`flex items-center gap-3 [padding-top:15px] [padding-right:10px] [padding-bottom:15px] pl-0 [border-bottom:1px_solid_var(--line)] text-sm`}
               >
@@ -1339,8 +1328,7 @@ export default function Estate() {
                         className={String.raw`mt-0 mr-0 mb-0 ml-0 pt-0 pr-0 [padding-bottom:18px] [padding-left:33px] text-sm [line-height:1.65] [color:var(--muted)] [max-width:40em]`}
                       >
                         Sri Lankan lunch and dinner cooked at home can be reserved
-                        in advance. The kitchen is also available for your own
-                        cooking. Rates on request.
+                        in advance. Rates on request.
                       </p>
                     </div>
                   </div>

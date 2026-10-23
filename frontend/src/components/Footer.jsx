@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { images } from "../images.js";
 
 export default function Footer() {
   const { pathname } = useLocation();
@@ -16,22 +15,25 @@ export default function Footer() {
           >
             <div className={String.raw`footer-brand`}>
               <Link
-                className="inline-block max-w-full no-underline"
-                to="/"
-                aria-label="Galkanda Estate home"
-              >
-                <img
-                  className="block w-28 sm:w-32 max-w-full h-auto object-contain"
-                  src={images["Transparent Galkanda Estate Farm Emblem.png"]}
-                  alt="Galkanda Estate Eco Farm Stay"
-                  width="1280"
-                  height="1280"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </Link>
+className={String.raw`brand inline-flex items-center gap-4 text-[18px] md:text-[20px] [letter-spacing:.12em] uppercase font-medium no-underline text-inherit whitespace-nowrap`}            to="/"
+            aria-label="Galkanda Estate — home"
+          >
+            <svg
+              className={String.raw`brand__mark [width:42px] [height:28px] flex-none [fill:none] [stroke:currentColor] [stroke-width:1.4] [stroke-linejoin:round] [stroke-linecap:round] [transition:transform_.6s_var(--ease)] [.brand:hover_&]:[transform:translateY(-1px)] max-[389.98px]:[width:22px] max-[389.98px]:[height:15px]`}
+              viewBox="0 0 28 18"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M1.5 16.5 9.6 4.2l4.6 6.6 3.4-4.4 8.9 10.1z"></path>
+              <path d="M7.4 7.6l2.2 1.6 1.9-1.4"></path>
+            </svg>
+            <span className="flex flex-col gap-1 leading-none">
+              <span>Galkanda Estate</span>
+              <span className="text-[11px] tracking-[.3em] font-normal leading-none">Eco Farm Stay</span>
+            </span>
+          </Link>
               <p
-                className={String.raw`mt-4 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] italic text-2xl xl:text-4xl [line-height:1.1] [letter-spacing:-.01em] [color:rgba(244,241,234,.9)] [max-width:12em]`}
+                className={String.raw`mt-8 mr-0 mb-0 ml-0 [font-family:var(--f-serif)] italic text-2xl xl:text-4xl [line-height:1.1] [letter-spacing:-.01em] [color:rgba(244,241,234,.9)] [max-width:12em]`}
               >
                 A slower way to experience Sri Lanka.
               </p>

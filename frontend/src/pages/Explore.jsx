@@ -257,7 +257,7 @@ export default function Explore() {
                 <h1
                   className={String.raw`h-xl [font-family:var(--f-sans)] font-normal [letter-spacing:-.045em] mt-0 mr-0 mb-0 ml-0 text-inherit [line-height:.94] text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl`}
                 >
-                  A Local Travel Journal
+                  A Local Travel Guide
                   <br />
                   by Galkanda{" "}
                   <em
