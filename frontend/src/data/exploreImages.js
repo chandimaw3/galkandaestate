@@ -16,11 +16,13 @@ export const exploreImages = {
   },
   // Kandyan Cultural Dance Show
   "kandyan-cultural-show": {
+    thumbnail: images["c-main.webp"],
+    mainImage: images["c-main.webp"],
     galleryImages: [
-      images[""], // Top-left: blank keeps existing photo.
-      images[""], // Top-right: blank keeps existing photo.
-      images[""], // Bottom-left: blank keeps existing photo.
-      images[""], // Bottom-right: blank keeps existing photo.
+      images["cu1.webp"], // Top-left: blank keeps existing photo.
+      images["cu2.webp"], // Top-right: blank keeps existing photo.
+      images["cu3.webp"], // Bottom-left: blank keeps existing photo.
+      images["cu4.webp"], // Bottom-right: blank keeps existing photo.
     ],
   },
   // Hill Country Tea Estate Visit
@@ -34,38 +36,42 @@ export const exploreImages = {
   },
   // Royal Botanical Gardens, Peradeniya
   "royal-botanical-gardens": {
+    thumbnail: images["bot-main.webp"],
+    mainImage: images["bot-main.webp"],
     galleryImages: [
-      images[""], // Top-left: blank keeps existing photo.
-      images[""], // Top-right: blank keeps existing photo.
-      images[""], // Bottom-left: blank keeps existing photo.
-      images[""], // Bottom-right: blank keeps existing photo.
+      images["bot1.webp"], // Top-left: blank keeps existing photo.
+      images["bot2.webp"], // Top-right: blank keeps existing photo.
+      images["bot3.webp"], // Bottom-left: blank keeps existing photo.
+      images["bot4.webp"], // Bottom-right: blank keeps existing photo.
     ],
   },
   // Kandy Lake Walk
   "kandy-lake": {
     galleryImages: [
-      images[""], // Top-left: blank keeps existing photo.
-      images[""], // Top-right: blank keeps existing photo.
-      images[""], // Bottom-left: blank keeps existing photo.
-      images[""], // Bottom-right: blank keeps existing photo.
+      images["kandy1.webp"], // Top-left: blank keeps existing photo.
+      images["kandy2.webp"], // Top-right: blank keeps existing photo.
+      images["kandy3.webp"], // Bottom-left: blank keeps existing photo.
+      images["kandy4.webp"], // Bottom-right: blank keeps existing photo.
     ],
   },
   // Udawattakele Forest Reserve
   "udawattakele-forest": {
+    thumbnail: images["uda-main.webp"],
+    mainImage: images["uda-main.webp"],
     galleryImages: [
-      images[""], // Top-left: blank keeps existing photo.
-      images[""], // Top-right: blank keeps existing photo.
-      images[""], // Bottom-left: blank keeps existing photo.
-      images[""], // Bottom-right: blank keeps existing photo.
+      images["uda1.webp"], // Top-left: blank keeps existing photo.
+      images["uda2.webp"], // Top-right: blank keeps existing photo.
+      images["uda3.png"], // Bottom-left: blank keeps existing photo.
+      images["uda4.png"], // Bottom-right: blank keeps existing photo.
     ],
   },
   // Degaldoruwa Raja Maha Vihara
   "degaldoruwa-raja-maha-vihara": {
     galleryImages: [
-      images[""], // Top-left: blank keeps existing photo.
-      images[""], // Top-right: blank keeps existing photo.
-      images[""], // Bottom-left: blank keeps existing photo.
-      images[""], // Bottom-right: blank keeps existing photo.
+      images["d1.webp"], // Top-left: blank keeps existing photo.
+      images["d2.webp"], // Top-right: blank keeps existing photo.
+      images["d3.webp"], // Bottom-left: blank keeps existing photo.
+      images["d4.webp"], // Bottom-right: blank keeps existing photo.
     ],
   },
 };

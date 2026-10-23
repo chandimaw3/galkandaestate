@@ -1,5 +1,5 @@
 import { degaldoruwaCard, degaldoruwaDetail } from "../data/degaldoruwa.js";
-import { applyLocalExploreImages } from "../data/exploreImages.js";
+import { applyLocalExploreImages, exploreImages } from "../data/exploreImages.js";
 import { createClient } from "contentful";
 
 const space = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
@@ -126,6 +126,7 @@ export async function getExploreExperiences() {
       );
 
       const cardImg =
+        exploreImages[rawSlug]?.thumbnail ||
         resolveAssetUrl(f.cardImage) ||
         resolveAssetUrl(f.mainHeroImage) ||
         resolveAssetUrl(f.mainImage) ||
