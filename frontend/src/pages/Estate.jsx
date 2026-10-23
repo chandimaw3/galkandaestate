@@ -691,7 +691,7 @@ export default function Estate() {
                 <h3
                   className={String.raw`h-sm [font-family:var(--f-sans)] font-normal text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mt-0 mr-0 [margin-bottom:6px] ml-0`}
                 >
-                  Gardens &amp; Indoor Gardens
+                  Indoor Gardens
                 </h3>
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 mb-0 ml-0`}
