@@ -208,7 +208,7 @@ export default function Contact() {
             >
               <img
                 className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                src={images["Moments4.webp"]}
+                src={images["ct2.webp"]}
                 sizes="(min-width: 992px) 40vw, 100vw"
                 alt="A quiet corner of the terrace at Galkanda"
                 fetchPriority="high"

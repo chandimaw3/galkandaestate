@@ -298,7 +298,7 @@ export default function Food() {
               </p>
             </div>
             <div
-              className={String.raw`grow grid [grid-template-columns:repeat(2,minmax(0,1fr))] [gap:24px_12px] min-[992px]:[grid-template-columns:repeat(12,minmax(0,1fr))] min-[992px]:[column-gap:clamp(16px,2vw,32px)] min-[992px]:items-end`}
+              className={String.raw`grow grid [grid-template-columns:repeat(2,minmax(0,1fr))] [gap:24px_12px] min-[992px]:[grid-template-columns:repeat(12,minmax(0,1fr))] min-[992px]:[column-gap:clamp(16px,2vw,32px)] min-[992px]:items-start`}
             >
               <figure
                 className={String.raw`grow__a mt-0 mr-0 mb-0 ml-0 [grid-column:1_/_-1] min-[992px]:[grid-column:1_/_span_6]`}
@@ -317,57 +317,77 @@ export default function Food() {
                     decoding="async"
                   />
                 </div>
-                <figcaption
-                  className={String.raw`cap flex justify-between gap-4 mt-3 text-xs [letter-spacing:.02em] [color:var(--muted)]`}
-                >
-                  
-                  
-                </figcaption>
               </figure>
+              <div className="grow__tiles grid grid-cols-2 grid-rows-2 gap-3 aspect-[4/3] col-span-full min-[992px]:[grid-column:7_/_span_6] min-[992px]:gap-[clamp(16px,2vw,32px)]">
               <figure
-                className={String.raw`grow__b mt-0 mr-0 mb-0 ml-0 min-[992px]:[grid-column:7_/_span_3]`}
+                className={String.raw`grow__b relative min-h-0 m-0`}
               >
                 <div
-                  className={String.raw`frame relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:3/4] min-[992px]:[aspect-ratio:3/4]`}
+                  className={String.raw`frame relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] h-full`}
                   data-reveal=""
                 >
                   <img
-                    className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["food-veg.webp"]}
+                    className={String.raw`max-w-full block w-full h-full object-cover absolute inset-0 [.frame.img-missing_>_&]:opacity-0`}
+                    src={images["4.1.webp"]}
                     sizes="(min-width: 992px) 26vw, 50vw"
-                    alt="Picking a ripe aubergine from the plant"
+                    alt="Vegetables growing on the estate"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
-                <figcaption
-                  className={String.raw`cap flex justify-between gap-4 mt-3 text-xs [letter-spacing:.02em] [color:var(--muted)]`}
-                >
-                  
-                </figcaption>
               </figure>
               <figure
-                className={String.raw`grow__c mt-0 mr-0 mb-0 ml-0 min-[992px]:[grid-column:10_/_span_3]`}
+                className={String.raw`grow__c relative min-h-0 m-0`}
               >
                 <div
-                  className={String.raw`frame relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] [aspect-ratio:3/4] min-[992px]:[aspect-ratio:3/4]`}
+                  className={String.raw`frame relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] h-full`}
                   data-reveal=""
                 >
                   <img
-                    className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["food-cow.webp"]}
+                    className={String.raw`max-w-full block w-full h-full object-cover absolute inset-0 [.frame.img-missing_>_&]:opacity-0`}
+                    src={images["4.2.webp"]}
                     sizes="(min-width: 992px) 22vw, 50vw"
-                    alt="A cow grazing on the green fields"
+                    alt="A cow and calf on the estate"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
-                <figcaption
-                  className={String.raw`cap flex justify-between gap-4 mt-3 text-xs [letter-spacing:.02em] [color:var(--muted)]`}
-                >
-                  
-                </figcaption>
               </figure>
+              <figure
+                className={String.raw`grow__b relative min-h-0 m-0`}
+              >
+                <div
+                  className={String.raw`frame relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] h-full`}
+                  data-reveal=""
+                >
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover absolute inset-0 [.frame.img-missing_>_&]:opacity-0`}
+                    src={images["4.3.webp"]}
+                    sizes="(min-width: 992px) 26vw, 50vw"
+                    alt="Fresh produce from the estate gardens"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+              <figure
+                className={String.raw`grow__c relative min-h-0 m-0`}
+              >
+                <div
+                  className={String.raw`frame relative overflow-hidden [border-radius:var(--r)] [background:var(--stone)] mt-0 mr-0 mb-0 ml-0 [isolation:isolate] [&.img-missing::after]:[content:attr(data-ph)] [&.img-missing::after]:absolute [&.img-missing::after]:top-0 [&.img-missing::after]:right-0 [&.img-missing::after]:bottom-0 [&.img-missing::after]:left-0 [&.img-missing::after]:grid [&.img-missing::after]:place-items-center [&.img-missing::after]:pt-6 [&.img-missing::after]:pr-6 [&.img-missing::after]:pb-6 [&.img-missing::after]:pl-6 [&.img-missing::after]:text-center [&.img-missing::after]:text-xs [&.img-missing::after]:[letter-spacing:.06em] [&.img-missing::after]:[color:var(--muted)] [&.img-missing::after]:[background:repeating-linear-gradient(135deg,var(--stone)_0_14px,#d5cfc2_14px_15px)] h-full`}
+                  data-reveal=""
+                >
+                  <img
+                    className={String.raw`max-w-full block w-full h-full object-cover absolute inset-0 [.frame.img-missing_>_&]:opacity-0`}
+                    src={images["4.4.webp"]}
+                    sizes="(min-width: 992px) 22vw, 50vw"
+                    alt="Dairy produce from the farm"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+              </div>
             </div>
           </div>
         </section>

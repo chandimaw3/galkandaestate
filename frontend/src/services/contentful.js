@@ -1,4 +1,5 @@
 import { degaldoruwaCard, degaldoruwaDetail } from "../data/degaldoruwa.js";
+import { applyLocalExploreImages } from "../data/exploreImages.js";
 import { createClient } from "contentful";
 
 const space = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
@@ -159,7 +160,7 @@ export async function getExploreExperiences() {
 
 // Fetch experience details, including the locally maintained Degaldoruwa entry.
 export async function getExperienceDetail(slug) {
-  if (slug === degaldoruwaDetail.slug) return degaldoruwaDetail;
+  if (slug === degaldoruwaDetail.slug) return applyLocalExploreImages(degaldoruwaDetail);
   if (!slug) return null;
 
   if (cachedExperienceDetails.has(slug)) {
@@ -271,8 +272,9 @@ export async function getExperienceDetail(slug) {
       relatedExperiences: related,
     };
 
-    cachedExperienceDetails.set(slug, expData);
-    return expData;
+    const detail = applyLocalExploreImages(expData);
+    cachedExperienceDetails.set(slug, detail);
+    return detail;
   } catch (err) {
     console.warn(`Failed to fetch detail for ${slug} from Contentful:`, err);
     return null;
