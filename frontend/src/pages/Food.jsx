@@ -446,14 +446,13 @@ export default function Food() {
                   <h3
                     className={String.raw`h-sm [font-family:var(--f-sans)] font-normal text-inherit [letter-spacing:-.03em] [line-height:1.15] mt-0 mr-0 mb-0 ml-0 text-base xl:text-lg 2xl:text-xl`}
                   >
-                    Curd
+                    Organic Eggs
                   </h3>
                 </div>
                 <p
                   className={String.raw`body [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)] text-sm mt-0 mr-0 [margin-bottom:10px] ml-0`}
                 >
-                  Our cows provide fresh milk morning and evening
-                  for tea, butter and curd.
+                  Fresh organic eggs from our farm, laid by naturally raised hens and carefully collected for wholesome goodness in every meal.
                 </p>
                 <Link
                   className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}

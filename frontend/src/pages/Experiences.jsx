@@ -1169,21 +1169,6 @@ export default function Experiences() {
                             aria-hidden="true"
                             focusable="false"
                           >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Entry fee]
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
                             <use href="#i-info"></use>
                           </svg>
                           <span>
@@ -1298,21 +1283,6 @@ export default function Experiences() {
                           <span>
                             <b className={String.raw`font-medium`}>Duration:</b>{" "}
                             2–3 hours
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            Free to walk
                           </span>
                         </li>
                         <li className={String.raw`flex [gap:9px] items-start`}>
@@ -1444,21 +1414,6 @@ export default function Experiences() {
                             aria-hidden="true"
                             focusable="false"
                           >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Entry fee]
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
                             <use href="#i-info"></use>
                           </svg>
                           <span>
@@ -1574,21 +1529,6 @@ export default function Experiences() {
                           <span>
                             <b className={String.raw`font-medium`}>Duration:</b>{" "}
                             About 1 hour
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Ticket price]
                           </span>
                         </li>
                         <li className={String.raw`flex [gap:9px] items-start`}>
@@ -1720,21 +1660,6 @@ export default function Experiences() {
                             aria-hidden="true"
                             focusable="false"
                           >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Guide fee]
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
                             <use href="#i-info"></use>
                           </svg>
                           <span>
@@ -1850,21 +1775,6 @@ export default function Experiences() {
                           <span>
                             <b className={String.raw`font-medium`}>Duration:</b>{" "}
                             Half day
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Driver / guide]
                           </span>
                         </li>
                         <li className={String.raw`flex [gap:9px] items-start`}>
@@ -1996,21 +1906,6 @@ export default function Experiences() {
                             aria-hidden="true"
                             focusable="false"
                           >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Tour price]
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
                             <use href="#i-info"></use>
                           </svg>
                           <span>
@@ -2128,21 +2023,7 @@ export default function Experiences() {
                             Full day
                           </span>
                         </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Entry fee]
-                          </span>
-                        </li>
+                        
                         <li className={String.raw`flex [gap:9px] items-start`}>
                           <svg
                             className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
@@ -2264,21 +2145,6 @@ export default function Experiences() {
                           <span>
                             <b className={String.raw`font-medium`}>Duration:</b>{" "}
                             Full day with travel
-                          </span>
-                        </li>
-                        <li className={String.raw`flex [gap:9px] items-start`}>
-                          <svg
-                            className={String.raw`ic flex-none [stroke:currentColor] [fill:none] [stroke-width:1.5] [stroke-linecap:round] [stroke-linejoin:round] [vertical-align:-.2em] [width:15px] [height:15px] [margin-top:1px] [color:var(--earth)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[color:#C9A27C]`}
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <use href="#i-cash"></use>
-                          </svg>
-                          <span>
-                            <b className={String.raw`font-medium`}>
-                              Est. price:
-                            </b>{" "}
-                            [Jeep &amp; park fees]
                           </span>
                         </li>
                         <li className={String.raw`flex [gap:9px] items-start`}>
