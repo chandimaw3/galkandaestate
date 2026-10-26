@@ -672,7 +672,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src={images["exp-5.webp"]}
+                      src={images["exp-5.1.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="Clay pots used for setting curd"
                       loading="lazy"
@@ -1725,8 +1725,7 @@ export default function Experiences() {
                   >
                     <img
                       className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0 [transition:transform_.9s_var(--ease)] [@media((hover:hover)_and_(pointer:fine)_and_(min-width:992px))]:[.xc:hover_.xc\_\_top_.frame_&]:[transform:scale(1.035)]`}
-                      src="https://images.unsplash.com/photo-1683604393889-60baf8b7eb15?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                      srcSet="https://images.unsplash.com/photo-1683604393889-60baf8b7eb15?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1683604393889-60baf8b7eb15?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1683604393889-60baf8b7eb15?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1683604393889-60baf8b7eb15?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      src={images["exp-waterfall1.webp"]}
                       sizes="(min-width: 1200px) 24vw, (min-width: 768px) 32vw, 48vw"
                       alt="A waterfall in lush green forest"
                       loading="lazy"

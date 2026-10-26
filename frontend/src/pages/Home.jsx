@@ -442,7 +442,7 @@ export default function Home() {
                   </p>
                   <Link
                     className={String.raw`link-u text-inherit [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100`}
-                    to="/estate"
+                    to="/villa"
                   >
                     Explore the Estate{" "}
                     <i
@@ -1397,7 +1397,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Farm1.wwbp"]}
+                    src={images["home-3.71.webp"]}
                     sizes="80vw"
                     alt="Walking along a path through green paddy fields"
                     loading="lazy"

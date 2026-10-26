@@ -56,7 +56,7 @@ export const pages = [
     },
   },
   {
-    path: "/estate",
+    path: "/villa",
     Component: Estate,
     title:
       "The Estate | 3-Bedroom Countryside Home Near Kandy — Galkanda Estate",
@@ -70,7 +70,7 @@ export const pages = [
       name: "The Estate — Galkanda Estate",
       description:
         "Inside Galkanda Estate: a single-floor countryside home near Kandy with 3 king bedrooms, 2 bathrooms and room for up to 6 guests, plus gardens, terraces and a private kitchen.",
-      url: "https://www.example.com/estate.html",
+      url: "https://www.example.com/villa",
       isPartOf: {
         "@type": "WebSite",
         name: "Galkanda Estate Eco Farm Stay",

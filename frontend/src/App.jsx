@@ -9,7 +9,7 @@ import {
 import { pages } from "./pages/routes.js";
 
 function EstateRoutes() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, search } = useLocation();
   const cleanPath =
     pathname
       .replace(/\/index\.html$/, "/")
@@ -64,6 +64,9 @@ function EstateRoutes() {
     });
     return () => cancelAnimationFrame(frame);
   }, [pathname, hash]);
+
+  if (cleanPath === "/estate")
+    return <Navigate to={{ pathname: "/villa", search, hash }} replace />;
 
   if (pathname !== cleanPath && page)
     return <Navigate to={{ pathname: cleanPath, hash }} replace />;
