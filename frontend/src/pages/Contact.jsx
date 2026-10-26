@@ -492,7 +492,7 @@ export default function Contact() {
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
                     <a
-                      className={String.raw`text-inherit`}
+                      className={String.raw`text-inherit no-underline hover:underline focus-visible:outline-2 focus-visible:outline-offset-4`}
                       href="https://www.instagram.com/galkanda_eco/"
                       target="_blank"
                       rel="noopener noreferrer"
