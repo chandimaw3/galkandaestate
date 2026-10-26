@@ -449,7 +449,7 @@ export default function Contact() {
                   <dd
                     className={String.raw`mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.4]`}
                   >
-                    info@galkandaestate.lk
+                    <a href="mailto:vandercone@gmail.com" className="text-inherit no-underline hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">vandercone@gmail.com</a>
                   </dd>
                 </div>
                 <div
