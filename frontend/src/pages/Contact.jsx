@@ -493,7 +493,7 @@ export default function Contact() {
                   >
                     <a
                       className={String.raw`text-inherit`}
-                      href="https://www.instagram.com/galkanda_eco?psln=ZjJiM215d204cjFz"
+                      href="https://www.instagram.com/galkanda_eco/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -118,7 +118,7 @@ className={String.raw`brand inline-flex items-center gap-4 text-[18px] md:text-[
               <li>
                 <a
                   className={String.raw`relative no-underline [padding-top:6px] pr-0 [padding-bottom:6px] pl-0 [.footer-links_&::after]:[content:""] [.footer-links_&::after]:absolute [.footer-links_&::after]:left-0 [.footer-links_&::after]:right-0 [.footer-links_&::after]:bottom-0 [.footer-links_&::after]:[height:1px] [.footer-links_&::after]:[background:currentColor] [.footer-links_&::after]:[transform:scaleX(0)] [.footer-links_&::after]:origin-left [.footer-links_&::after]:[transition:transform_.5s_var(--ease)] [.footer-links_&:hover::after]:[transform:scaleX(1)] text-sm [color:rgba(244,241,234,.82)]`}
-                  href="https://www.instagram.com/galkanda_eco?psln=ZjJiM215d204cjFz"
+                  href="https://www.instagram.com/galkanda_eco/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
