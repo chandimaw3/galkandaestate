@@ -451,7 +451,7 @@ export default function Experiences() {
                 <h3
                   className={String.raw`[font-family:var(--f-sans)] text-inherit text-base 2xl:text-xl [letter-spacing:-.02em] [line-height:1.2] mt-0 mr-0 mb-1 ml-0 font-medium`}
                 >
-                  Cow Milking
+                  Milk the cows
                 </h3>
                 <p
                   className={String.raw`xc__line mt-0 mr-0 mb-0 ml-0 text-sm [line-height:1.5] [color:var(--muted)]`}

@@ -336,7 +336,7 @@ export default function Home() {
                   <em
                     className={String.raw`[font-family:var(--f-serif)] italic font-normal [letter-spacing:-.02em]`}
                   >
-                    Relax Life.
+                    Relaxed Life.
                   </em>
                 </h2>
               </div>
@@ -939,7 +939,7 @@ export default function Home() {
                       02
                     </span>
                     <span className={String.raw`mf__t`}>
-                      Morning Cow Milking
+                      Milk The Cows
                     </span>
                   </button>
                   <div
@@ -1335,7 +1335,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["main3.webp"]}
+                    src={images["exp-1.webp"]}
                     alt="Morning fields of the working farm at Galkanda"
                     loading="lazy"
                     decoding="async"
@@ -1366,7 +1366,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["Farm2.webp"]}
+                    src={images["home-2.7.webp"]}
                     sizes="80vw"
                     alt="Cow being milked by hand in the early morning"
                     loading="lazy"
@@ -1381,7 +1381,7 @@ export default function Home() {
                 <h3
                   className={String.raw`h-sm [font-family:var(--f-sans)] font-normal mt-0 mr-0 ml-0 text-inherit text-2xl 2xl:text-3xl [letter-spacing:-.03em] [line-height:1.15] mb-2`}
                 >
-                  Morning Cow Milking
+                  Milk The Cows
                 </h3>
                 <p
                   className={String.raw`body text-base [line-height:1.7] [color:var(--muted)] [max-width:32em] [.is-dark_&]:[color:rgba(244,241,234,.66)]`}
@@ -1460,7 +1460,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["curdbutter.webp"]}
+                    src={images["home-5.71.webp"]}
                     sizes="80vw"
                     alt="Traditional red clay pots used for setting curd"
                     loading="lazy"
@@ -1524,7 +1524,7 @@ export default function Home() {
                 >
                   <img
                     className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                    src={images["tea.webp"]}
+                    src={images["home-7.7.webp"]}
                     alt="Tea being poured at a garden table"
                     loading="lazy"
                     decoding="async"
@@ -1844,8 +1844,7 @@ export default function Home() {
             >
               <img
                 className={String.raw`max-w-full block w-full object-cover absolute left-0 [top:-8%] [height:116%] [.frame.img-missing_>_&]:opacity-0`}
-                src="https://images.unsplash.com/photo-1739519261478-e626c0ebd8c3?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
-                srcSet="https://images.unsplash.com/photo-1739519261478-e626c0ebd8c3?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1739519261478-e626c0ebd8c3?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1739519261478-e626c0ebd8c3?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1739519261478-e626c0ebd8c3?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                src={images["people.webp"]}
                 sizes="(min-width: 992px) 46vw, 100vw"
                 alt="Candid photograph of the family who care for Galkanda, in the fields (placeholder image)"
                 loading="lazy"
@@ -2389,7 +2388,10 @@ src={images["h2.webp"]}                    sizes="(min-width: 992px) 46vw, 80vw"
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["Farm1.webp"]}
+                        src="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78"
+                      srcSet="https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=640&amp;q=78 640w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1024&amp;q=78 1024w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=1600&amp;q=78 1600w, https://images.unsplash.com/photo-1665849050430-5e8c16bacf7e?auto=format&amp;fit=crop&amp;w=2400&amp;q=78 2400w"
+                      sizes="45vw"
+                      
                         alt="Temple of the Tooth in Kandy"
                         loading="lazy"
                         decoding="async"
@@ -2450,8 +2452,9 @@ src={images["h2.webp"]}                    sizes="(min-width: 992px) 46vw, 80vw"
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["tea.webp"]}
-                        sizes="90vw"
+                        src={images["tea22.webp"]}
+                      sizes="45vw"
+                      
                         alt="Tea being poured as evening falls"
                         loading="lazy"
                         decoding="async"
@@ -2481,7 +2484,9 @@ src={images["h2.webp"]}                    sizes="(min-width: 992px) 46vw, 80vw"
                     >
                       <img
                         className={String.raw`max-w-full block w-full h-full object-cover [.frame.img-missing_>_&]:opacity-0`}
-                        src={images["Room2.webp"]}
+                        src={images["home-9.7.webp"]}
+                      sizes="45vw"
+                      
                         alt="Wooden table set with Sri Lankan dishes"
                         loading="lazy"
                         decoding="async"
