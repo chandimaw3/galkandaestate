@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://galkandaestate.vercel.app/sitemap.xml
+Sitemap: https://www.galkandaestate.lk/sitemap.xml
