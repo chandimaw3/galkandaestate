@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
-/* Original design tokens and document baseline. Page styling lives in Tailwind utilities. */
+/* Original test design tokens and document baseline. Page styling lives in Tailwind utilities. */
 @layer base {
 
   *,
