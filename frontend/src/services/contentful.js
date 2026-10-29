@@ -1,6 +1,7 @@
 import { degaldoruwaCard, degaldoruwaDetail } from "../data/degaldoruwa.js";
 import { applyLocalExploreImages, exploreImages } from "../data/exploreImages.js";
 import { createClient } from "contentful";
+import { normalizeSeoPath } from "../seo/metadata.js";
 
 const space = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
 const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
@@ -90,6 +91,72 @@ function resolveAssetUrl(asset) {
 // In-memory caches to eliminate double-loading and repeated network fetches
 let cachedExploreExperiences = null;
 const cachedExperienceDetails = new Map();
+let cachedPageSeo = null;
+let cachedPageSeoPromise = null;
+
+function toSeoFields(fields = {}) {
+  return {
+    seoTitle: fields.seoTitle || "",
+    seoDescription: fields.seoDescription || "",
+    focusKeyword: fields.focusKeyword || "",
+    supportingKeywords: fields.supportingKeywords || [],
+    shareImage: resolveAssetUrl(fields.shareImage) || "",
+    shareImageAlt:
+      fields.shareImageAlt ||
+      fields.shareImage?.fields?.title ||
+      fields.title ||
+      "",
+    indexable: fields.indexable !== false,
+  };
+}
+
+export async function getPageSeoEntries() {
+  if (cachedPageSeo) return cachedPageSeo;
+  if (!isContentfulConfigured || !contentfulClient) return {};
+  if (!cachedPageSeoPromise) {
+    cachedPageSeoPromise = contentfulClient
+      .getEntries({ content_type: "pageSeo", limit: 1000 })
+      .then(({ items = [] }) => {
+        const entries = {};
+        for (const item of items) {
+          const path = normalizeSeoPath(item.fields?.path || "");
+          if (!path || path === "/" && !item.fields?.path) continue;
+          if (entries[path]) {
+            throw new Error(`Duplicate Contentful Page SEO path: ${path}`);
+          }
+          entries[path] = { ...toSeoFields(item.fields), path };
+        }
+        cachedPageSeo = entries;
+        return entries;
+      })
+      .catch((error) => {
+        cachedPageSeoPromise = null;
+        throw error;
+      });
+  }
+  return cachedPageSeoPromise;
+}
+
+export async function getPageSeo(path) {
+  const entries = await getPageSeoEntries();
+  return entries[normalizeSeoPath(path)] || null;
+}
+
+export async function getExploreSeo(slug) {
+  if (!slug || !isContentfulConfigured || !contentfulClient) return null;
+  try {
+    const response = await contentfulClient.getEntries({
+      content_type: "exploreExperience",
+      "fields.slug": slug,
+      limit: 1,
+    });
+    const fields = response.items?.[0]?.fields;
+    return fields ? toSeoFields(fields) : null;
+  } catch (error) {
+    console.warn(`Failed to load SEO metadata for Explore entry ${slug}:`, error);
+    return null;
+  }
+}
 
 // Fetch Explore Experiences (cards)
 export async function getExploreExperiences() {
@@ -247,6 +314,7 @@ export async function getExperienceDetail(slug) {
     const expData = {
       slug: f.slug || slug,
       title: f.title || "",
+      ...toSeoFields(f),
       category: categoryName || "",
       categorySlug: categorySlug || "",
       lead: f.shortDescription || f.cardDescription || f.lead || "",

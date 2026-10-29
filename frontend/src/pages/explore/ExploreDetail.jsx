@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { initExploreDetail } from "../../behaviors/ExploreDetail.js";
 import { getExperienceDetail } from "../../services/contentful.js";
+import { applySeoMetadata, createSeoMetadata } from "../../seo/metadata.js";
 
 import ExploreIcons from "./components/ExploreIcons.jsx";
 import ExploreHeader from "./components/ExploreHeader.jsx";
@@ -43,45 +44,21 @@ export default function ExploreDetail({ slug: propSlug, data: propData }) {
 
   useEffect(() => {
     if (!data?.title) return;
-    document.title = `${data.title} | Explore Kandy — Galkanda Estate`;
+    if (!data.seoTitle && !data.seoDescription && !data.shareImage) return;
+    applySeoMetadata(
+      createSeoMetadata({
+        fields: data,
+        path: `/explore/${data.slug || currentSlug}`,
+        origin: import.meta.env.VITE_SITE_URL,
+        fallback: {
+          title: `${data.title} | Explore Kandy — Galkanda Estate`,
+          description: data.lead,
+          image: data.mainImage?.url,
+          imageAlt: data.mainImage?.alt,
+        },
+      }),
+    );
 
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && data.lead) metaDesc.content = data.lead;
-
-    const schema = document.createElement("script");
-    schema.type = "application/ld+json";
-    schema.textContent = JSON.stringify([
-      {
-        "@context": "https://schema.org",
-        "@type": "TouristAttraction",
-        name: data.title,
-        description: data.lead,
-        image: data.mainImage?.url,
-        url: window.location.href,
-        isAccessibleForFree: false,
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: window.location.origin + "/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Explore",
-            item: window.location.origin + "/explore",
-          },
-          { "@type": "ListItem", position: 3, name: data.title },
-        ],
-      },
-    ]);
-    document.head.appendChild(schema);
-    return () => schema.remove();
   }, [data]);
 
   useLayoutEffect(() => {

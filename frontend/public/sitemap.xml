@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- The production sitemap is generated from published, indexable Contentful entries during the frontend build. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.galkandaestate.lk/</loc></url>
   <url><loc>https://www.galkandaestate.lk/about</loc></url>
   <url><loc>https://www.galkandaestate.lk/villa</loc></url>
   <url><loc>https://www.galkandaestate.lk/experiences</loc></url>
-  <url><loc>https://www.galkandaestate.lk/food</loc></url>
   <url><loc>https://www.galkandaestate.lk/explore</loc></url>
+  <url><loc>https://www.galkandaestate.lk/food</loc></url>
   <url><loc>https://www.galkandaestate.lk/gallery</loc></url>
   <url><loc>https://www.galkandaestate.lk/contact</loc></url>
-  <url><loc>https://www.galkandaestate.lk/explore/temple-of-the-tooth</loc></url>
-  <url><loc>https://www.galkandaestate.lk/explore/kandy-lake</loc></url>
-  <url><loc>https://www.galkandaestate.lk/explore/udawattakele-forest</loc></url>
-  <url><loc>https://www.galkandaestate.lk/explore/royal-botanical-gardens</loc></url>
-  <url><loc>https://www.galkandaestate.lk/explore/kandyan-cultural-show</loc></url>
-  <url><loc>https://www.galkandaestate.lk/explore/tea-estate-visit</loc></url>
   <url><loc>https://www.galkandaestate.lk/explore/degaldoruwa-raja-maha-vihara</loc></url>
 </urlset>
