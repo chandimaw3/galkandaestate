@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { initHome } from "../behaviors/Home.js";
 import { images } from "../images.js";
-
+ 
+/*home*/
 export default function Home() {
   useLayoutEffect(initHome, []);
 
