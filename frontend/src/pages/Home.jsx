@@ -274,10 +274,9 @@ export default function Home() {
                   <div
                     className={String.raw`btn-row flex flex-wrap items-center [gap:14px_28px]`}
                   >
-                    <a
+                    <Link
                       className={String.raw`btn-g btn-g--light btn-g--down text-inherit inline-flex items-center gap-1 no-underline text-sm font-medium [line-height:16px] [--bb:#fff] [--bf:var(--ink)] pointer-events-auto`}
-                      href="#about"
-                      data-discover=""
+                      to="/about"
                     >
                       <span
                         className={String.raw`btn-g__label [background:var(--bb)] [color:var(--bf)] [padding-top:14px] [padding-right:22px] [padding-bottom:14px] [padding-left:22px] rounded-full [transition:padding_.5s_var(--ease),background-color_.4s_var(--ease)] whitespace-nowrap [.btn-g:hover_&]:[padding-left:27px] [.btn-g:hover_&]:[padding-right:27px] [.btn-g:focus-visible_&]:[padding-left:27px] [.btn-g:focus-visible_&]:[padding-right:27px]`}
@@ -294,7 +293,7 @@ export default function Home() {
                           &#8595;
                         </span>
                       </span>
-                    </a>
+                    </Link>
                     <Link
                       className={String.raw`link-u link-u--light [&::after]:[content:""] [&::after]:absolute [&::after]:left-0 [&::after]:right-0 [&::after]:bottom-0 [&::after]:[height:1px] [&::after]:[background:currentColor] [&::after]:origin-left [&::after]:[transition:transform_.5s_var(--ease)] [&:hover::after]:[transform:scaleX(1)] relative inline-flex [gap:6px] items-center text-sm no-underline pt-1 pr-0 pb-1 pl-0 font-medium [&::after]:[transform:scaleX(1)] [&::after]:[opacity:.35] [&:hover::after]:opacity-100 [color:var(--bg)] pointer-events-auto`}
                       to="/gallery"
