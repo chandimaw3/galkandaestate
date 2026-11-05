@@ -20,24 +20,16 @@ export const contentfulClient = isContentfulConfigured
 export const DEFAULT_EXPLORE_CATEGORIES = [
   { slug: "all", name: "All" },
   { slug: "culture-heritage", name: "Culture & Heritage" },
-  { slug: "scenic-places", name: "Scenic Places" },
-  { slug: "nature", name: "Nature" },
-  { slug: "local-experiences", name: "Local Experiences" },
-  { slug: "shopping", name: "Shopping" },
-  { slug: "adventure", name: "Adventure" },
   { slug: "day-trips", name: "Day Trips" },
-  { slug: "food-dining", name: "Food & Dining" },
+  { slug: "local-experiences", name: "Local Experiences" },
+  { slug: "scenic-places", name: "Scenic Places" },
 ];
 
 export const CATEGORY_SLUG_MAP = {
   "Culture & Heritage": "culture-heritage",
   "Scenic Places": "scenic-places",
-  "Nature": "nature",
   "Local Experiences": "local-experiences",
-  "Shopping": "shopping",
-  "Adventure": "adventure",
   "Day Trips": "day-trips",
-  "Food & Dining": "food-dining",
 };
 
 export function toCategorySlug(name) {
@@ -51,31 +43,34 @@ export function toCategorySlug(name) {
     .replace(/(^-|-$)/g, "");
 }
 
-export function resolveCategory(rawCategory, rawCategorySlug) {
-  // If it's a Contentful Reference entry (Taxonomy model)
-  if (rawCategory && typeof rawCategory === "object" && rawCategory.fields) {
-    const name =
-      rawCategory.fields.name ||
-      rawCategory.fields.title ||
-      "Culture & Heritage";
-    const slug = rawCategory.fields.slug || toCategorySlug(name);
-    return { name, slug };
-  }
+export function resolveCategory(rawCategory) {
+  const resolveOne = (category) => {
+    // Contentful reference entry (Taxonomy model)
+    if (category && typeof category === "object" && category.fields) {
+      const name = category.fields.name || category.fields.title || "Culture & Heritage";
+      return { name, slug: category.fields.slug || toCategorySlug(name) };
+    }
 
-  // If it's a string (e.g. from a dropdown or text)
-  const name =
-    typeof rawCategory === "string" && rawCategory.trim()
-      ? rawCategory.trim()
+    const name = typeof category === "string" && category.trim()
+      ? category.trim()
       : "Culture & Heritage";
+    return { name, slug: toCategorySlug(name) };
+  };
 
-  const slug =
-    rawCategorySlug &&
-      typeof rawCategorySlug === "string" &&
-      rawCategorySlug.trim()
-      ? rawCategorySlug.trim()
-      : toCategorySlug(name);
+  // Contentful fields configured for multiple values are returned as arrays.
+  const categories = Array.isArray(rawCategory)
+    ? rawCategory.map((category) => resolveOne(category))
+    : [resolveOne(rawCategory)];
+  const uniqueCategories = categories.filter(
+    (category, index) => categories.findIndex((item) => item.slug === category.slug) === index
+  );
 
-  return { name, slug };
+  return {
+    name: uniqueCategories.map((category) => category.name).join(", "),
+    slug: uniqueCategories.map((category) => category.slug).join(" "),
+    names: uniqueCategories.map((category) => category.name),
+    slugs: uniqueCategories.map((category) => category.slug),
+  };
 }
 
 // Helper to resolve Contentful Asset image URLs
@@ -187,9 +182,8 @@ export async function getExploreExperiences() {
           ? rawSlug
           : `/explore/${rawSlug}`;
 
-      const { name: categoryName, slug: categorySlug } = resolveCategory(
-        f.category || f.categoryName,
-        f.categorySlug
+      const { name: categoryName, slug: categorySlug, names: categoryNames, slugs: categorySlugs } = resolveCategory(
+        f.categoryRef
       );
 
       const cardImg =
@@ -204,6 +198,8 @@ export async function getExploreExperiences() {
         slug: rawSlug,
         categorySlug,
         categoryName,
+        categorySlugs,
+        categoryNames,
         link,
         title: exploreImages[rawSlug]?.title || f.title || "Experience",
         description: f.shortDescription || f.cardDescription || f.description || "",
@@ -294,8 +290,8 @@ export async function getExperienceDetail(slug) {
             slug: rf.slug || "",
             link: `/explore/${rf.slug || ""}`,
             title: rf.title || "Experience",
-            category: rf.category || rf.categoryName || "",
-            categorySlug: toCategorySlug(rf.category || rf.categoryName),
+            category: resolveCategory(rf.categoryRef).name,
+            categorySlug: resolveCategory(rf.categoryRef).slug,
             image: imgUrl,
             imageAlt: rf.title || "",
             distance: rf.distance || "",
@@ -306,10 +302,7 @@ export async function getExperienceDetail(slug) {
         .filter((r) => Boolean(r && r.slug));
     }
 
-    const { name: categoryName, slug: categorySlug } = resolveCategory(
-      f.category || f.categoryName,
-      f.categorySlug
-    );
+    const { name: categoryName, slug: categorySlug } = resolveCategory(f.categoryRef);
 
     const expData = {
       slug: f.slug || slug,

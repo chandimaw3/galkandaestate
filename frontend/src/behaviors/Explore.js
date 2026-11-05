@@ -75,7 +75,7 @@ export function initExplore() {
             x.setAttribute("aria-pressed", String(x === b));
           });
           const f = b.dataset.filter,
-            show = (c) => f === "all" || c.dataset.cat === f;
+            show = (c) => f === "all" || (c.dataset.cat || "").split(/\s+/).includes(f);
           const done = () => {
             cards.forEach((c) => c.classList.toggle("is-hidden", !show(c)));
             const vis = cards.filter((c) => !c.classList.contains("is-hidden"));
