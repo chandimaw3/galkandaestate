@@ -3,9 +3,9 @@
   "short_name": "Galkanda",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/seo.jpeg",
+      "sizes": "160x160",
+      "type": "image/jpeg",
       "purpose": "any"
     }
   ],
