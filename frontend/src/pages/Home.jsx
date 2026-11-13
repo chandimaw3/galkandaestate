@@ -210,7 +210,7 @@ export default function Home() {
                   className={String.raw`hx__zoom absolute top-0 right-0 bottom-0 left-0 overflow-visible`}
                 >
                   <img
-                    className="max-w-full block w-full h-full object-cover object-left-bottom"
+                    className="max-w-full block w-full h-full object-cover object-center md:object-left-bottom"
                     src={images["HomeHero3.webp"]}
                     alt="Galkanda Estate villa surrounded by tropical greenery near Kandy"
                     fetchPriority="high"
